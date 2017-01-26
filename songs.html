@@ -395,10 +395,16 @@
                 </div>
                 <div class="col-sm-6">
                   <div class="panel panel-default">
-                    <div class="panel-heading">Upload Songs</div>
+                    <div class="panel-heading">Upload Songs/Audio clip</div>
                     <div class="panel-body">
-                      <form class="form-horizontal" method="get">
+                      <form class="form-horizontal" method="POST">
                         <div class="line line-dashed b-b line-lg pull-in"></div>
+                        <div class="form-group">
+                          <label class="col-lg-2 control-label">Audio Name</label>
+                          <div class="col-lg-10">
+                            <input type="email" class="form-control" placeholder="Your audio clip's title">
+                          </div>
+                        </div>
                         <div class="form-group">
                           <label class="col-sm-2 control-label">Mp3 Upload</label>
                           <div class="col-sm-10">
@@ -406,14 +412,9 @@
                           </div>
                         </div>
                         <div class="line line-dashed b-b line-lg pull-in"></div>
-                        <div class="form-group">
-                          <label class="col-sm-2 control-label">Chosen multiple</label>
-                          <div class="col-sm-10">
-                            <select style="width:260px" multiple class="chosen-select">
-                              <input type="file">
-                            </select>
-                          </div>
-                        </div>
+                        <p style="float:right;">
+                          <button class="btn btn-success" data-toggle="class:show inline" data-target="#spin" data-loading-text="Uploading..."><i class="fa fa-cloud-upload text"></i> Upload </button> <i class="fa fa-spin fa-spinner hide" id="spin"></i>
+                        </p>
                       </form>
                     </div>
                   </div>
