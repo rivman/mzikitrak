@@ -2,7 +2,7 @@
 <html lang="en" class="app">
 <head>
   <meta charset="utf-8" />
-  <title>MzikiTrak</title>
+  <title>Musik | Web Application</title>
   <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <link rel="stylesheet" href="js/jPlayer/jplayer.flat.css" type="text/css" />
@@ -12,8 +12,7 @@
   <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" />
   <link rel="stylesheet" href="css/font.css" type="text/css" />
   <link rel="stylesheet" href="css/app.css" type="text/css" />
-
-  <!--[if lt IE 9]>
+    <!--[if lt IE 9]>
     <script src="js/ie/html5shiv.js"></script>
     <script src="js/ie/respond.min.js"></script>
     <script src="js/ie/excanvas.js"></script>
@@ -29,7 +28,7 @@
         <a href="index.html" class="navbar-brand text-lt">
           <i class="icon-earphones"></i>
           <img src="images/logo.png" alt="." class="hide">
-          <span class="hidden-nav-xs m-l-sm">MzikiTrak</span>
+          <span class="hidden-nav-xs m-l-sm">Musik</span>
         </a>
         <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
           <i class="icon-settings"></i>
@@ -138,13 +137,13 @@
                       Music is life!
                     </li>
                     <li>
-                      <a href="index.html">
+                      <a href="#">
                         <i class="fa fa-dashboard"></i>
                         <span class="font-bold">Dashboard</span>
                       </a>
                     </li>
                     <li>
-                      <a href="albums.html">
+                      <a href="genres.html">
                         <i class="icon-music-tone-alt icon text-info"></i>
                         <span class="font-bold">My Albums</span>
                       </a>
@@ -157,7 +156,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="profile.html">
+                      <a href="listen.html">
                         <i class="icon-user"></i>
                         <span class="font-bold">My Profile</span>
                       </a>
@@ -214,68 +213,85 @@
         <!-- /.aside -->
         <section id="content">
           <section class="vbox">
-            <section class="scrollable">
-              <section class="hbox stretch">
-                <aside class="aside-lg bg-light lter b-r">
-                  <section class="vbox">
-                    <section class="scrollable">
-                      <div class="wrapper">
-                        <div class="text-center m-b m-t">
-                          <a href="#" class="thumb-lg">
-                            <img src="images/a0.png" class="img-circle">
-                          </a>
-                          <div>
-                            <div class="h3 m-t-xs m-b-xs">John.Smith</div>
-                            <small class="text-muted"><i class="fa fa-map-marker"></i> London, UK</small>
+            <section class="scrollable padder">
+              <div class="m-b-md">
+                <h3 class="m-b-none">Form wizard</h3>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <form id="wizardform" method="get" action="index.html">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <ul class="nav nav-tabs font-bold">
+                          <li><a href="#step1" data-toggle="tab">Step 1</a></li>
+                          <li><a href="#step2" data-toggle="tab">Step 2</a></li>
+                          <li><a href="#step3" data-toggle="tab">Step 3</a></li>
+                        </ul>
+                      </div>
+                      <div class="panel-body">
+                        <p>This twitter bootstrap plugin builds a wizard out of a formatter tabbable structure. It allows to build a wizard functionality using buttons to go through the different wizard steps and using events allows to hook into each step individually.</p>
+                        <div class="line line-lg"></div>
+                        <h4>Validate Form</h4>
+                        <div class="progress progress-xs m-t-md">
+                          <div class="progress-bar bg-success"></div>
+                        </div>
+                        <div class="tab-content">
+                          <div class="tab-pane" id="step1">
+                            <p>Your website:</p>
+                            <input type="text" class="form-control" data-trigger="change" data-required="true" data-type="url" placeholder="website">
+                            <p class="m-t">Your email:</p>
+                            <input type="text" class="form-control" data-trigger="change" data-required="true" data-type="email" placeholder="email address">
                           </div>
-                        </div>
-                        <div class="panel wrapper">
-                          <div class="row text-center">
-                            <div class="col-xs-6">
-                              <a href="#">
-                                <span class="m-b-xs h4 block">245</span>
-                                <small class="text-muted">Plays</small>
-                              </a>
-                            </div>
-                            <div class="col-xs-6">
-                              <a href="#">
-                                <span class="m-b-xs h4 block">23</span>
-                                <small class="text-muted">Stations played</small>
-                              </a>
-                            </div>
+                          <div class="tab-pane" id="step2">
+                            <p>Your email:</p>
+                            <input type="text" class="form-control" data-trigger="change" data-required="true" data-type="email" placeholder="email address">
                           </div>
-                        </div>
-                        <div class="btn-group btn-group-justified m-b">
-                          <a class="btn btn-success btn-rounded" data-toggle="button">
-                            <span class="text">
-                              <i class="fa fa-eye"></i> Follow
-                            </span>
-                            <span class="text-active">
-                              <i class="fa fa-eye"></i> 
-                            </span>
-                          </a>
-                          <a class="btn btn-dark btn-rounded">
-                            <i class="fa fa-comment-o"></i> Edit Profile
-                          </a>
-                        </div>
-                        <div>
-                          <small class="text-uc text-xs text-muted">about me</small>
-                          <p>Artist</p>
-                          <small class="text-uc text-xs text-muted">info</small>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id neque quam. Aliquam sollicitudin venenatis ipsum ac feugiat.</p>
-                          <div class="line"></div>
-                          <small class="text-uc text-xs text-muted">connection</small>
-                          <p class="m-t-sm">
-                            <a href="#" class="btn btn-rounded btn-twitter btn-icon"><i class="fa fa-twitter"></i></a>
-                            <a href="#" class="btn btn-rounded btn-facebook btn-icon"><i class="fa fa-facebook"></i></a>
-                            <a href="#" class="btn btn-rounded btn-gplus btn-icon"><i class="fa fa-google-plus"></i></a>
-                          </p>
+                          <div class="tab-pane" id="step3">This is step 3</div>
+                          <ul class="pager wizard m-b-sm">
+                            <li class="previous first" style="display:none;"><a href="#">First</a></li>
+                            <li class="previous"><a href="#">Previous</a></li>
+                            <li class="next last" style="display:none;"><a href="#">Last</a></li>
+                            <li class="next"><a href="#">Next</a></li>
+                          </ul>
                         </div>
                       </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="col-sm-6">
+                  <form id="guessform">
+                    <section class="panel panel-default">
+                      <header class="panel-heading">
+                        <ul class="nav nav-tabs pull-right">
+                          <li><a href="#tab1" data-toggle="tab">Guess</a></li>
+                          <li><a href="#tab2" data-toggle="tab">Result</a></li>
+                        </ul>
+                        <span class="font-bold">Guess Game</span>
+                      </header>
+                      <div class="panel-body">
+                        <div class="tab-content">
+                          <div class="tab-pane text-center" id="tab1">
+                            <p class="text-center h4 m-t m-b">Guess a number between 1 and 50!</p>
+                            <input type="text" class="no-border b-b input-s-sm h1 inline text-center text-success wrapper-lg" id="gn">
+                            <p class="text-center h4 m-t m-b text-danger" id="gi">.</p>
+                          </div>
+                          <div class="tab-pane text-center wrapper-xl" id="tab2">
+                            <h1 class="text-danger m-b-xl" id="answer"></h1>
+                            <h2 class="text-success m-b-xl">Correct!!</h2>
+                            <p class="h4">You guess <span id="count"></span> time(s), [<span id="num"></span> ]</p>
+                          </div>
+                        </div>
+                      </div>
+                      <footer class="panel-footer text-right bg-light lter">
+                        <ul class="pager wizard m-n">
+                          <li class="previous"><a href="#">Try again</a></li>
+                          <li class="next"><a href="#">Guess</a></li>
+                        </ul>
+                      </footer>
                     </section>
-                  </section>
-                </aside>
-              </section>
+                  </form>
+                </div>
+              </div>
             </section>
           </section>
           <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
@@ -289,7 +305,9 @@
   <!-- App -->
   <script src="js/app.js"></script>
   <script src="js/slimscroll/jquery.slimscroll.min.js"></script>
-  <script src="js/charts/easypiechart/jquery.easy-pie-chart.js"></script>
+  <script src="js/parsley/parsley.min.js"></script>
+<script src="js/wizard/jquery.bootstrap.wizard.js"></script>
+<script src="js/wizard/demo.js"></script>
   <script src="js/app.plugin.js"></script>
   <script type="text/javascript" src="js/jPlayer/jquery.jplayer.min.js"></script>
   <script type="text/javascript" src="js/jPlayer/add-on/jplayer.playlist.min.js"></script>

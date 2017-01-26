@@ -2,7 +2,7 @@
 <html lang="en" class="app">
 <head>
   <meta charset="utf-8" />
-  <title>MzikiTrak</title>
+  <title>Musik | Web Application</title>
   <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <link rel="stylesheet" href="js/jPlayer/jplayer.flat.css" type="text/css" />
@@ -29,7 +29,7 @@
         <a href="index.html" class="navbar-brand text-lt">
           <i class="icon-earphones"></i>
           <img src="images/logo.png" alt="." class="hide">
-          <span class="hidden-nav-xs m-l-sm">MzikiTrak</span>
+          <span class="hidden-nav-xs m-l-sm">Mzikitrak</span>
         </a>
         <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
           <i class="icon-settings"></i>
@@ -213,69 +213,184 @@
         </aside>
         <!-- /.aside -->
         <section id="content">
-          <section class="vbox">
-            <section class="scrollable">
-              <section class="hbox stretch">
-                <aside class="aside-lg bg-light lter b-r">
-                  <section class="vbox">
-                    <section class="scrollable">
-                      <div class="wrapper">
-                        <div class="text-center m-b m-t">
-                          <a href="#" class="thumb-lg">
+          <section class="vbox" id="bjax-el">
+            <section class="scrollable wrapper-lg">
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="panel wrapper-lg">
+                    <div class="row">
+                      <div class="col-sm-5">
+                        <img src="images/m10.jpg" class="img-full m-b">
+                      </div>
+                      <div class="col-sm-7">
+                        <h2 class="m-t-none text-black">Tincidunt ut laoreet</h2>
+                        <div class="clearfix m-b-lg">
+                          <a href="#" class="thumb-sm pull-left m-r">
                             <img src="images/a0.png" class="img-circle">
                           </a>
-                          <div>
-                            <div class="h3 m-t-xs m-b-xs">John.Smith</div>
-                            <small class="text-muted"><i class="fa fa-map-marker"></i> London, UK</small>
+                          <div class="clear">
+                            <a href="#" class="text-info">Mike Mcalidek</a>
+                            <small class="block text-muted">2,415 followers / 225 following</small>
                           </div>
                         </div>
-                        <div class="panel wrapper">
-                          <div class="row text-center">
-                            <div class="col-xs-6">
-                              <a href="#">
-                                <span class="m-b-xs h4 block">245</span>
-                                <small class="text-muted">Plays</small>
-                              </a>
-                            </div>
-                            <div class="col-xs-6">
-                              <a href="#">
-                                <span class="m-b-xs h4 block">23</span>
-                                <small class="text-muted">Stations played</small>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="btn-group btn-group-justified m-b">
-                          <a class="btn btn-success btn-rounded" data-toggle="button">
-                            <span class="text">
-                              <i class="fa fa-eye"></i> Follow
-                            </span>
-                            <span class="text-active">
-                              <i class="fa fa-eye"></i> 
-                            </span>
-                          </a>
-                          <a class="btn btn-dark btn-rounded">
-                            <i class="fa fa-comment-o"></i> Edit Profile
-                          </a>
+                        <div class="m-b-lg">
+                          <a href="#" class="btn btn-info">Play</a> <a href="#" class="btn btn-default">3 airplays this week</a>
                         </div>
                         <div>
-                          <small class="text-uc text-xs text-muted">about me</small>
-                          <p>Artist</p>
-                          <small class="text-uc text-xs text-muted">info</small>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id neque quam. Aliquam sollicitudin venenatis ipsum ac feugiat.</p>
-                          <div class="line"></div>
-                          <small class="text-uc text-xs text-muted">connection</small>
-                          <p class="m-t-sm">
-                            <a href="#" class="btn btn-rounded btn-twitter btn-icon"><i class="fa fa-twitter"></i></a>
-                            <a href="#" class="btn btn-rounded btn-facebook btn-icon"><i class="fa fa-facebook"></i></a>
-                            <a href="#" class="btn btn-rounded btn-gplus btn-icon"><i class="fa fa-google-plus"></i></a>
-                          </p>
+                          Stations: <a href="#" class="badge bg-light">Kiss 100</a> <a href="#" class="badge bg-light">Capital FM</a>
                         </div>
                       </div>
-                    </section>
-                  </section>
-                </aside>
-              </section>
+                    </div>
+                    <div class="m-t">
+                      <p>Lorem ipsum dolor sit amet, consecteter adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. John smith Admin</p>
+                    </div>
+                    <h4 class="m-t-lg m-b">My Songs</h4>
+                    <ul class="list-group list-group-lg">
+                      <li class="list-group-item">
+                        <div class="pull-right m-l">
+                          <a href="#" class="m-r-sm"><i class="icon-cloud-download"></i></a>
+                          <a href="#" class="m-r-sm"><i class="icon-plus"></i></a>
+                          <a href="#"><i class="icon-close"></i></a>
+                        </div>
+                        <a href="#" class="jp-play-me m-r-sm pull-left">
+                          <i class="icon-control-play text"></i>
+                          <i class="icon-control-pause text-active"></i>
+                        </a>
+                        <div class="clear text-ellipsis">
+                          <span>E.T.M</span>
+                          <span class="text-muted"> -- 04:35</span>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="pull-right m-l">
+                          <a href="#" class="m-r-sm"><i class="icon-cloud-download"></i></a>
+                          <a href="#"><i class="icon-plus"></i></a>
+                        </div>
+                        <a href="#" class="jp-play-me m-r-sm pull-left">
+                          <i class="icon-control-play text"></i>
+                          <i class="icon-control-pause text-active"></i>
+                        </a>
+                        <div class="clear text-ellipsis">
+                          <span>Vestibulum id ligula porta</span>
+                          <span class="text-muted"> -- 04:15</span>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="pull-right m-l">
+                          <a href="#" class="m-r-sm"><i class="icon-cloud-download"></i></a>
+                          <a href="#"><i class="icon-plus"></i></a>
+                        </div>
+                        <a href="#" class="jp-play-me m-r-sm pull-left">
+                          <i class="icon-control-play text"></i>
+                          <i class="icon-control-pause text-active"></i>
+                        </a>
+                        <div class="clear text-ellipsis">
+                          <span>Praesent commodo cursus magna</span>
+                          <span class="text-muted"> -- 02:25</span>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="pull-right m-l">
+                          <a href="#" class="m-r-sm"><i class="icon-cloud-download"></i></a>
+                          <a href="#"><i class="icon-plus"></i></a>
+                        </div>
+                        <a href="#" class="jp-play-me m-r-sm pull-left">
+                          <i class="icon-control-play text"></i>
+                          <i class="icon-control-pause text-active"></i>
+                        </a>
+                        <div class="clear text-ellipsis">
+                          <span>Curabitur blandit tempus</span>
+                          <span class="text-muted"> -- 05:00</span>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="pull-right m-l">
+                          <a href="#" class="m-r-sm"><i class="icon-cloud-download"></i></a>
+                          <a href="#"><i class="icon-plus"></i></a>
+                        </div>
+                        <a href="#" class="jp-play-me m-r-sm pull-left">
+                          <i class="icon-control-play text"></i>
+                          <i class="icon-control-pause text-active"></i>
+                        </a>
+                        <div class="clear text-ellipsis">
+                          <span>Faucibus dolor auctor</span>
+                          <span class="text-muted"> -- 03:50</span>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="pull-right m-l">
+                          <a href="#" class="m-r-sm"><i class="icon-cloud-download"></i></a>
+                          <a href="#"><i class="icon-plus"></i></a>
+                        </div>
+                        <a href="#" class="jp-play-me m-r-sm pull-left">
+                          <i class="icon-control-play text"></i>
+                          <i class="icon-control-pause text-active"></i>
+                        </a>
+                        <div class="clear text-ellipsis">
+                          <span>Get lacinia odio sem nec elit cibus dolor auctor sed odio dui mollis ornare</span>
+                          <span class="text-muted"> -- 04:05</span>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="pull-right m-l">
+                          <a href="#" class="m-r-sm"><i class="icon-cloud-download"></i></a>
+                          <a href="#"><i class="icon-plus"></i></a>
+                        </div>
+                        <a href="#" class="jp-play-me m-r-sm pull-left">
+                          <i class="icon-control-play text"></i>
+                          <i class="icon-control-pause text-active"></i>
+                        </a>
+                        <div class="clear text-ellipsis">
+                          <span>Faucibus dolor auctor</span>
+                          <span class="text-muted"> -- 02:55</span>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="pull-right m-l">
+                          <a href="#" class="m-r-sm"><i class="icon-cloud-download"></i></a>
+                          <a href="#"><i class="icon-plus"></i></a>
+                        </div>
+                        <a href="#" class="jp-play-me m-r-sm pull-left">
+                          <i class="icon-control-play text"></i>
+                          <i class="icon-control-pause text-active"></i>
+                        </a>
+                        <div class="clear text-ellipsis">
+                          <span>Donec sed odio dui</span>
+                          <span class="text-muted"> -- 04:35</span>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="pull-right m-l">
+                          <a href="#" class="m-r-sm"><i class="icon-cloud-download"></i></a>
+                          <a href="#"><i class="icon-plus"></i></a>
+                        </div>
+                        <a href="#" class="jp-play-me m-r-sm pull-left">
+                          <i class="icon-control-play text"></i>
+                          <i class="icon-control-pause text-active"></i>
+                        </a>
+                        <div class="clear text-ellipsis">
+                          <span>Urna mollis ornare vel eu leo</span>
+                          <span class="text-muted"> -- 05:10</span>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="pull-right m-l">
+                          <a href="#" class="m-r-sm"><i class="icon-cloud-download"></i></a>
+                          <a href="#"><i class="icon-plus"></i></a>
+                        </div>
+                        <a href="#" class="jp-play-me m-r-sm pull-left">
+                          <i class="icon-control-play text"></i>
+                          <i class="icon-control-pause text-active"></i>
+                        </a>
+                        <div class="clear text-ellipsis">
+                          <span>Vivamus sagittis lacus vel augue</span>
+                          <span class="text-muted"> -- 02:35</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </section>
           </section>
           <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
@@ -289,7 +404,7 @@
   <!-- App -->
   <script src="js/app.js"></script>
   <script src="js/slimscroll/jquery.slimscroll.min.js"></script>
-  <script src="js/charts/easypiechart/jquery.easy-pie-chart.js"></script>
+
   <script src="js/app.plugin.js"></script>
   <script type="text/javascript" src="js/jPlayer/jquery.jplayer.min.js"></script>
   <script type="text/javascript" src="js/jPlayer/add-on/jplayer.playlist.min.js"></script>

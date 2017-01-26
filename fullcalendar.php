@@ -2,7 +2,7 @@
 <html lang="en" class="app">
 <head>
   <meta charset="utf-8" />
-  <title>MzikiTrak</title>
+  <title>Musik | Web Application</title>
   <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <link rel="stylesheet" href="js/jPlayer/jplayer.flat.css" type="text/css" />
@@ -12,7 +12,8 @@
   <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" />
   <link rel="stylesheet" href="css/font.css" type="text/css" />
   <link rel="stylesheet" href="css/app.css" type="text/css" />
-
+    <link rel="stylesheet" href="js/fullcalendar/fullcalendar.css" type="text/css"  />
+  <link rel="stylesheet" href="js/fullcalendar/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="js/ie/html5shiv.js"></script>
     <script src="js/ie/respond.min.js"></script>
@@ -29,7 +30,7 @@
         <a href="index.html" class="navbar-brand text-lt">
           <i class="icon-earphones"></i>
           <img src="images/logo.png" alt="." class="hide">
-          <span class="hidden-nav-xs m-l-sm">MzikiTrak</span>
+          <span class="hidden-nav-xs m-l-sm">Musik</span>
         </a>
         <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
           <i class="icon-settings"></i>
@@ -138,13 +139,13 @@
                       Music is life!
                     </li>
                     <li>
-                      <a href="index.html">
+                      <a href="#">
                         <i class="fa fa-dashboard"></i>
                         <span class="font-bold">Dashboard</span>
                       </a>
                     </li>
                     <li>
-                      <a href="albums.html">
+                      <a href="genres.html">
                         <i class="icon-music-tone-alt icon text-info"></i>
                         <span class="font-bold">My Albums</span>
                       </a>
@@ -157,7 +158,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="profile.html">
+                      <a href="listen.html">
                         <i class="icon-user"></i>
                         <span class="font-bold">My Profile</span>
                       </a>
@@ -214,70 +215,75 @@
         <!-- /.aside -->
         <section id="content">
           <section class="vbox">
-            <section class="scrollable">
-              <section class="hbox stretch">
-                <aside class="aside-lg bg-light lter b-r">
-                  <section class="vbox">
-                    <section class="scrollable">
-                      <div class="wrapper">
-                        <div class="text-center m-b m-t">
-                          <a href="#" class="thumb-lg">
-                            <img src="images/a0.png" class="img-circle">
-                          </a>
-                          <div>
-                            <div class="h3 m-t-xs m-b-xs">John.Smith</div>
-                            <small class="text-muted"><i class="fa fa-map-marker"></i> London, UK</small>
+              <section class="scrollable">
+                <section class="hbox">
+                  <!-- .aside -->
+                  <aside class="aside-lg bg-light dker wrapper">
+                    <div id="myEvents" class="panel b-a bg-light">
+                      <div class="panel-heading bg-white">
+                        Dragable events
+                      </div>
+                      <ul class="list-unstyled wrapper m-b-none">
+                        <li class="m-b-xxs">
+                          <div class="r bg-white b-l b-2x b-info wrapper-xxs">
+                            Meet a friend
                           </div>
-                        </div>
-                        <div class="panel wrapper">
-                          <div class="row text-center">
-                            <div class="col-xs-6">
-                              <a href="#">
-                                <span class="m-b-xs h4 block">245</span>
-                                <small class="text-muted">Plays</small>
-                              </a>
-                            </div>
-                            <div class="col-xs-6">
-                              <a href="#">
-                                <span class="m-b-xs h4 block">23</span>
-                                <small class="text-muted">Stations played</small>
-                              </a>
-                            </div>
+                        </li>
+                        <li class="m-b-xxs">
+                          <div class="r bg-white b-l b-2x b-danger wrapper-xxs">
+                            Tom's birthday
                           </div>
+                        </li>
+                        <li class="m-b-xxs">
+                          <div class="r bg-white b-l b-2x b-primary wrapper-xxs">
+                            Feed cat
+                          </div>
+                        </li>
+                        <li class="m-b-xxs">
+                          <div class="r bg-white b-l b-2x b-warning wrapper-xxs">
+                            Sports
+                          </div>
+                        </li>
+                        <li class="m-b-xxs">
+                          <div class="r bg-primary bg wrapper-xxs">
+                            Tom's birthday
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="checkbox">
+                      <label class="i-checks"><input type='checkbox' checked id='drop-remove' /><i></i> remove after drop</label>
+                    </div>
+                  </aside>
+                  <!-- /.aside -->
+                  <!-- .aside -->
+                  <aside class="wrapper">
+                    <section class="panel no-border bg-light">
+                      <header class="panel-heading bg-primary clearfix">
+                        <div class="btn-group pull-right" data-toggle="buttons">
+                          <label class="btn btn-sm btn-bg btn-default active" id="monthview">
+                            <input type="radio" name="options">Month
+                          </label>
+                          <label class="btn btn-sm btn-bg btn-default" id="weekview">
+                            <input type="radio" name="options">Week
+                          </label>
+                          <label class="btn btn-sm btn-bg btn-default" id="dayview">
+                            <input type="radio" name="options">Day
+                          </label>
                         </div>
-                        <div class="btn-group btn-group-justified m-b">
-                          <a class="btn btn-success btn-rounded" data-toggle="button">
-                            <span class="text">
-                              <i class="fa fa-eye"></i> Follow
-                            </span>
-                            <span class="text-active">
-                              <i class="fa fa-eye"></i> 
-                            </span>
-                          </a>
-                          <a class="btn btn-dark btn-rounded">
-                            <i class="fa fa-comment-o"></i> Edit Profile
-                          </a>
-                        </div>
-                        <div>
-                          <small class="text-uc text-xs text-muted">about me</small>
-                          <p>Artist</p>
-                          <small class="text-uc text-xs text-muted">info</small>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id neque quam. Aliquam sollicitudin venenatis ipsum ac feugiat.</p>
-                          <div class="line"></div>
-                          <small class="text-uc text-xs text-muted">connection</small>
-                          <p class="m-t-sm">
-                            <a href="#" class="btn btn-rounded btn-twitter btn-icon"><i class="fa fa-twitter"></i></a>
-                            <a href="#" class="btn btn-rounded btn-facebook btn-icon"><i class="fa fa-facebook"></i></a>
-                            <a href="#" class="btn btn-rounded btn-gplus btn-icon"><i class="fa fa-google-plus"></i></a>
-                          </p>
-                        </div>
+                        <span class="m-t-xs inline text-white">
+                          Fullcalendar
+                        </span>
+                      </header>
+                      <div class="calendar" id="calendar">
+
                       </div>
                     </section>
-                  </section>
-                </aside>
+                  </aside>
+                  <!-- /.aside -->
+                </section>
               </section>
             </section>
-          </section>
           <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
         </section>
       </section>
@@ -289,7 +295,11 @@
   <!-- App -->
   <script src="js/app.js"></script>
   <script src="js/slimscroll/jquery.slimscroll.min.js"></script>
-  <script src="js/charts/easypiechart/jquery.easy-pie-chart.js"></script>
+  <!-- fullcalendar -->
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="js/fullcalendar/fullcalendar.min.js"></script>
+<script src="js/fullcalendar/demo.js"></script>
   <script src="js/app.plugin.js"></script>
   <script type="text/javascript" src="js/jPlayer/jquery.jplayer.min.js"></script>
   <script type="text/javascript" src="js/jPlayer/add-on/jplayer.playlist.min.js"></script>
