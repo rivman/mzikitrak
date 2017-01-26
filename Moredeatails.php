@@ -105,7 +105,7 @@ $row431=sqlsrv_fetch_array($session431);
           </a>
         </li>
       </ul>
-      <form class="navbar-form navbar-left input-s-lg m-t m-l-n-xs hidden-xs" role="search">
+      <!--<form class="navbar-form navbar-left input-s-lg m-t m-l-n-xs hidden-xs" role="search">
         <div class="form-group">
           <div class="input-group">
             <span class="input-group-btn">
@@ -114,7 +114,7 @@ $row431=sqlsrv_fetch_array($session431);
             <input type="text" class="form-control input-sm no-border rounded" placeholder="Search songs, albums...">
           </div>
         </div>
-      </form>
+      </form>-->
       <div class="navbar-right ">
         <ul class="nav navbar-nav m-n hidden-xs nav-user user">
           <li class="hidden-xs">
@@ -239,7 +239,8 @@ $row431=sqlsrv_fetch_array($session431);
                       </li>
                     </ul>
                   </div>
-                </div>            </footer>
+                </div>           
+                 </footer>
           </section>
         </aside>
         <!-- /.aside -->
@@ -247,7 +248,7 @@ $row431=sqlsrv_fetch_array($session431);
           <section class="vbox">
             <section class="scrollable padder">
               <div class="m-b-md">
-                <h3 class="m-b-none">Form wizard</h3>
+                <!--<h3 class="m-b-none">Form wizard</h3>-->
               </div>
               <div class="row">
                 <div class="col-sm-12">
@@ -284,11 +285,11 @@ $row431=sqlsrv_fetch_array($session431);
           <h3> Personal Details</h3>
           <div class="form-group">
             <label class="control-label">Name</label>
-            <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Enter  Name"  />
+            <input  maxlength="100" type="text" required="required" name="name" class="form-control" placeholder="Enter  Name" value="<?php echo $row431['FirstName']."  ".$row431['LastName']; ?>"  />
           </div>
           <div class="form-group">
             <label class="control-label">County</label>
-            <select class="form-control">
+            <select class="form-control" name="county">
               <option disabled selected>select your county</option>
               <option value="Baringo">Baringo</option>  
 <option value="Bomet">Bomet </option>
@@ -343,24 +344,24 @@ $row431=sqlsrv_fetch_array($session431);
           
           <div class="form-group">
             <label class="control-label">Upload ID</label>
-            <input  maxlength="100" type="file" required="required" class="form-control" placeholder="Upload ID"  />
+            <input  maxlength="100" type="file" required="required" name="ID"  class="form-control" placeholder="Upload ID"  />
           </div>
           
           <div class="form-group">
             <label class="control-label">Upload Passport Photo</label>
-            <input maxlength="100" type="file" required="required" class="form-control" placeholder="Upload Passport Photo" />
+            <input maxlength="100" type="file" required="required" name="Photo"  class="form-control" placeholder="Upload Passport Photo" />
           </div>
           <div class="form-group">
             <label class="control-label">Address</label>
-            <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Postal Address"  />           
+            <input  maxlength="100" type="text" required="required" name="address" class="form-control" placeholder="Enter Postal Address"  />           
           </div>
           <div class="form-group">
-            <label class="control-label">Password</label>
-            <input  maxlength="100" type="password" required="required" class="form-control" placeholder="Type password"  />           
+            <label class="control-label">Change Password</label>
+            <input  maxlength="100" type="password" required="required" name="password" class="form-control" placeholder="Type password"  />           
           </div>
           <div class="form-group">
             <label class="control-label">Confirm password</label>
-            <input  maxlength="100" type="password" required="required" class="form-control" placeholder="Retype password"  />           
+            <input  maxlength="100" type="password" required="required"  name="cpassword" class="form-control" placeholder="Retype password"  />           
           </div>
           <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
         </div>
@@ -372,19 +373,19 @@ $row431=sqlsrv_fetch_array($session431);
           <h3> Next of Kin</h3>
           <div class="form-group">
             <label class="control-label">First Name</label>
-            <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter First Name" />
+            <input maxlength="200" type="text" required="required" name="fname" class="form-control" placeholder="Enter First Name" />
           </div>
           <div class="form-group">
             <label class="control-label">Last Name</label>
-            <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Second Address"  />
+            <input maxlength="200" type="text" required="required" name="lname" class="form-control" placeholder="Enter Second Address"  />
           </div>
           <div class="form-group">
             <label class="control-label">Phone Number</label>
-            <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Phone Number" />
+            <input maxlength="200" type="text" required="required" name="pnumber" class="form-control" placeholder="Enter Phone Number" />
           </div>
           <div class="form-group">
             <label class="control-label">Email Address</label>
-            <input maxlength="200" type="email" required="required" class="form-control" placeholder="Enter Second Address"  />
+            <input maxlength="200" type="email" required="required" name="eaddress" class="form-control" placeholder="Enter Second Address"  />
           </div>
           <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
         </div>
@@ -394,6 +395,18 @@ $row431=sqlsrv_fetch_array($session431);
       <div class="col-xs-6 col-md-offset-2">
         <div class="col-md-12">
           <h3> Payment</h3>
+         <p>
+         <br>1.Go to M-Pesa menu, select Lipa na M-Pesa</br>
+         <br>2.Select Paybill Paybill Account No. 800902</br>
+         <br>3.Select Enter business no. </br>
+         <br>4.Select Enter account no i.e. Business ID and press OK</br>
+         <br>5.Enter amount ( 3,717.00) and press OK</br>
+         </p>
+          
+
+                      
+
+<p><strong>NB.</strong>Account Name:FLAG FORTY TWO LIMITED</p>
           <button class="btn btn-success btn-lg pull-right" type="submit">Submit</button>
         </div>
       </div>
