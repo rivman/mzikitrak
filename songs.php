@@ -42,148 +42,37 @@
                       <p>The songs are rated from your the most popular to the least played songs.</p>
                     </div>
                     <h4 class="m-t-lg m-b">My Songs</h4>
+
+
+
                     <ul class="list-group list-group-lg">
+
+                    <?php
+                       $result = sqlsrv_query($conn,"SELECT * FROM AudioClip WHERE AccountNo='$acc' ") or die (sqlsrv_errors()); 
+                           while( $member = sqlsrv_fetch_array( $result, SQLSRV_FETCH_ASSOC) ) {
+                            
+    
+
+
+                    ?>
                       <li class="list-group-item">
                         <div class="pull-right m-l">
                           <a href="#" class="m-r-sm"><i class="icon-cloud-download"></i></a>
-                          <a href="#" class="m-r-sm"><i class="icon-plus"></i></a>
+                          
                           <a href="#"><i class="icon-close"></i></a>
                         </div>
                         <a href="#" class="jp-play-me m-r-sm pull-left">
-                          <i class="icon-control-play text"></i>
-                          <i class="icon-control-pause text-active"></i>
+                        <audio id="music" controls="controls">
+  <source src="music/<?php echo $member['AudioPath'];   ?>" />
+  
+</audio>
                         </a>
                         <div class="clear text-ellipsis">
-                          <span>E.T.M</span>
+                          <span><?php echo  $member['AudioTitle'];  ?></span>
                           <span class="text-muted"> -- 04:35</span>
                         </div>
                       </li>
-                      <li class="list-group-item">
-                        <div class="pull-right m-l">
-                          <a href="#" class="m-r-sm"><i class="icon-cloud-download"></i></a>
-                          <a href="#"><i class="icon-plus"></i></a>
-                        </div>
-                        <a href="#" class="jp-play-me m-r-sm pull-left">
-                          <i class="icon-control-play text"></i>
-                          <i class="icon-control-pause text-active"></i>
-                        </a>
-                        <div class="clear text-ellipsis">
-                          <span>Vestibulum id ligula porta</span>
-                          <span class="text-muted"> -- 04:15</span>
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="pull-right m-l">
-                          <a href="#" class="m-r-sm"><i class="icon-cloud-download"></i></a>
-                          <a href="#"><i class="icon-plus"></i></a>
-                        </div>
-                        <a href="#" class="jp-play-me m-r-sm pull-left">
-                          <i class="icon-control-play text"></i>
-                          <i class="icon-control-pause text-active"></i>
-                        </a>
-                        <div class="clear text-ellipsis">
-                          <span>Praesent commodo cursus magna</span>
-                          <span class="text-muted"> -- 02:25</span>
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="pull-right m-l">
-                          <a href="#" class="m-r-sm"><i class="icon-cloud-download"></i></a>
-                          <a href="#"><i class="icon-plus"></i></a>
-                        </div>
-                        <a href="#" class="jp-play-me m-r-sm pull-left">
-                          <i class="icon-control-play text"></i>
-                          <i class="icon-control-pause text-active"></i>
-                        </a>
-                        <div class="clear text-ellipsis">
-                          <span>Curabitur blandit tempus</span>
-                          <span class="text-muted"> -- 05:00</span>
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="pull-right m-l">
-                          <a href="#" class="m-r-sm"><i class="icon-cloud-download"></i></a>
-                          <a href="#"><i class="icon-plus"></i></a>
-                        </div>
-                        <a href="#" class="jp-play-me m-r-sm pull-left">
-                          <i class="icon-control-play text"></i>
-                          <i class="icon-control-pause text-active"></i>
-                        </a>
-                        <div class="clear text-ellipsis">
-                          <span>Faucibus dolor auctor</span>
-                          <span class="text-muted"> -- 03:50</span>
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="pull-right m-l">
-                          <a href="#" class="m-r-sm"><i class="icon-cloud-download"></i></a>
-                          <a href="#"><i class="icon-plus"></i></a>
-                        </div>
-                        <a href="#" class="jp-play-me m-r-sm pull-left">
-                          <i class="icon-control-play text"></i>
-                          <i class="icon-control-pause text-active"></i>
-                        </a>
-                        <div class="clear text-ellipsis">
-                          <span>Get lacinia odio sem nec elit cibus dolor auctor sed odio dui mollis ornare</span>
-                          <span class="text-muted"> -- 04:05</span>
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="pull-right m-l">
-                          <a href="#" class="m-r-sm"><i class="icon-cloud-download"></i></a>
-                          <a href="#"><i class="icon-plus"></i></a>
-                        </div>
-                        <a href="#" class="jp-play-me m-r-sm pull-left">
-                          <i class="icon-control-play text"></i>
-                          <i class="icon-control-pause text-active"></i>
-                        </a>
-                        <div class="clear text-ellipsis">
-                          <span>Faucibus dolor auctor</span>
-                          <span class="text-muted"> -- 02:55</span>
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="pull-right m-l">
-                          <a href="#" class="m-r-sm"><i class="icon-cloud-download"></i></a>
-                          <a href="#"><i class="icon-plus"></i></a>
-                        </div>
-                        <a href="#" class="jp-play-me m-r-sm pull-left">
-                          <i class="icon-control-play text"></i>
-                          <i class="icon-control-pause text-active"></i>
-                        </a>
-                        <div class="clear text-ellipsis">
-                          <span>Donec sed odio dui</span>
-                          <span class="text-muted"> -- 04:35</span>
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="pull-right m-l">
-                          <a href="#" class="m-r-sm"><i class="icon-cloud-download"></i></a>
-                          <a href="#"><i class="icon-plus"></i></a>
-                        </div>
-                        <a href="#" class="jp-play-me m-r-sm pull-left">
-                          <i class="icon-control-play text"></i>
-                          <i class="icon-control-pause text-active"></i>
-                        </a>
-                        <div class="clear text-ellipsis">
-                          <span>Urna mollis ornare vel eu leo</span>
-                          <span class="text-muted"> -- 05:10</span>
-                        </div>
-                      </li>
-                      <li class="list-group-item">
-                        <div class="pull-right m-l">
-                          <a href="#" class="m-r-sm"><i class="icon-cloud-download"></i></a>
-                          <a href="#"><i class="icon-plus"></i></a>
-                        </div>
-                        <a href="#" class="jp-play-me m-r-sm pull-left">
-                          <i class="icon-control-play text"></i>
-                          <i class="icon-control-pause text-active"></i>
-                        </a>
-                        <div class="clear text-ellipsis">
-                          <span>Vivamus sagittis lacus vel augue</span>
-                          <span class="text-muted"> -- 02:35</span>
-                        </div>
-                      </li>
+                      <?php } ?>
                     </ul>
                   </div>
                 </div>
@@ -191,29 +80,29 @@
                   <div class="panel panel-default">
                     <div class="panel-heading">Upload Song/Audio clip</div>
                     <div class="panel-body">
-                      <form class="form-horizontal" method="POST">
+                      <form class="form-horizontal" method="POST" action="musicuplod.php" enctype="multipart/form-data" >
                         <div class="line line-dashed b-b line-lg pull-in"></div>
                         <div class="form-group">
                           <label class="col-sm-3 control-label">Audio Name</label>
                           <div class="col-sm-9">
-                            <input type="email" class="form-control" placeholder="Your audio clip's title">
+                            <input type="text" class="form-control" name="name" placeholder="Your audio clip's title">
                           </div>
                         </div>
                         <div class="form-group">
                           <label class="col-sm-3 control-label">Cover Art</label>
                           <div class="col-sm-9">
-                            <input type="file" class="filestyle" data-icon="false" data-classButton="btn btn-default" data-classInput="form-control inline v-middle input-s" multiple>
+                            <input type="file" name="file" class="filestyle" data-icon="false" data-classButton="btn btn-default" data-classInput="form-control inline v-middle input-s"  >
                           </div>
                         </div>
                         <div class="form-group">
                           <label class="col-sm-3 control-label">Mp3 Upload</label>
                           <div class="col-sm-9">
-                            <input type="file" class="filestyle" data-icon="false" data-classButton="btn btn-default" data-classInput="form-control inline v-middle input-s" multiple>
+                            <input type="file"  name="file1" class="filestyle" data-icon="false" data-classButton="btn btn-default" data-classInput="form-control inline v-middle input-s" >
                           </div>
                         </div>
                         <div class="line line-dashed b-b line-lg pull-in"></div>
                         <p style="float:right;">
-                          <button class="btn btn-success" data-toggle="class:show inline" data-target="#spin" data-loading-text="Uploading..."><i class="fa fa-cloud-upload text"></i> Upload </button> <i class="fa fa-spin fa-spinner hide" id="spin"></i>
+                          <button type="submit" class="btn btn-success" ></i> Upload </button> <i class="fa fa-spin fa-spinner hide" id="spin"></i>
                         </p>
                       </form>
                     </div>
