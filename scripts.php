@@ -29,6 +29,17 @@
     <script type="text/javascript" src="js/jPlayer/jquery.jplayer.min.js"></script>
     <script type="text/javascript" src="js/jPlayer/add-on/jplayer.playlist.min.js"></script>
     <script type="text/javascript" src="js/jPlayer/demo.js"></script>
-    
+    <!-- Sparkline Chart -->
+    <script src="js/charts/sparkline/jquery.sparkline.min.js"></script>
+    <!-- Easy Pie Chart -->
+    <script src="js/charts/easypiechart/jquery.easy-pie-chart.js"></script>
+    <!-- Flot -->
+    <script src="js/charts/flot/jquery.flot.min.js"></script>
+    <script src="js/charts/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="js/charts/flot/jquery.flot.resize.js"></script>
+    <script src="js/charts/flot/jquery.flot.orderBars.js"></script>
+    <script src="js/charts/flot/jquery.flot.pie.min.js"></script>
+    <script src="js/charts/flot/jquery.flot.grow.js"></script>
+    <script src="js/charts/flot/demo.js"></script>
   
     
