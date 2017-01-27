@@ -278,18 +278,15 @@ $row431=sqlsrv_fetch_array($session431);
     </div>
   </div>
   
-  <form role="form" action="" method="post">
+  <form role="form" action="process.php" method="post" enctype="multipart/form-data">
     <div class="row setup-content" id="step-1">
       <div class="col-xs-6 col-md-offset-2">
         <div class="col-md-12">
           <h3> Personal Details</h3>
-          <div class="form-group">
-            <label class="control-label">Name</label>
-            <input  maxlength="100" type="text" required="required" name="name" class="form-control" placeholder="Enter  Name" value="<?php echo $row431['FirstName']."  ".$row431['LastName']; ?>"  />
-          </div>
+          
           <div class="form-group">
             <label class="control-label">County</label>
-            <select class="form-control" name="county">
+            <select class="form-control" name="county" >
               <option disabled selected>select your county</option>
               <option value="Baringo">Baringo</option>  
 <option value="Bomet">Bomet </option>
@@ -342,27 +339,29 @@ $row431=sqlsrv_fetch_array($session431);
             </select>
           </div>
           
+          
+          <div class="form-group">
+            <label class="control-label">Address</label>
+            <input  maxlength="100" type="text" name="address" class="form-control" placeholder="Enter Postal Address"  />           
+          </div>
+          <div class="form-group">
+            <label class="control-label">Change Password</label>
+            <input  maxlength="100" type="password" name="password" class="form-control" placeholder="Type password"  />           
+          </div>
+          <div class="form-group">
+            <label class="control-label">Confirm password</label>
+            <input  maxlength="100" type="password"  name="cpassword" class="form-control" placeholder="Retype password"  />           
+          </div>
           <div class="form-group">
             <label class="control-label">Upload ID</label>
-            <input  maxlength="100" type="file" required="required" name="ID"  class="form-control" placeholder="Upload ID"  />
+            <input  maxlength="100" type="file" name="file"  class="form-control" placeholder="Upload ID"  />
           </div>
           
           <div class="form-group">
             <label class="control-label">Upload Passport Photo</label>
-            <input maxlength="100" type="file" required="required" name="Photo"  class="form-control" placeholder="Upload Passport Photo" />
+            <input maxlength="100" type="file" name="file1"  class="form-control" placeholder="Upload Passport Photo" />
           </div>
-          <div class="form-group">
-            <label class="control-label">Address</label>
-            <input  maxlength="100" type="text" required="required" name="address" class="form-control" placeholder="Enter Postal Address"  />           
-          </div>
-          <div class="form-group">
-            <label class="control-label">Change Password</label>
-            <input  maxlength="100" type="password" required="required" name="password" class="form-control" placeholder="Type password"  />           
-          </div>
-          <div class="form-group">
-            <label class="control-label">Confirm password</label>
-            <input  maxlength="100" type="password" required="required"  name="cpassword" class="form-control" placeholder="Retype password"  />           
-          </div>
+
           <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
         </div>
       </div>
@@ -373,19 +372,19 @@ $row431=sqlsrv_fetch_array($session431);
           <h3> Next of Kin</h3>
           <div class="form-group">
             <label class="control-label">First Name</label>
-            <input maxlength="200" type="text" required="required" name="fname" class="form-control" placeholder="Enter First Name" />
+            <input maxlength="200" type="text" name="fname" class="form-control" placeholder="Enter First Name" />
           </div>
           <div class="form-group">
             <label class="control-label">Last Name</label>
-            <input maxlength="200" type="text" required="required" name="lname" class="form-control" placeholder="Enter Second Address"  />
+            <input maxlength="200" type="text" name="lname" class="form-control" placeholder="Enter Second Address"  />
           </div>
           <div class="form-group">
             <label class="control-label">Phone Number</label>
-            <input maxlength="200" type="text" required="required" name="pnumber" class="form-control" placeholder="Enter Phone Number" />
+            <input maxlength="200" type="text" name="pnumber" class="form-control" placeholder="Enter Phone Number" />
           </div>
           <div class="form-group">
             <label class="control-label">Email Address</label>
-            <input maxlength="200" type="email" required="required" name="eaddress" class="form-control" placeholder="Enter Second Address"  />
+            <input maxlength="200" type="email" name="eaddress" class="form-control" placeholder="Enter Second Address"  />
           </div>
           <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
         </div>
@@ -399,22 +398,22 @@ $row431=sqlsrv_fetch_array($session431);
          <br>1.Go to M-Pesa menu, select Lipa na M-Pesa</br>
          <br>2.Select Paybill Paybill Account No. 800902</br>
          <br>3.Select Enter business no. </br>
-         <br>4.Select Enter account no i.e. Business ID and press OK</br>
-         <br>5.Enter amount ( 3,717.00) and press OK</br>
+         <br>4.Select Enter account no <?php echo $row431['AccountNo'] ?></br>
+         <br>5.Enter amount ( 500.00) and press OK</br>
          </p>
           
 
                       
 
 <p><strong>NB.</strong>Account Name:FLAG FORTY TWO LIMITED</p>
-          <button class="btn btn-success btn-lg pull-right" type="submit">Submit</button>
+          <button  type="submit" class="btn btn-success btn-lg pull-right">Submit</button>
         </div>
       </div>
     </div>
   </form>
   
 </div>
-                  </form>
+                  
                 </div>
                 <div class="col-sm-6">
                   <!--<form id="guessform">
@@ -461,18 +460,8 @@ $row431=sqlsrv_fetch_array($session431);
   <!-- Bootstrap -->
   <script src="js/bootstrap.js"></script>
   <!-- App -->
-  <script src="js/app.js"></script>
-  <script src="js/slimscroll/jquery.slimscroll.min.js"></script>
-  <script src="js/parsley/parsley.min.js"></script>
-<script src="js/wizard/jquery.bootstrap.wizard.js"></script>
-<script src="js/wizard/demo.js"></script>
-  <script src="js/app.plugin.js"></script>
-  <script type="text/javascript" src="js/jPlayer/jquery.jplayer.min.js"></script>
-  <script type="text/javascript" src="js/jPlayer/add-on/jplayer.playlist.min.js"></script>
-  <script type="text/javascript" src="js/jPlayer/demo.js"></script>
+  
 
-  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script type="text/javascript">
   $(document).ready(function () {
   var navListItems = $('div.setup-panel div a'),
@@ -502,13 +491,7 @@ $row431=sqlsrv_fetch_array($session431);
           curInputs = curStep.find("input[type='text'],input[type='url']"),
           isValid = true;
 
-      $(".form-group").removeClass("has-error");
-      for(var i=0; i<curInputs.length; i++){
-          if (!curInputs[i].validity.valid){
-              isValid = false;
-              $(curInputs[i]).closest(".form-group").addClass("has-error");
-          }
-      }
+      
 
       if (isValid)
           nextStepWizard.removeAttr('disabled').trigger('click');
