@@ -33,6 +33,7 @@ $row431=sqlsrv_fetch_array($session431);
   <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" />
   <link rel="stylesheet" href="css/font.css" type="text/css" />
   <link rel="stylesheet" href="css/app.css" type="text/css" />
+  <link rel="shortcut icon" href="images/mtrakLogo.png" type="image/x-icon" />
     <!--[if lt IE 9]>
     <script src="js/ie/html5shiv.js"></script>
     <script src="js/ie/respond.min.js"></script>
@@ -105,48 +106,28 @@ $row431=sqlsrv_fetch_array($session431);
           </a>
         </li>
       </ul>
-      <!--<form class="navbar-form navbar-left input-s-lg m-t m-l-n-xs hidden-xs" role="search">
-        <div class="form-group">
-          <div class="input-group">
-            <span class="input-group-btn">
-              <button type="submit" class="btn btn-sm bg-white btn-icon rounded"><i class="fa fa-search"></i></button>
-            </span>
-            <input type="text" class="form-control input-sm no-border rounded" placeholder="Search songs, albums...">
-          </div>
-        </div>
-      </form>-->
       <div class="navbar-right ">
         <ul class="nav navbar-nav m-n hidden-xs nav-user user">
           <li class="hidden-xs">
             <a href="#" class="dropdown-toggle lt" data-toggle="dropdown">
               <i class="icon-bell"></i>
-              <span class="badge badge-sm up bg-danger count">2</span>
+              <span class="badge badge-sm up bg-danger count">1</span>
             </a>
             <section class="dropdown-menu aside-xl animated fadeInUp">
               <section class="panel bg-white">
                 <div class="panel-heading b-light bg-light">
-                  <strong>You have <span class="count">2</span> notifications</strong>
+                  <strong>You have <span class="count">1</span> notifications</strong>
                 </div>
                 <div class="list-group list-group-alt">
                   <a href="#" class="media list-group-item">
                     <span class="pull-left thumb-sm">
-                      <img src="images/a0.png" alt="..." class="img-circle">
+                      <img src="images/unk.jpg" alt="..." class="img-circle">
                     </span>
                     <span class="media-body block m-b-none">
-                      Use awesome animate.css<br>
-                      <small class="text-muted">10 minutes ago</small>
+                      Complete your profile to advance.<br>
+                      <small class="text-muted"></small>
                     </span>
                   </a>
-                  <a href="#" class="media list-group-item">
-                    <span class="media-body block m-b-none">
-                      1.0 initial released<br>
-                      <small class="text-muted">1 hour ago</small>
-                    </span>
-                  </a>
-                </div>
-                <div class="panel-footer text-sm">
-                  <a href="#" class="pull-right"><i class="fa fa-cog"></i></a>
-                  <a href="#notes" data-toggle="class:show animated fadeInRight">See all the notifications</a>
                 </div>
               </section>
             </section>
@@ -154,30 +135,13 @@ $row431=sqlsrv_fetch_array($session431);
           <li class="dropdown">
             <a href="#" class="dropdown-toggle bg clear" data-toggle="dropdown">
               <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
-                <img src="images/a0.png" alt="...">
+                <img src="images/unk.jpg" alt="...">
               </span>
-              John.Smith <b class="caret"></b>
+              <b class="caret"></b>
             </a>
             <ul class="dropdown-menu animated fadeInRight">
               <li>
-                <span class="arrow top"></span>
-                <a href="#">Settings</a>
-              </li>
-              <li>
-                <a href="profile.html">Profile</a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="badge bg-danger pull-right">3</span>
-                  Notifications
-                </a>
-              </li>
-              <li>
-                <a href="docs.html">Help</a>
-              </li>
-              <li class="divider"></li>
-              <li>
-                <a href="modal.lockme.html" data-toggle="ajaxModal" >Logout</a>
+                <a href="logout.php" data-toggle="ajaxModal" >Logout</a>
               </li>
             </ul>
           </li>
@@ -205,37 +169,24 @@ $row431=sqlsrv_fetch_array($session431);
                   <div class="dropdown dropup wrapper-sm clearfix">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                       <span class="thumb-sm avatar pull-left m-l-xs">
-                        <img src="images/a3.png" class="dker" alt="...">
+                        <img src="images/unk.jpg" class="dker" alt="...">
                         <i class="on b-black"></i>
                       </span>
                       <span class="hidden-nav-xs clear">
                         <span class="block m-l">
-                          <strong class="font-bold text-lt">John.Smith</strong>
+                          <strong class="font-bold text-lt"> </strong>
                           <b class="caret"></b>
                         </span>
-                        <span class="text-muted text-xs block m-l">Art Director</span>
+                        <span class="text-muted text-xs block m-l"> </span>
                       </span>
                     </a>
                     <ul class="dropdown-menu animated fadeInRight aside text-left">
                       <li>
-                        <span class="arrow bottom hidden-nav-xs"></span>
-                        <a href="#">Settings</a>
-                      </li>
-                      <li>
-                        <a href="profile.html">Profile</a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <span class="badge bg-danger pull-right">3</span>
-                          Notifications
-                        </a>
-                      </li>
-                      <li>
-                        <a href="docs.html">Help</a>
+                        <a href="404.php">Profile</a>
                       </li>
                       <li class="divider"></li>
                       <li>
-                        <a href="modal.lockme.html" data-toggle="ajaxModal" >Logout</a>
+                        <a href="index.php" data-toggle="ajaxModal" >Logout</a>
                       </li>
                     </ul>
                   </div>
@@ -248,16 +199,13 @@ $row431=sqlsrv_fetch_array($session431);
           <section class="vbox">
             <section class="scrollable padder">
               <div class="m-b-md">
-                <!--<h3 class="m-b-none">Form wizard</h3>-->
               </div>
               <div class="row">
                 <div class="col-sm-12">
                   
                       <div class="col-sm-12">
                       <div class="panel-body">
-                        <!--<p>This twitter bootstrap plugin builds a wizard out of a formatter tabbable structure. It allows to build a wizard functionality using buttons to go through the different wizard steps and using events allows to hook into each step individually.</p>-->
                         <div class="line line-lg"></div>
-                        <!--<h4>Validate Form</h4>-->
                         <div class="progress progress-xs m-t-md">
                           <div class="progress-bar bg-success"></div>
                         </div>
@@ -287,54 +235,54 @@ $row431=sqlsrv_fetch_array($session431);
           <div class="form-group">
             <label class="control-label">County</label>
             <select class="form-control" name="county" >
-              <option disabled selected>select your county</option>
+              <option disabled selected>Select your county</option>
               <option value="Baringo">Baringo</option>  
-<option value="Bomet">Bomet </option>
-<option value="Bungoma">Bungoma</option>  
-<option value="Busia">Busia </option>
-<option value="Elgeyo">Elgeyo</option>
-<option value="Embu">Embu </option>
-<option value="Garissa">Garissa </option>
-<option value="Homa Bay">Homa Bay </option>
-<option value="Isiolo">Isiolo </option>
-<option value="Kajiado">Kajiado </option>
-<option value="Kakamega">Kakamega </option>
-<option value="Kericho">Kericho </option>
-<option value="Kiambu">Kiambu </option>
-<option value="Kilifi">Kilifi </option>
-<option value="Kirinyaga">Kirinyaga</option>
-<option value="Kisii">Kisii </option>
-<option value="Kisumu">Kisumu </option>
-<option value="Kitui">Kitui </option>
-<option value="Kwale">Kwale </option>
-<option value="Laikipia">Laikipia </option>
-<option value="Lamu">Lamu </option>
-<option value="Machakos">Machakos </option>
-<option value="Makueni">Makueni </option>
-<option value="Mandera">Mandera </option>
-<option value="Marsabit">Marsabit </option>
-<option value="Meru">Meru </option>
-<option value="Migori">Migori </option>
-<option value="Mombasa">Mombasa </option>
-<option value="Murang'a">Murang'a </option>
-<option value="Nairobi">Nairobi  </option>
-<option value="Nakuru">Nakuru </option>
-<option value="Nandi">Nandi </option>
-<option value="Narok">Narok </option>
-<option value="Nyamira">Nyamira </option>
-<option value="Nyandarua">Nyandarua </option>
-<option value="Nyeri">Nyeri </option>
-<option value="Samburu">Samburu </option>
-<option value="Siaya">Siaya </option>
-<option value="Taita Taveta">Taita Taveta </option>
-<option value="Tana River">Tana River </option>
-<option value="Tharaka Nithi">Tharaka Nithi </option>
-<option value="Trans Nzoia">Trans Nzoia </option>
-<option value="Turkana">Turkana </option>
-<option value="Uasin Gishu">Uasin Gishu </option>
-<option value="Vihiga">Vihiga </option>
-<option value="Wajir">Wajir </option>
-<option value="West Pokot">West Pokot </option>
+              <option value="Bomet">Bomet </option>
+              <option value="Bungoma">Bungoma</option>  
+              <option value="Busia">Busia </option>
+              <option value="Elgeyo">Elgeyo</option>
+              <option value="Embu">Embu </option>
+              <option value="Garissa">Garissa </option>
+              <option value="Homa Bay">Homa Bay </option>
+              <option value="Isiolo">Isiolo </option>
+              <option value="Kajiado">Kajiado </option>
+              <option value="Kakamega">Kakamega </option>
+              <option value="Kericho">Kericho </option>
+              <option value="Kiambu">Kiambu </option>
+              <option value="Kilifi">Kilifi </option>
+              <option value="Kirinyaga">Kirinyaga</option>
+              <option value="Kisii">Kisii </option>
+              <option value="Kisumu">Kisumu </option>
+              <option value="Kitui">Kitui </option>
+              <option value="Kwale">Kwale </option>
+              <option value="Laikipia">Laikipia </option>
+              <option value="Lamu">Lamu </option>
+              <option value="Machakos">Machakos </option>
+              <option value="Makueni">Makueni </option>
+              <option value="Mandera">Mandera </option>
+              <option value="Marsabit">Marsabit </option>
+              <option value="Meru">Meru </option>
+              <option value="Migori">Migori </option>
+              <option value="Mombasa">Mombasa </option>
+              <option value="Murang'a">Murang'a </option>
+              <option value="Nairobi">Nairobi  </option>
+              <option value="Nakuru">Nakuru </option>
+              <option value="Nandi">Nandi </option>
+              <option value="Narok">Narok </option>
+              <option value="Nyamira">Nyamira </option>
+              <option value="Nyandarua">Nyandarua </option>
+              <option value="Nyeri">Nyeri </option>
+              <option value="Samburu">Samburu </option>
+              <option value="Siaya">Siaya </option>
+              <option value="Taita Taveta">Taita Taveta </option>
+              <option value="Tana River">Tana River </option>
+              <option value="Tharaka Nithi">Tharaka Nithi </option>
+              <option value="Trans Nzoia">Trans Nzoia </option>
+              <option value="Turkana">Turkana </option>
+              <option value="Uasin Gishu">Uasin Gishu </option>
+              <option value="Vihiga">Vihiga </option>
+              <option value="Wajir">Wajir </option>
+              <option value="West Pokot">West Pokot </option>
 
             </select>
           </div>
@@ -342,7 +290,7 @@ $row431=sqlsrv_fetch_array($session431);
           
           <div class="form-group">
             <label class="control-label">Address</label>
-            <input  maxlength="100" type="text" name="address" class="form-control" placeholder="Enter Postal Address"  />           
+            <input  maxlength="100" type="text" class="form-control" placeholder="Enter Postal Address"  />           
           </div>
           <div class="form-group">
             <label class="control-label">Change Password</label>
@@ -416,37 +364,6 @@ $row431=sqlsrv_fetch_array($session431);
                   
                 </div>
                 <div class="col-sm-6">
-                  <!--<form id="guessform">
-                    <section class="panel panel-default">
-                      <header class="panel-heading">
-                        <ul class="nav nav-tabs pull-right">
-                          <li><a href="#tab1" data-toggle="tab">Guess</a></li>
-                          <li><a href="#tab2" data-toggle="tab">Result</a></li>
-                        </ul>
-                        <span class="font-bold">Guess Game</span>
-                      </header>
-                      <div class="panel-body">
-                        <div class="tab-content">
-                          <div class="tab-pane text-center" id="tab1">
-                            <p class="text-center h4 m-t m-b">Guess a number between 1 and 50!</p>
-                            <input type="text" class="no-border b-b input-s-sm h1 inline text-center text-success wrapper-lg" id="gn">
-                            <p class="text-center h4 m-t m-b text-danger" id="gi">.</p>
-                          </div>
-                          <div class="tab-pane text-center wrapper-xl" id="tab2">
-                            <h1 class="text-danger m-b-xl" id="answer"></h1>
-                            <h2 class="text-success m-b-xl">Correct!!</h2>
-                            <p class="h4">You guess <span id="count"></span> time(s), [<span id="num"></span> ]</p>
-                          </div>
-                        </div>
-                      </div>
-                      <footer class="panel-footer text-right bg-light lter">
-                        <ul class="pager wizard m-n">
-                          <li class="previous"><a href="#">Try again</a></li>
-                          <li class="next"><a href="#">Guess</a></li>
-                        </ul>
-                      </footer>
-                    </section>
-                  </form>-->
                 </div>
               </div>
             </section>

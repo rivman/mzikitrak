@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="js/datepicker/datepicker.css" type="text/css" />
   <link rel="stylesheet" href="js/slider/slider.css" type="text/css" />
   <link rel="stylesheet" href="js/chosen/chosen.css" type="text/css" />
+  <link rel="shortcut icon" href="images/mtrakLogo.png" type="image/x-icon" />
 
   <!--[if lt IE 9]>
     <script src="js/ie/html5shiv.js"></script>

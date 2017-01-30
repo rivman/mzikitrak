@@ -63,9 +63,8 @@
                         </div>
                         <a href="#" class="jp-play-me m-r-sm pull-left">
                         <audio id="music" controls="controls">
-  <source src="music/<?php echo $member['AudioPath'];   ?>" />
-  
-</audio>
+                          <source src="music/<?php echo $member['AudioPath'];   ?>" />  
+                        </audio>
                         </a>
                         <div class="clear text-ellipsis">
                           <span><?php echo  $member['AudioTitle'];  ?></span>

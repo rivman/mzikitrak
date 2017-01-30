@@ -55,3 +55,8 @@
 [0127/102506:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files\settings.dat: Access is denied. (0x5)
 [0127/102507:ERROR:registration_protocol_win.cc(82)] TransactNamedPipe: The pipe has been ended. (0x6D)
 [0127/102507:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files\settings.dat: Access is denied. (0x5)
+[0130/122839:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files\settings.dat: Access is denied. (0x5)
+[0130/122839:ERROR:registration_protocol_win.cc(82)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[0130/122840:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files\settings.dat: Access is denied. (0x5)
+[0130/161724:ERROR:tcp_listen_socket.cc(76)] Could not bind socket to 127.0.0.1:6004
+[0130/161724:ERROR:node_debugger.cc(86)] Cannot start debugger server
