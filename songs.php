@@ -68,7 +68,7 @@
                         </a>
                         <div class="clear text-ellipsis">
                           <span><?php echo  $member['AudioTitle'];  ?></span>
-                          <span class="text-muted"> -- 04:35</span>
+                          <span class="text-muted"> -- </span>
                         </div>
                       </li>
                       <?php } ?>

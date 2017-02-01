@@ -51,8 +51,8 @@
                               <i class="fa fa-eye"></i> 
                             </span>
                           </a>
-                          <a class="btn btn-dark btn-rounded">
-                            <i class="fa fa-comment-o"></i> Edit Profile
+                          <a href="edit.php" class="btn btn-dark btn-rounded">
+                             Edit Profile
                           </a>
                         </div>
                         <div>
