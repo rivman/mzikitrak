@@ -13,7 +13,7 @@
           <section class="vbox" id="bjax-el">
             <section class="scrollable wrapper-lg">
               <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-7">
                   <div class="panel wrapper-lg">
                     <div class="row">
                       <div class="col-sm-5">
@@ -56,9 +56,15 @@
                     ?>
                       <li class="list-group-item">
                         <div class="pull-right m-l">
-                          <a href="#" class="m-r-sm"><i class="icon-cloud-download"></i></a>
-                          
-                          <a href="#"><i class="icon-close"></i></a>
+                          <div class="btn-group">
+		                      <button class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Delete</a></li>
+                              <li><a href="#">Download</a></li>
+                              <li class="divider"></li>
+                              <li><a href="#">Share</a></li>
+                            </ul>
+		                      </div>
                         </div>
                         <a href="#" class="jp-play-me m-r-sm pull-left">
                         <audio id="music" controls="controls">
@@ -74,7 +80,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-5">
                   <div class="panel panel-default">
                     <div class="panel-heading">Upload Song/Audio clip</div>
                     <div class="panel-body">
