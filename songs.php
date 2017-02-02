@@ -26,8 +26,7 @@
                             <img src="images/a0.png" class="img-circle">
                           </a>
                           <div class="clear">
-                            <a href="#" class="text-info">Artist</a>
-                            <small class="block text-muted">2,415 followers / 225 following</small>
+                            <a href="#" class="text-info">Artist Name</a>
                           </div>
                         </div>
                         <div class="m-b-lg">

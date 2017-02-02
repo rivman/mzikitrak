@@ -53,7 +53,7 @@ $stmt12 = sqlsrv_query( $conn, $sql2, $params);
 
 
 ?>
-<script language="javascript">
-                  alert("Upload Sucessfull");
+            <script language="javascript">
+                  alert("Upload Successful");
                   top.location.href = "songs.php"; //the page to redirect
             </script>

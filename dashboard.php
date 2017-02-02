@@ -54,27 +54,27 @@ else{
                       </div>
                     </div>
                     <section class="panel panel-default">
-                      <header class="panel-heading font-bold">Site statistics</header>
+                      <header class="panel-heading font-bold">Your stats to date </header>
                       <div class="panel-body">
                         <div id="flot-1ine" style="height:250px"></div>
                       </div>
                       <footer class="panel-footer bg-white">
                         <div class="row text-center no-gutter">
                           <div class="col-xs-3 b-r b-light">
-                            <p class="h3 font-bold m-t">5,860</p>
-                            <p class="text-muted">Orders</p>
+                            <p class="h3 font-bold m-t">2</p>
+                            <p class="text-muted">Songs</p>
                           </div>
                           <div class="col-xs-3 b-r b-light">
-                            <p class="h3 font-bold m-t">10,450</p>
-                            <p class="text-muted">Sellings</p>
+                            <p class="h3 font-bold m-t">0</p>
+                            <p class="text-muted">Airplay</p>
                           </div>
                           <div class="col-xs-3 b-r b-light">
-                            <p class="h3 font-bold m-t">21,230</p>
-                            <p class="text-muted">Items</p>
+                            <p class="h3 font-bold m-t">0</p>
+                            <p class="text-muted">Trending</p>
                           </div>
                           <div class="col-xs-3">
-                            <p class="h3 font-bold m-t">7,230</p>
-                            <p class="text-muted">Customers</p>
+                            <p class="h3 font-bold m-t">0</p>
+                            <p class="text-muted">Stations</p>
                           </div>
                         </div>
                       </footer>
@@ -90,7 +90,7 @@ else{
                       </div>
                       <div class="col-md-6">
                         <section class="panel panel-default">
-                          <header class="panel-heading font-bold">Vertical bar</header>
+                          <header class="panel-heading font-bold">Your best 3</header>
                           <div class="panel-body">
                             <div id="flot-bar"  style="height:240px"></div>
                           </div>
