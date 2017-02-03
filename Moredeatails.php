@@ -332,7 +332,7 @@ $row431=sqlsrv_fetch_array($session431);
           </div>
           <div class="form-group">
             <label class="control-label">Email Address</label>
-            <input maxlength="200" type="email" name="eaddress" class="form-control" placeholder="Enter Second Address"  />
+            <input maxlength="200" type="email" name="eaddress" class="form-control" placeholder="Enter Email Address"  />
           </div>
           <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
         </div>

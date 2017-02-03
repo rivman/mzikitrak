@@ -3,9 +3,9 @@
 <?php include 'css.php' ;?>
 <body class="">
   <section class="vbox">
-    <?php include 'header.php'; 
+     <?php include 'header.php'; 
 
-    $session431=sqlsrv_query($conn, "SELECT * FROM ClientInfo WHERE Username='$check' ");
+    $session431=sqlsrv_query($conn, "SELECT * FROM ClientInfo WHERE Email='$check' ");
 $row431=sqlsrv_fetch_array($session431);
 $acc=$row431['AccountNo'];
 $image=$row431['PassportPhoto'];
@@ -80,22 +80,23 @@ $image=$row431['PassportPhoto'];
                               <div class="form-group">
                                 <label class="col-lg-3 control-label">First Name</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" placeholder="First name..." value="<?php echo $row431['FirstName'];  ?>" 
-                                  disabled>
+                                  <input class="form-control" type="text" namevalue="<?php echo $row431['FirstName'];  ?>" 
+                                  
                                 </div>
                               </div>
                               <div class="line line-dashed b-b line-lg pull-in"></div>
                               <div class="form-group">
                               <label class="col-lg-3 control-label">Last Name</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" placeholder="Last Name..." value="<?php echo $row431['LastName']; ?>" disabled>
+                                  <input class="form-control" type="text"  value="<?php echo $row431['LastName']; ?>" 
+
                                 </div>
                               </div>
                               <div class="line line-dashed b-b line-lg pull-in"></div>
                               <div class="form-group">
                               <label class="col-lg-3 control-label">Email Address</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" placeholder="email@example.com" value="<?php echo $row431['Email']; ?>" disabled> 
+                                  <input class="form-control" type="text"  value="<?php echo $row431['Email']; ?>"  
 
                                 </div>
                               </div>
@@ -103,14 +104,14 @@ $image=$row431['PassportPhoto'];
                               <div class="form-group">
                               <label class="col-lg-3 control-label">Phone Number</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" placeholder="+254 7 XXXX XXX XXX" value="<?php echo $row431['PhoneNumber']; ?>" disabled>
+                                  <input class="form-control" type="text"  value="<?php echo $row431['PhoneNumber']; ?>" 
                                 </div>
                               </div>
                               <div class="line line-dashed b-b line-lg pull-in"></div> 
                               <div class="form-group">
                               <label class="col-lg-3 control-label">County</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" value="<?php echo $row431['County']; ?>" disabled>
+                                  <input class="form-control" type="text" value="<?php echo $row431['County']; ?>" 
                                 </div>
                               </div>
                               <div class="m-b-md">
@@ -120,28 +121,28 @@ $image=$row431['PassportPhoto'];
                               <div class="form-group">
                               <label class="col-lg-3 control-label">First Name</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" placeholder="First name..." value="<?php echo $row432['fname']; ?>" disabled>
+                                  <input class="form-control" type="text"  value="<?php echo $row432['FirstName']; ?>" 
                                 </div>
                               </div>
                               <div class="line line-dashed b-b line-lg pull-in"></div>
                               <div class="form-group">
                               <label class="col-lg-3 control-label">Last Name</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" placeholder="Last Name..." value="<?php echo $row432['LastName']; ?>" disabled>
+                                  <input class="form-control" type="text"  value="<?php echo $row432['LastName']; ?>" 
                                 </div>
                               </div>
                               <div class="line line-dashed b-b line-lg pull-in"></div>
                               <div class="form-group">
                               <label class="col-lg-3 control-label">Email Address</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" placeholder="email@example.com" value="<?php echo $row432['Email']; ?>" disabled>
+                                  <input class="form-control" type="text"  value="<?php echo $row432['Email']; ?>" 
                                 </div>
                               </div>
                               <div class="line line-dashed b-b line-lg pull-in"></div>
                               <div class="form-group">
                               <label class="col-lg-3 control-label">Phone Number</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" placeholder="+254 7 XXXX XXX XXX" value="<?php echo $row432['PhoneNumber']; ?>" disabled>
+                                  <input class="form-control" type="text"  value="<?php echo $row432['PhoneNumber']; ?>" 
                                   </div>
                                 </div>
                                 <div class="m-b-md">

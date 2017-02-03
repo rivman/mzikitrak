@@ -63,7 +63,7 @@ else{
               
 
 
-header ('location:dashboard.php');
+header ('location:moredeatails.php');
 }
     }
 
