@@ -5,7 +5,7 @@
   <section class="vbox">
     <?php include 'header.php'; 
 
-    $session431=sqlsrv_query($conn, "SELECT * FROM ClientInfo WHERE Email='$check' ");
+    $session431=sqlsrv_query($conn, "SELECT * FROM ClientInfo WHERE Username='$check' ");
 $row431=sqlsrv_fetch_array($session431);
 $acc=$row431['AccountNo'];
 $image=$row431['PassportPhoto'];
@@ -13,7 +13,6 @@ $county=$row431['County'];
 
 $session4321=sqlsrv_query($conn, "SELECT * FROM NextofKin WHERE AccountNumber='$acc' ");
 $row4321=sqlsrv_fetch_array($session4321);
-
 
 
     ?>
@@ -32,12 +31,12 @@ $row4321=sqlsrv_fetch_array($session4321);
                       <div class="wrapper">
                         <div class="text-center m-b m-t">
                           <a href="#" class="thumb-lg">
-                          <img src="uploadimages/<?php echo $image;  ?>" alt="...">
+                            <img src="uploadimages/<?php echo $image;  ?>" alt="...">
                           </a>
-                       
+                        
                           <div>
                             <div class="h3 m-t-xs m-b-xs"> <?php echo $login_session;  ?></div>
-                            <small class="text-muted"><i class="fa fa-map-marker"></i> <?php echo $county; ?></small>
+                            <small class="text-muted"><i class="fa fa-map-marker"></i><?php echo $county; ?> </small>
                           </div>
                         </div>
                         <div class="panel wrapper">
@@ -57,7 +56,7 @@ $row4321=sqlsrv_fetch_array($session4321);
                           </div>
                         </div>
                         <div class="btn-group btn-group-justified m-b">
-                          <a class="btn btn-success btn-rounded" data-toggle="button">
+                          <a class="btn btn-success btn-rounded" data-toggle="button" href="profile.php">
                             <span class="text">
                               <i class="fa fa-eye"></i> View Profile
                             </span>
@@ -66,7 +65,7 @@ $row4321=sqlsrv_fetch_array($session4321);
                             </span>
                           </a>
                           <a href="edit2.php" class="btn btn-dark btn-rounded">
-                             Edit Profile
+                            <i class="fa fa-pencil"></i> Edit Profile
                           </a>
                         </div>
                         <div>
@@ -141,7 +140,6 @@ $row4321=sqlsrv_fetch_array($session4321);
                               <label class="col-lg-3 control-label">Phone Number</label>
                                 <div class="col-lg-9">
                                   <input class="form-control" type="text" placeholder="+254 7 XXXX XXX XXX" value="<?php echo $row4321['PhoneNumber']; ?>" disabled>
-                                  <div><button>Update></div>
                                   </div>
                                 </div>
                                 <div class="m-b-md">

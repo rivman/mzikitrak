@@ -5,14 +5,14 @@
   <section class="vbox">
     <?php include 'header.php'; 
 
-    $session431=sqlsrv_query($conn, "SELECT * FROM ClientInfo WHERE Email='$check' ");
+    $session431=sqlsrv_query($conn, "SELECT * FROM ClientInfo WHERE Username='$check' ");
 $row431=sqlsrv_fetch_array($session431);
 $acc=$row431['AccountNo'];
 $image=$row431['PassportPhoto'];
 $county=$row431['County'];
 
 $session4321=sqlsrv_query($conn, "SELECT * FROM NextofKin WHERE AccountNumber='$acc' ");
-$row4321=sqlsrv_fetch_array($session4321);
+$row4321=sqlsrv_fetch_array($session432);
 
 
 
@@ -32,11 +32,11 @@ $row4321=sqlsrv_fetch_array($session4321);
                       <div class="wrapper">
                         <div class="text-center m-b m-t">
                           <a href="#" class="thumb-lg">
-                          <img src="uploadimages/<?php echo $image;  ?>" alt="...">
+                             <img src="uploadimages/<?php echo $image;  ?>" alt="...">
                           </a>
-                       
+                        
                           <div>
-                            <div class="h3 m-t-xs m-b-xs"> <?php echo $login_session;  ?></div>
+                            <div class="h3 m-t-xs m-b-xs"><?php echo $login_session;  ?></div>
                             <small class="text-muted"><i class="fa fa-map-marker"></i> <?php echo $county; ?></small>
                           </div>
                         </div>
@@ -57,16 +57,15 @@ $row4321=sqlsrv_fetch_array($session4321);
                           </div>
                         </div>
                         <div class="btn-group btn-group-justified m-b">
-                          <a class="btn btn-success btn-rounded" data-toggle="button">
+                          <a href="profile.php" class="btn btn-success btn-rounded">
                             <span class="text">
                               <i class="fa fa-eye"></i> View Profile
                             </span>
-                            <span class="text-active">
-                              <i class="fa fa-eye"></i> 
-                            </span>
                           </a>
                           <a href="edit2.php" class="btn btn-dark btn-rounded">
-                             Edit Profile
+                             <span class="text">
+                              <i class="fa fa-pencil"></i> Edit Profile
+                             </span>
                           </a>
                         </div>
                         <div>
@@ -80,21 +79,21 @@ $row4321=sqlsrv_fetch_array($session4321);
                                 <label class="col-lg-3 control-label">First Name</label>
                                 <div class="col-lg-9">
                                   <input class="form-control" type="text" placeholder="First name..." value="<?php echo $row431['FirstName'];  ?>" 
-                                  disabled>
+                                  >
                                 </div>
                               </div>
                               <div class="line line-dashed b-b line-lg pull-in"></div>
                               <div class="form-group">
                               <label class="col-lg-3 control-label">Last Name</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" placeholder="Last Name..." value="<?php echo $row431['LastName']; ?>" disabled>
+                                  <input class="form-control" type="text" placeholder="Last Name..." value="<?php echo $row431['LastName']; ?>" >
                                 </div>
                               </div>
                               <div class="line line-dashed b-b line-lg pull-in"></div>
                               <div class="form-group">
                               <label class="col-lg-3 control-label">Email Address</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" placeholder="email@example.com" value="<?php echo $row431['Email']; ?>" disabled> 
+                                  <input class="form-control" type="text" placeholder="email@example.com" value="<?php echo $row431['Email']; ?>" > 
 
                                 </div>
                               </div>
@@ -102,14 +101,14 @@ $row4321=sqlsrv_fetch_array($session4321);
                               <div class="form-group">
                               <label class="col-lg-3 control-label">Phone Number</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" placeholder="+254 7 XXXX XXX XXX" value="<?php echo $row431['PhoneNumber']; ?>" disabled>
+                                  <input class="form-control" type="text" placeholder="+254 7 XXXX XXX XXX" value="<?php echo $row431['PhoneNumber']; ?>" >
                                 </div>
                               </div>
                               <div class="line line-dashed b-b line-lg pull-in"></div> 
                               <div class="form-group">
                               <label class="col-lg-3 control-label">County</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" value="<?php echo $row431['County']; ?>" disabled>
+                                  <input class="form-control" type="text" value="<?php echo $row431['County']; ?>" >
                                 </div>
                               </div>
                               <div class="m-b-md">
@@ -119,46 +118,50 @@ $row4321=sqlsrv_fetch_array($session4321);
                               <div class="form-group">
                               <label class="col-lg-3 control-label">First Name</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" placeholder="First name..." value="<?php echo $row4321['FirstName']; ?>" disabled>
+                                  <input class="form-control" type="text" placeholder="First name..." value="<?php echo $row4321['FirstName']; ?>" >
                                 </div>
                               </div>
                               <div class="line line-dashed b-b line-lg pull-in"></div>
                               <div class="form-group">
                               <label class="col-lg-3 control-label">Last Name</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" placeholder="Last Name..." value="<?php echo $row4321['LastName']; ?>" disabled>
+                                  <input class="form-control" type="text" placeholder="Last Name..." value="<?php echo $row4321['LastName']; ?>" >
                                 </div>
                               </div>
                               <div class="line line-dashed b-b line-lg pull-in"></div>
                               <div class="form-group">
                               <label class="col-lg-3 control-label">Email Address</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" placeholder="email@example.com" value="<?php echo $row4321['Email']; ?>" disabled>
+                                  <input class="form-control" type="text" placeholder="email@example.com" value="<?php echo $row4321['Email']; ?>" >
                                 </div>
                               </div>
                               <div class="line line-dashed b-b line-lg pull-in"></div>
                               <div class="form-group">
                               <label class="col-lg-3 control-label">Phone Number</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" placeholder="+254 7 XXXX XXX XXX" value="<?php echo $row4321['PhoneNumber']; ?>" disabled>
-                                  <div><button>Update></div>
+                                  <input class="form-control" type="text" placeholder="+254 7 XXXX XXX XXX" value="<?php echo $row4321['PhoneNumber']; ?>" >
                                   </div>
                                 </div>
+
+                                <a class="btn btn-default" id="btn-1" href="#btn-1" data-toggle="class:btn-success"style="float:right;">
+                                  <span class="text">Save</span>
+                                  <i class="fa fa-check text-active"></i>
+                                  <span class="text-active">Saved</span>
+                                </a>
+
                                 <div class="m-b-md">
-                              <h3 class="m-b-none">Connections</h3>
-                          </div>
-                          <p class="m-t-sm">
-                            <button class="btn btn-sm btn-default" data-toggle="tooltip" data-placement="top" title="Twitter"><a href="#" class="btn btn-rounded btn-twitter btn-icon"><i class="fa fa-twitter"></i></a></button>
-                            <button class="btn btn-sm btn-default" data-toggle="tooltip" data-placement="top" title="Facebook"><a href="#" class="btn btn-rounded btn-facebook btn-icon"><i class="fa fa-facebook"></i></a></button>
-                            <button class="btn btn-sm btn-default" data-toggle="tooltip" data-placement="top" title="Google Plus"><a href="#" class="btn btn-rounded btn-gplus btn-icon"><i class="fa fa-google-plus"></i></a></button>                            
-                          </p>
+                                    <h3 class="m-b-none">Connections</h3>
+                                </div>
+                                <p class="m-t-sm">
+                                  <button class="btn btn-sm btn-default" data-toggle="tooltip" data-placement="top" title="Twitter"><a href="#" class="btn btn-rounded btn-twitter btn-icon"><i class="fa fa-twitter"></i></a></button>
+                                  <button class="btn btn-sm btn-default" data-toggle="tooltip" data-placement="top" title="Facebook"><a href="#" class="btn btn-rounded btn-facebook btn-icon"><i class="fa fa-facebook"></i></a></button>
+                                  <button class="btn btn-sm btn-default" data-toggle="tooltip" data-placement="top" title="Google Plus"><a href="#" class="btn btn-rounded btn-gplus btn-icon"><i class="fa fa-google-plus"></i></a></button>                            
+                                </p>
                               </div>
                             </form>
-                              </div>
-                              
                           </div>
-                          <div class="line"></div>
-                          
+                        </div>
+                        <div class="line"></div>
                         </div>
                       </div>
                     </section>
