@@ -59,7 +59,7 @@
                           <div class="btn-group">
 		                      <button class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
                             <ul class="dropdown-menu">
-                              <li><a href="#">Delete</a></li>
+                              <li><a href="deletemusic.php?var=<?php echo $member['ID']?>">Delete</a></li>
                               <li><a href="#">Download</a></li>
                               <li class="divider"></li>
                               <li><a href="#">Share</a></li>
