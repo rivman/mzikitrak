@@ -21,6 +21,7 @@
                           <a href="#" class="thumb-lg">
                             <img src="images/a0.png" class="img-circle">
                           </a>
+                        
                           <div>
                             <div class="h3 m-t-xs m-b-xs">John.Smith</div>
                             <small class="text-muted"><i class="fa fa-map-marker"></i> London, UK</small>
