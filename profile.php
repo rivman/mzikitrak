@@ -19,11 +19,11 @@
                       <div class="wrapper">
                         <div class="text-center m-b m-t">
                           <a href="#" class="thumb-lg">
-                            <img src="images/a0.png" class="img-circle">
+                            <img src="images/unk.jpg" class="img-circle">
                           </a>
                           <div>
-                            <div class="h3 m-t-xs m-b-xs">John.Smith</div>
-                            <small class="text-muted"><i class="fa fa-map-marker"></i> London, UK</small>
+                            <div class="h3 m-t-xs m-b-xs"> Mr. Mziki</div>
+                            <small class="text-muted"><i class="fa fa-map-marker"></i> Nairobi, Kenya</small>
                           </div>
                         </div>
                         <div class="panel wrapper">
@@ -56,16 +56,57 @@
                           </a>
                         </div>
                         <div>
-                          <small class="text-uc text-xs text-muted">about me</small>
-                          <p>Artist</p>
-                          <small class="text-uc text-xs text-muted">info</small>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id neque quam. Aliquam sollicitudin venenatis ipsum ac feugiat.</p>
+                          <div class="panel-body">
+                            <form action="" class="form-horizontal">
+                            <div class="m-b-md">
+                                <h3 class="m-b-none">Info</h3>
+                              </div>
+                              <div class="form-group">
+                              <div class="line line-dashed b-b line-lg pull-in"></div>
+                              <label class="col-lg-3 control-label">First Name</label>
+                                <div class="col-lg-9">
+                                  <input class="form-control" type="text" placeholder="First name..." disabled>
+                                </div>
+                              </div>
+                              <div class="line line-dashed b-b line-lg pull-in"></div>
+                              <div class="form-group">
+                              <label class="col-lg-3 control-label">Last Name</label>
+                                <div class="col-lg-9">
+                                  <input class="form-control" type="text" placeholder="Last Name..." disabled>
+                                </div>
+                              </div>
+                              <div class="line line-dashed b-b line-lg pull-in"></div>
+                              <div class="form-group">
+                              <label class="col-lg-3 control-label">Email Address</label>
+                                <div class="col-lg-9">
+                                  <input class="form-control" type="text" placeholder="email@example.com" disabled>
+                                </div>
+                              </div>
+                              <div class="line line-dashed b-b line-lg pull-in"></div>
+                              <div class="form-group">
+                              <label class="col-lg-3 control-label">Phone Number</label>
+                                <div class="col-lg-9">
+                                  <input class="form-control" type="text" placeholder="+254 7 XXXX XXX XXX" disabled>
+                                </div>
+                              </div>
+                              <div class="line line-dashed b-b line-lg pull-in"></div>
+                              <div class="form-group">
+                              <label class="col-lg-3 control-label">Another Field</label>
+                                <div class="col-lg-9">
+                                  <input class="form-control" type="text" placeholder="Info ..." disabled>
+                                </div>
+                          </div>
+                            </form>
+                          </div>
+                          <p></p>
                           <div class="line"></div>
-                          <small class="text-uc text-xs text-muted">connection</small>
+                          <div class="m-b-md">
+                              <h3 class="m-b-none">Connections</h3>
+                          </div>
                           <p class="m-t-sm">
-                            <a href="#" class="btn btn-rounded btn-twitter btn-icon"><i class="fa fa-twitter"></i></a>
-                            <a href="#" class="btn btn-rounded btn-facebook btn-icon"><i class="fa fa-facebook"></i></a>
-                            <a href="#" class="btn btn-rounded btn-gplus btn-icon"><i class="fa fa-google-plus"></i></a>
+                            <button class="btn btn-sm btn-default" data-toggle="tooltip" data-placement="top" title="Twitter"><a href="#" class="btn btn-rounded btn-twitter btn-icon"><i class="fa fa-twitter"></i></a></button>
+                            <button class="btn btn-sm btn-default" data-toggle="tooltip" data-placement="top" title="Facebook"><a href="#" class="btn btn-rounded btn-facebook btn-icon"><i class="fa fa-facebook"></i></a></button>
+                            <button class="btn btn-sm btn-default" data-toggle="tooltip" data-placement="top" title="Google Plus"><a href="#" class="btn btn-rounded btn-gplus btn-icon"><i class="fa fa-google-plus"></i></a></button>                            
                           </p>
                         </div>
                       </div>
