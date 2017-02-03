@@ -58,7 +58,7 @@ $image=$row431['PassportPhoto'];
                           </div>
                         </div>
                         <div class="btn-group btn-group-justified m-b">
-                          <a class="btn btn-success btn-rounded" data-toggle="button">
+                          <a class="btn btn-success btn-rounded" data-toggle="button" href="profile.php">
                             <span class="text">
                               <i class="fa fa-eye"></i> View Profile
                             </span>
@@ -67,7 +67,7 @@ $image=$row431['PassportPhoto'];
                             </span>
                           </a>
                           <a href="edit2.php" class="btn btn-dark btn-rounded">
-                             Edit Profile
+                            <i class="fa fa-pencil"></i> Edit Profile
                           </a>
                         </div>
                         <div>
