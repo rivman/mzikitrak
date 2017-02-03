@@ -95,10 +95,46 @@
                                 <div class="col-lg-9">
                                   <input class="form-control" type="text" placeholder="Info ..." disabled>
                                 </div>
-                          </div>
+                              </div>
+                              <div class="m-b-md">
+                                <h3 class="m-b-none">Next of Kin</h3>
+                              </div>
+                              <div class="form-group">
+                              <div class="line line-dashed b-b line-lg pull-in"></div>
+                              <label class="col-lg-3 control-label">First Name</label>
+                                <div class="col-lg-9">
+                                  <input class="form-control" type="text" placeholder="First name..." disabled>
+                                </div>
+                              </div>
+                              <div class="line line-dashed b-b line-lg pull-in"></div>
+                              <div class="form-group">
+                              <label class="col-lg-3 control-label">Last Name</label>
+                                <div class="col-lg-9">
+                                  <input class="form-control" type="text" placeholder="Last Name..." disabled>
+                                </div>
+                              </div>
+                              <div class="line line-dashed b-b line-lg pull-in"></div>
+                              <div class="form-group">
+                              <label class="col-lg-3 control-label">Email Address</label>
+                                <div class="col-lg-9">
+                                  <input class="form-control" type="text" placeholder="email@example.com" disabled>
+                                </div>
+                              </div>
+                              <div class="line line-dashed b-b line-lg pull-in"></div>
+                              <div class="form-group">
+                              <label class="col-lg-3 control-label">Phone Number</label>
+                                <div class="col-lg-9">
+                                  <input class="form-control" type="text" placeholder="+254 7 XXXX XXX XXX" disabled>
+                                </div>
+                              </div>
+                              <div class="line line-dashed b-b line-lg pull-in"></div>
+                              <div class="form-group">
+                              <label class="col-lg-3 control-label">Another Field</label>
+                                <div class="col-lg-9">
+                                  <input class="form-control" type="text" placeholder="Info ..." disabled>
+                                </div>
                             </form>
                           </div>
-                          <p></p>
                           <div class="line"></div>
                           <div class="m-b-md">
                               <h3 class="m-b-none">Connections</h3>
