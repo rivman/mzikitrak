@@ -3,9 +3,9 @@
 <?php include 'css.php' ;?>
 <body class="">
   <section class="vbox">
-    <?php include 'header.php'; 
+     <?php include 'header.php'; 
 
-    $session431=sqlsrv_query($conn, "SELECT * FROM ClientInfo WHERE Username='$check' ");
+    $session431=sqlsrv_query($conn, "SELECT * FROM ClientInfo WHERE Email='$check' ");
 $row431=sqlsrv_fetch_array($session431);
 $acc=$row431['AccountNo'];
 $image=$row431['PassportPhoto'];
@@ -15,7 +15,7 @@ $session4321=sqlsrv_query($conn, "SELECT * FROM NextofKin WHERE AccountNumber='$
 $row4321=sqlsrv_fetch_array($session4321);
 
 
-    ?>
+?>
     <section>
       <section class="hbox stretch">
         <!-- .aside -->
@@ -36,7 +36,7 @@ $row4321=sqlsrv_fetch_array($session4321);
                         
                           <div>
                             <div class="h3 m-t-xs m-b-xs"> <?php echo $login_session;  ?></div>
-                            <small class="text-muted"><i class="fa fa-map-marker"></i><?php echo $county; ?> </small>
+                            <small class="text-muted"><i class="fa fa-map-marker"></i> <?php echo $county; ?></small>
                           </div>
                         </div>
                         <div class="panel wrapper">
@@ -56,16 +56,15 @@ $row4321=sqlsrv_fetch_array($session4321);
                           </div>
                         </div>
                         <div class="btn-group btn-group-justified m-b">
-                          <a class="btn btn-success btn-rounded" data-toggle="button" href="profile.php">
+                          <a href="profile.php" class="btn btn-success btn-rounded">
                             <span class="text">
                               <i class="fa fa-eye"></i> View Profile
                             </span>
-                            <span class="text-active">
-                              <i class="fa fa-eye"></i> 
-                            </span>
                           </a>
-                          <a href="edit2.php" class="btn btn-dark btn-rounded">
-                            <i class="fa fa-pencil"></i> Edit Profile
+                          <a href="edit_prof.php" class="btn btn-dark btn-rounded">
+                             <span class="text">
+                              <i class="fa fa-pencil"></i> Edit Profile
+                             </span>
                           </a>
                         </div>
                         <div>
@@ -78,37 +77,35 @@ $row4321=sqlsrv_fetch_array($session4321);
                               <div class="form-group">
                                 <label class="col-lg-3 control-label">First Name</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" placeholder="First name..." value="<?php echo $row431['FirstName'];  ?>" 
-                                  disabled>
+                                  <input class="form-control" type="text" namevalue="<?php echo $row431['FirstName'];  ?>">                                  
                                 </div>
                               </div>
                               <div class="line line-dashed b-b line-lg pull-in"></div>
                               <div class="form-group">
                               <label class="col-lg-3 control-label">Last Name</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" placeholder="Last Name..." value="<?php echo $row431['LastName']; ?>" disabled>
+                                  <input class="form-control" type="text"  value="<?php echo $row431['LastName']; ?>">
                                 </div>
                               </div>
                               <div class="line line-dashed b-b line-lg pull-in"></div>
                               <div class="form-group">
                               <label class="col-lg-3 control-label">Email Address</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" placeholder="email@example.com" value="<?php echo $row431['Email']; ?>" disabled> 
-
+                                  <input class="form-control" type="text"  value="<?php echo $row431['Email']; ?>">
                                 </div>
                               </div>
                               <div class="line line-dashed b-b line-lg pull-in"></div> 
                               <div class="form-group">
                               <label class="col-lg-3 control-label">Phone Number</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" placeholder="+254 7 XXXX XXX XXX" value="<?php echo $row431['PhoneNumber']; ?>" disabled>
+                                  <input class="form-control" type="text"  value="<?php echo $row431['PhoneNumber']; ?>">
                                 </div>
                               </div>
                               <div class="line line-dashed b-b line-lg pull-in"></div> 
                               <div class="form-group">
                               <label class="col-lg-3 control-label">County</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" value="<?php echo $row431['County']; ?>" disabled>
+                                  <input class="form-control" type="text" value="<?php echo $row431['County']; ?>">
                                 </div>
                               </div>
                               <div class="m-b-md">
@@ -118,28 +115,28 @@ $row4321=sqlsrv_fetch_array($session4321);
                               <div class="form-group">
                               <label class="col-lg-3 control-label">First Name</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" placeholder="First name..." value="<?php echo $row4321['FirstName']; ?>" disabled>
+                                  <input class="form-control" type="text"  value="<?php echo $row4321['FirstName']; ?>"> 
                                 </div>
                               </div>
                               <div class="line line-dashed b-b line-lg pull-in"></div>
                               <div class="form-group">
                               <label class="col-lg-3 control-label">Last Name</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" placeholder="Last Name..." value="<?php echo $row4321['LastName']; ?>" disabled>
+                                  <input class="form-control" type="text"  value="<?php echo $row4321['LastName']; ?>"> 
                                 </div>
                               </div>
                               <div class="line line-dashed b-b line-lg pull-in"></div>
                               <div class="form-group">
                               <label class="col-lg-3 control-label">Email Address</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" placeholder="email@example.com" value="<?php echo $row4321['Email']; ?>" disabled>
+                                  <input class="form-control" type="text"  value="<?php echo $row4321['Email']; ?>"> 
                                 </div>
                               </div>
                               <div class="line line-dashed b-b line-lg pull-in"></div>
                               <div class="form-group">
                               <label class="col-lg-3 control-label">Phone Number</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" placeholder="+254 7 XXXX XXX XXX" value="<?php echo $row4321['PhoneNumber']; ?>" disabled>
+                                  <input class="form-control" type="text"  value="<?php echo $row4321['PhoneNumber']; ?>"> 
                                   </div>
                                 </div>
                                 <div class="m-b-md">

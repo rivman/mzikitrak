@@ -57,16 +57,15 @@ $row4321=sqlsrv_fetch_array($session4321);
                           </div>
                         </div>
                         <div class="btn-group btn-group-justified m-b">
-                          <a class="btn btn-success btn-rounded" data-toggle="button">
+                          <a href="profile.php" class="btn btn-success btn-rounded">
                             <span class="text">
                               <i class="fa fa-eye"></i> View Profile
                             </span>
-                            <span class="text-active">
-                              <i class="fa fa-eye"></i> 
-                            </span>
                           </a>
-                          <a href="edit2.php" class="btn btn-dark btn-rounded">
-                             Edit Profile
+                          <a href="edit_prof.php" class="btn btn-dark btn-rounded">
+                             <span class="text">
+                              <i class="fa fa-pencil"></i> Edit Profile
+                             </span>
                           </a>
                         </div>
                         <div>
@@ -140,9 +139,8 @@ $row4321=sqlsrv_fetch_array($session4321);
                               <div class="form-group">
                               <label class="col-lg-3 control-label">Phone Number</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" placeholder="+254 7 XXXX XXX XXX" value="<?php echo $row4321['PhoneNumber']; ?>" disabled>
-                                  <div><button>Update></div>
-                                  </div>
+                                  <input class="form-control" type="text" placeholder="+254 7 XXXX XXX XXX" value="<?php echo $row4321['PhoneNumber']; ?>" disabled>                                  
+                                </div>
                                 </div>
                                 <div class="m-b-md">
                               <h3 class="m-b-none">Connections</h3>
