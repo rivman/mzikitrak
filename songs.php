@@ -38,7 +38,7 @@
                       </div>
                     </div>
                     <div class="m-t">
-                      <p>The songs are rated from your the most popular to the least played songs.</p>
+                      <p> </p>
                     </div>
                     <h4 class="m-t-lg m-b">My Songs</h4>
 
