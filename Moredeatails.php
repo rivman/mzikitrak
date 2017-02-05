@@ -301,8 +301,8 @@ $row431=sqlsrv_fetch_array($session431);
             <input  maxlength="100" type="password"  name="cpassword" class="form-control" placeholder="Retype password"  />           
           </div>
           <div class="form-group">
-            <label class="control-label">Upload ID</label>
-            <input  maxlength="100" type="file" name="file"  class="form-control" placeholder="Upload ID"  />
+            <label class="control-label">Upload ID</label><small>It should be in PDF format.</small>
+            <input  maxlength="100" type="file" name="file"  class="form-control" placeholder="Upload a copy of your National ID"  />
           </div>
           
           <div class="form-group">
@@ -324,7 +324,7 @@ $row431=sqlsrv_fetch_array($session431);
           </div>
           <div class="form-group">
             <label class="control-label">Last Name</label>
-            <input maxlength="200" type="text" name="lname" class="form-control" placeholder="Enter Second Address"  />
+            <input maxlength="200" type="text" name="lname" class="form-control" placeholder="Enter Second Name"  />
           </div>
           <div class="form-group">
             <label class="control-label">Phone Number</label>
@@ -349,11 +349,7 @@ $row431=sqlsrv_fetch_array($session431);
          <br>4.Select Enter account no <?php echo $row431['AccountNo'] ?></br>
          <br>5.Enter amount ( 500.00) and press OK</br>
          </p>
-          
-
-                      
-
-<p><strong>NB.</strong>Account Name:FLAG FORTY TWO LIMITED</p>
+         <p><strong>NB.</strong>Account Name:FLAG FORTY TWO LIMITED</p>
           <button  type="submit" class="btn btn-success btn-lg pull-right">Submit</button>
         </div>
       </div>

@@ -18,7 +18,7 @@
                     <li>
                       <a href="songs.php">
                         <i class="icon-playlist icon text-success-lter"></i>
-                        <b class="badge bg-success dker pull-right">9</b>
+                        <b class="badge bg-success dker pull-right">0</b>
                         <span>My Songs</span>
                       </a>
                     </li>

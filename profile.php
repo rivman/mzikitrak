@@ -44,13 +44,13 @@ $row4321=sqlsrv_fetch_array($session4321);
                           <div class="row text-center">
                             <div class="col-xs-6">
                               <a href="#">
-                                <span class="m-b-xs h4 block">245</span>
+                                <span class="m-b-xs h4 block">0</span>
                                 <small class="text-muted">Plays</small>
                               </a>
                             </div>
                             <div class="col-xs-6">
                               <a href="#">
-                                <span class="m-b-xs h4 block">23</span>
+                                <span class="m-b-xs h4 block">0</span>
                                 <small class="text-muted">Stations played</small>
                               </a>
                             </div>
