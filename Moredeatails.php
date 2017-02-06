@@ -234,7 +234,7 @@ $row431=sqlsrv_fetch_array($session431);
           
           <div class="form-group">
             <label class="control-label">County</label>
-            <select class="form-control" name="county" >
+            <select class="form-control" name="county" required >
               <option disabled selected>Select your county</option>
               <option value="Baringo">Baringo</option>  
               <option value="Bomet">Bomet </option>
@@ -290,24 +290,24 @@ $row431=sqlsrv_fetch_array($session431);
           
           <div class="form-group">
             <label class="control-label">Address</label>
-            <input  maxlength="100" type="text" class="form-control" placeholder="Enter Postal Address"  />           
+            <input  maxlength="100" type="text" class="form-control"  placeholder="Enter Postal Address" required  />           
           </div>
           <div class="form-group">
             <label class="control-label">Change Password</label>
-            <input  maxlength="100" type="password" name="password" class="form-control" placeholder="Type password"  />           
+            <input  maxlength="100" type="password" name="password"  class="form-control" placeholder="Type password" required  />           
           </div>
           <div class="form-group">
             <label class="control-label">Confirm password</label>
-            <input  maxlength="100" type="password"  name="cpassword" class="form-control" placeholder="Retype password"  />           
+            <input  maxlength="100" type="password"  name="cpassword"  class="form-control" placeholder="Retype password"  required />           
           </div>
           <div class="form-group">
             <label class="control-label">Upload ID</label><small>It should be in PDF format.</small>
-            <input  maxlength="100" type="file" name="file"  class="form-control" placeholder="Upload a copy of your National ID"  />
+            <input  maxlength="100" type="file" name="file"   class="form-control" placeholder="Upload a copy of your National ID" required  />
           </div>
           
           <div class="form-group">
             <label class="control-label">Upload Passport Photo</label>
-            <input maxlength="100" type="file" name="file1"  class="form-control" placeholder="Upload Passport Photo" />
+            <input maxlength="100" type="file" name="file1"  class="form-control" placeholder="Upload Passport Photo" required />
           </div>
 
           <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
@@ -320,19 +320,19 @@ $row431=sqlsrv_fetch_array($session431);
           <h3> Next of Kin</h3>
           <div class="form-group">
             <label class="control-label">First Name</label>
-            <input maxlength="200" type="text" name="fname" class="form-control" placeholder="Enter First Name" />
+            <input maxlength="200" type="text" name="fname"  class="form-control" placeholder="Enter First Name" required  />
           </div>
           <div class="form-group">
             <label class="control-label">Last Name</label>
-            <input maxlength="200" type="text" name="lname" class="form-control" placeholder="Enter Second Name"  />
+            <input maxlength="200" type="text" name="lname"  class="form-control" placeholder="Enter Second Name"  required />
           </div>
           <div class="form-group">
             <label class="control-label">Phone Number</label>
-            <input maxlength="200" type="text" name="pnumber" class="form-control" placeholder="Enter Phone Number" />
+            <input maxlength="200" type="text" name="pnumber"  class="form-control" placeholder="Enter Phone Number" required />
           </div>
           <div class="form-group">
             <label class="control-label">Email Address</label>
-            <input maxlength="200" type="email" name="eaddress" class="form-control" placeholder="Enter Email Address"  />
+            <input maxlength="200" type="email" name="eaddress"  class="form-control" placeholder="Enter Email Address"  required />
           </div>
           <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
         </div>
