@@ -294,24 +294,24 @@ $row431=sqlsrv_fetch_array($session431);
           </div>
           <div class="form-group">
             <label class="control-label">Address</label>
-            <input  maxlength="100" type="text" class="form-control"  placeholder="Enter Postal Address" required  />           
+            <input  maxlength="100" type="text" class="form-control" required="required"  placeholder="Enter Postal Address" required  />           
           </div>
           <div class="form-group">
             <label class="control-label">Change Password</label>
-            <input  maxlength="100" type="password" name="password"  class="form-control" placeholder="Type password" required  />           
+            <input  maxlength="100" type="password" name="password" required="required" class="form-control" placeholder="Type password"  />           
           </div>
           <div class="form-group">
             <label class="control-label">Confirm password</label>
-            <input  maxlength="100" type="password"  name="cpassword"  class="form-control" placeholder="Retype password"  required />           
+            <input  maxlength="100" type="password"  name="cpassword" required="required" class="form-control" placeholder="Retype password"   />           
           </div>
           <div class="form-group">
             <label class="control-label">Upload a copy of your National ID</label> <small>(It should be in PDF format.)</small>
-            <input  maxlength="100" type="file" name="file"  class="form-control" placeholder="Upload a copy of your National ID"  required/>
+            <input  maxlength="100" type="file" name="file" required="required"  class="form-control" placeholder="Upload a copy of your National ID"  />
           </div>
           
           <div class="form-group">
             <label class="control-label">Upload Passport Photo</label>
-            <input maxlength="100" type="file" name="file1"  class="form-control" placeholder="Upload Passport Photo" required />
+            <input maxlength="100" type="file" name="file1" required="required" class="form-control" placeholder="Upload Passport Photo"  />
           </div>
 
           <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
@@ -324,19 +324,19 @@ $row431=sqlsrv_fetch_array($session431);
           <h3> Next of Kin</h3>
           <div class="form-group">
             <label class="control-label">First Name</label>
-            <input maxlength="200" type="text" name="fname"  class="form-control" placeholder="Enter First Name" required  />
+            <input maxlength="200" type="text" name="fname"  required="required" class="form-control" placeholder="Enter First Name"  />
           </div>
           <div class="form-group">
             <label class="control-label">Last Name</label>
-            <input maxlength="200" type="text" name="lname"  class="form-control" placeholder="Enter Second Name"  required />
+            <input maxlength="200" type="text" name="lname" required="required" class="form-control" placeholder="Enter Second Name"   />
           </div>
           <div class="form-group">
             <label class="control-label">Phone Number</label>
-            <input maxlength="200" type="text" name="pnumber"  class="form-control" placeholder="Enter Phone Number" required />
+            <input maxlength="200" type="text" name="pnumber" required="required" class="form-control" placeholder="Enter Phone Number"  />
           </div>
           <div class="form-group">
             <label class="control-label">Email Address</label>
-            <input maxlength="200" type="email" name="eaddress"  class="form-control" placeholder="Enter Email Address"  required />
+            <input maxlength="200" type="email" name="eaddress" required="required" class="form-control" placeholder="Enter Email Address"   />
           </div>
           <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
         </div>
@@ -408,6 +408,14 @@ $row431=sqlsrv_fetch_array($session431);
           curInputs = curStep.find("input[type='text'],input[type='url']"),
           isValid = true;
 
+                  $(".form-group").removeClass("has-error");
+        for(var i=0; i<curInputs.length; i++){
+            if (!curInputs[i].validity.valid){
+                isValid = false;
+                $(curInputs[i]).closest(".form-group").addClass("has-error");
+            }
+        }
+
       
 
       if (isValid)
@@ -416,6 +424,7 @@ $row431=sqlsrv_fetch_array($session431);
 
   $('div.setup-panel div a.btn-primary').trigger('click');
 });
+  
   </script>
 </body>
 </html>

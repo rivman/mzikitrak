@@ -11,10 +11,10 @@
         </header>
         <form action="login.php" method="POST">
           <div class="form-group">
-            <input type="email" placeholder="Email" name="Email" class="form-control rounded input-lg text-center no-border">
+            <input type="email" placeholder="Email" name="Email" required="required" class="form-control rounded input-lg text-center no-border">
           </div>
           <div class="form-group">
-             <input type="password" placeholder="Password" name="password" class="form-control rounded input-lg text-center no-border">
+             <input type="password" placeholder="Password" name="password" required="required" class="form-control rounded input-lg text-center no-border">
           </div>
           <button type="submit" class="btn btn-lg btn-warning lt b-white b-2x btn-block btn-rounded"><i class="icon-arrow-right pull-right"></i><span class="m-r-n-lg">Sign in</span></button>
           <div class="text-center m-t m-b"><a href="passreset.php"><small>Forgot password?</small></a></div>
