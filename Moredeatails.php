@@ -324,7 +324,7 @@ $row431=sqlsrv_fetch_array($session431);
           </div>
           <div class="form-group">
             <label class="control-label">Last Name</label>
-            <input maxlength="200" type="text" name="lname" class="form-control" placeholder="Enter Second Address"  />
+            <input maxlength="200" type="text" name="lname" class="form-control" placeholder="Enter Second Name"  />
           </div>
           <div class="form-group">
             <label class="control-label">Phone Number</label>
