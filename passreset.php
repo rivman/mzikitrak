@@ -65,7 +65,7 @@ $row4321=sqlsrv_fetch_array($session4321);
                                 <form role="form">
                                     <div class="form-group">
                                     <label>Email address</label>
-                                    <input type="email" class="form-control" placeholder="Enter email">
+                                    <input type="email" class="form-control" placeholder="Enter email" required>
                                     </div>
                                     <button type="submit" class="btn btn-sm btn-default">Submit</button>
                                 </form>
