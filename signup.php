@@ -11,16 +11,16 @@
         </header>
         <form action="createuser.php" method="POST">
           <div class="form-group">
-            <input placeholder="First Name" name="fname" class="form-control rounded input-lg text-center no-border">
+            <input placeholder="First Name" name="fname" required="required" class="form-control rounded input-lg text-center no-border">
           </div>
           <div class="form-group">
-            <input placeholder="Last Name" name="lname" class="form-control rounded input-lg text-center no-border">
+            <input placeholder="Last Name" name="lname" required="required" class="form-control rounded input-lg text-center no-border">
           </div>
           <div class="form-group">
-            <input type="email" name="email" placeholder="Email Address" class="form-control rounded input-lg text-center no-border">
+            <input type="email" name="email" required="required" placeholder="Email Address" class="form-control rounded input-lg text-center no-border">
           </div>
           <div class="form-group">
-             <input type="phone number" name="pnumber" placeholder="Phone Number" class="form-control rounded input-lg text-center no-border">
+             <input type="phone number" name="pnumber" required="required"  placeholder="Phone Number" class="form-control rounded input-lg text-center no-border">
           </div>
           <div class="checkbox i-checks m-b">
             <label class="m-l">
