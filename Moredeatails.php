@@ -289,6 +289,10 @@ $row431=sqlsrv_fetch_array($session431);
           
           
           <div class="form-group">
+            <label class="control-label">Stage Name</label> <small> (Optional) </small>
+            <input  maxlength="100" type="text" class="form-control" placeholder="Your Stage Name"  />           
+          </div>
+          <div class="form-group">
             <label class="control-label">Address</label>
             <input  maxlength="100" type="text" class="form-control"  placeholder="Enter Postal Address" required  />           
           </div>
@@ -301,8 +305,8 @@ $row431=sqlsrv_fetch_array($session431);
             <input  maxlength="100" type="password"  name="cpassword"  class="form-control" placeholder="Retype password"  required />           
           </div>
           <div class="form-group">
-            <label class="control-label">Upload ID</label><small>It should be in PDF format.</small>
-            <input  maxlength="100" type="file" name="file"   class="form-control" placeholder="Upload a copy of your National ID" required  />
+            <label class="control-label">Upload a copy of your National ID</label> <small>(It should be in PDF format.)</small>
+            <input  maxlength="100" type="file" name="file"  class="form-control" placeholder="Upload a copy of your National ID"  required/>
           </div>
           
           <div class="form-group">

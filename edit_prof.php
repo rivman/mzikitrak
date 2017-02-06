@@ -139,14 +139,21 @@ $row4321=sqlsrv_fetch_array($session4321);
                                   <input class="form-control" type="text"  value="<?php echo $row4321['PhoneNumber']; ?>"> 
                                   </div>
                                 </div>
+                                <div class="btn-group btn-group-justified m-b">
+                                  <a href="profile.php" class="btn btn-success btn-rounded">
+                                    <span class="text">
+                                      <i class="fa fa-save"></i>   Save Changes
+                                    </span>
+                                  </a>
+                                </div>
                                 <div class="m-b-md">
-                              <h3 class="m-b-none">Connections</h3>
-                          </div>
-                          <p class="m-t-sm">
-                            <button class="btn btn-sm btn-default" data-toggle="tooltip" data-placement="top" title="Twitter"><a href="#" class="btn btn-rounded btn-twitter btn-icon"><i class="fa fa-twitter"></i></a></button>
-                            <button class="btn btn-sm btn-default" data-toggle="tooltip" data-placement="top" title="Facebook"><a href="#" class="btn btn-rounded btn-facebook btn-icon"><i class="fa fa-facebook"></i></a></button>
-                            <button class="btn btn-sm btn-default" data-toggle="tooltip" data-placement="top" title="Google Plus"><a href="#" class="btn btn-rounded btn-gplus btn-icon"><i class="fa fa-google-plus"></i></a></button>                            
-                          </p>
+                                  <h3 class="m-b-none">Connections</h3>
+                                </div>
+                                <p class="m-t-sm">
+                                  <button class="btn btn-sm btn-default" data-toggle="tooltip" data-placement="top" title="Twitter"><a href="#" class="btn btn-rounded btn-twitter btn-icon"><i class="fa fa-twitter"></i></a></button>
+                                  <button class="btn btn-sm btn-default" data-toggle="tooltip" data-placement="top" title="Facebook"><a href="#" class="btn btn-rounded btn-facebook btn-icon"><i class="fa fa-facebook"></i></a></button>
+                                  <button class="btn btn-sm btn-default" data-toggle="tooltip" data-placement="top" title="Google Plus"><a href="#" class="btn btn-rounded btn-gplus btn-icon"><i class="fa fa-google-plus"></i></a></button>                            
+                                </p>
                               </div>
                             </form>
                               </div>

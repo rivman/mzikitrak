@@ -20,17 +20,17 @@
                         <img src="images/m10.jpg" class="img-full m-b">
                       </div>
                       <div class="col-sm-7">
-                        <h2 class="m-t-none text-black">Song Title</h2>
+                        <h2 class="m-t-none text-black"></h2><!--Song title-->
                         <div class="clearfix m-b-lg">
                           <a href="#" class="thumb-sm pull-left m-r">
-                            <img src="images/a0.png" class="img-circle">
+                            <img src="images/MusicQuaver.png" class="img-circle"><!--Artist image -->
                           </a>
                           <div class="clear">
-                            <a href="#" class="text-info">Artist Name</a>
+                            <a href="#" class="text-info"></a><!--Artist Name-->
                           </div>
                         </div>
                         <div class="m-b-lg">
-                          <a href="#" class="btn btn-info">Play</a> <a href="#" class="btn btn-default">3 airplays this week</a>
+                          <a href="#" class="btn btn-info">Play</a> <a href="#" class="btn btn-default">0 airplays this week</a>
                         </div>
                         <div>
                           Stations: <a href="#" class="badge bg-light">Kiss 100</a> <a href="#" class="badge bg-light">Capital FM</a>
@@ -73,7 +73,7 @@
                         </a>
                         <div class="clear text-ellipsis">
                           <span><?php echo  $member['AudioTitle'];  ?></span>
-                          <span class="text-muted"> -- </span>
+                          <span class="text-muted"></span>
                         </div>
                       </li>
                       <?php } ?>
