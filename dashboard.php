@@ -47,7 +47,7 @@ else{
                             <div class="sparkline m-l m-r-lg pull-right" data-type="bar" data-height="35" data-bar-width="6" data-bar-spacing="2" data-bar-color="#fff">5,8,9,12,8,10,8,9,7,8,6</div>
                             <div class="m-t-md">
                               <span class="text-uc">New users</span>
-                              <div class="h4 m-n"><strong>1,120,100</strong></div>
+                              <div class="h4 m-n"><strong>1,120</strong></div>
                             </div>
                           </div>
                         </div>
@@ -56,12 +56,12 @@ else{
                     <section class="panel panel-default">
                       <header class="panel-heading font-bold">Your stats to date </header>
                       <div class="panel-body">
-                        <div id="flot-1ine" style="height:250px"></div>
+                        <div id="" style="height:250px"> You have empty stats.</div><!-- id = "flot-line" -->
                       </div>
                       <footer class="panel-footer bg-white">
                         <div class="row text-center no-gutter">
                           <div class="col-xs-3 b-r b-light">
-                            <p class="h3 font-bold m-t">2</p>
+                            <p class="h3 font-bold m-t">0</p>
                             <p class="text-muted">Songs</p>
                           </div>
                           <div class="col-xs-3 b-r b-light">
@@ -82,9 +82,9 @@ else{
                     <div class="row">
                       <div class="col-md-6">
                         <section class="panel panel-default">
-                          <header class="panel-heading font-bold">Multiple</header>
+                          <header class="panel-heading font-bold">Airplay per Month</header>
                           <div class="panel-body">
-                            <div id="flot-chart"  style="height:240px"></div>
+                            <div id=""  style="height:240px"><p>0 airplay.</p></div><!-- id = "flot-chart" -->                            
                           </div>
                         </section>
                       </div>
@@ -92,7 +92,7 @@ else{
                         <section class="panel panel-default">
                           <header class="panel-heading font-bold">Your best 3</header>
                           <div class="panel-body">
-                            <div id="flot-bar"  style="height:240px"></div>
+                            <div id=""  style="height:240px">Nothing to see here.</div><!-- id= "flot-bar" -->
                           </div>
                         </section>
                       </div>
