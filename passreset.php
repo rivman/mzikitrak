@@ -68,7 +68,7 @@ $row4321=sqlsrv_fetch_array($session4321);
                                     <input type="email" class="form-control" placeholder="Enter email" required>
                                     </div>
                                     <button type="submit" class="btn btn-sm btn-default">Submit</button>
-                                    <a href="#modal-form" class="btn btn-success" data-toggle="modal">Next</a>
+                                    <!--<a href="#modal-form" class="btn btn-success" data-toggle="modal">Next</a>-->
                                 </form>
                             </div>
                             </div>
