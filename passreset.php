@@ -68,6 +68,7 @@ $row4321=sqlsrv_fetch_array($session4321);
                                     <input type="email" class="form-control" placeholder="Enter email" required>
                                     </div>
                                     <button type="submit" class="btn btn-sm btn-default">Submit</button>
+                                    <a href="#modal-form" class="btn btn-success" data-toggle="modal">Next</a>
                                 </form>
                             </div>
                             </div>
@@ -86,5 +87,19 @@ $row4321=sqlsrv_fetch_array($session4321);
     </section>
   </section>
   <?php include 'scripts.php'; ?>
+  <div class="modal fade" id="modal-form">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body wrapper-lg">
+          <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+              <h4>Reset your password.</h4>
+              <p>A link has been sent to your email to reset your password.</p>
+            </div>
+          </div>          
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
