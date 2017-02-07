@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" class="app">
 <?php include 'css.php'; ?>
+
+
+
 <body class="bg-info dker">
+
+
   <section id="content" class="m-t-lg wrapper-md animated fadeInDown">
     <div class="container aside-xl">
       <a class="navbar-brand block" href="form-wizard.html"><span class="h1 font-bold">MzikiTrak</span></a>

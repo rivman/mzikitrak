@@ -221,7 +221,11 @@ $row431=sqlsrv_fetch_array($session431);
       </div>
       <div class="stepwizard-step">
         <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
-        <p>Payment</p>
+        <p>Notification</p>
+      </div>
+      <div class="stepwizard-step">
+        <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
+        <p>Signature</p>
       </div>
     </div>
   </div>
@@ -342,22 +346,35 @@ $row431=sqlsrv_fetch_array($session431);
         </div>
       </div>
     </div>
-    <div class="row setup-content" id="step-3">
-      <div class="col-xs-6 col-md-offset-2">
+     <div class="row setup-content" id="step-3">
+      <div class="col-xs-6 col-md-offset-3">
         <div class="col-md-12">
-          <h3> Payment</h3>
-         <p>
-         <br>1.Go to M-Pesa menu, select Lipa na M-Pesa</br>
-         <br>2.Select Paybill Paybill Account No. 800902</br>
-         <br>3.Select Enter business no. </br>
-         <br>4.Select Enter account no <?php echo $row431['AccountNo'] ?></br>
-         <br>5.Enter amount ( 500.00) and press OK</br>
-         </p>
-         <p><strong>NB.</strong>Account Name:FLAG FORTY TWO LIMITED</p>
-          <button  type="submit" class="btn btn-success btn-lg pull-right">Submit</button>
+          <h3> Notification</h3>
+          <p>How would you like to receive your notification </p>
+         <input type="radio" name="phone" value="phone" > Phone<br>
+         <input type="radio" name="email" value="email"> Email<br>
+         <h4>Frequency (Monthly, Quarterly)</h4>
+          <p>Weekly or daily notification is a premium service. For this, kindly email us at info@mzikitrak.com </p>
+         
+          
+          <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
         </div>
       </div>
     </div>
+    <div class="row setup-content" id="step-4">
+      <div class="col-xs-6 col-md-offset-2">
+        <div class="col-md-12">
+          <h3>Signature</h3>
+         <div class="form-group">
+            <label class="control-label">Full Name</label>
+            <input maxlength="200" type="text" name="fullname"  required="required" class="form-control" placeholder="Enter Full Name"  />
+            <label><input type="checkbox" name="terms"> I agree with the <a href="http://mzikitrak.azurewebsites.net/index.php">Terms and Conditions</a>.</label>
+          </div>
+          <button type="submit" class="btn btn-success btn-lg pull-right">Submit</button>
+        </div>
+      </div>
+    </div>
+    
   </form>
   
 </div>
@@ -408,14 +425,14 @@ $row431=sqlsrv_fetch_array($session431);
           curInputs = curStep.find("input[type='text'],input[type='url']"),
           isValid = true;
 
-                  $(".form-group").removeClass("has-error");
+                 
+ $(".form-group").removeClass("has-error");
         for(var i=0; i<curInputs.length; i++){
             if (!curInputs[i].validity.valid){
                 isValid = false;
                 $(curInputs[i]).closest(".form-group").addClass("has-error");
             }
         }
-
       
 
       if (isValid)

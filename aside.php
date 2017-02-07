@@ -30,14 +30,14 @@
                     <ul class="dropdown-menu animated fadeInRight aside text-left">
                       <li>
                         <span class="arrow bottom hidden-nav-xs"></span>
-                        <a href="#">Settings</a>
+                      
                       </li>
                       <li>
                         <a href="profile.php">Profile</a>
                       </li>
                       
                       <li>
-                        <a href="#">Help</a>
+                        
                       </li>
                       <li class="divider"></li>
                       <li>

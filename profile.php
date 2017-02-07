@@ -11,6 +11,7 @@ $acc=$row431['AccountNo'];
 $image=$row431['PassportPhoto'];
 $county=$row431['County'];
 
+
 $session4321=sqlsrv_query($conn, "SELECT * FROM NextofKin WHERE AccountNumber='$acc' ");
 $row4321=sqlsrv_fetch_array($session4321);
 

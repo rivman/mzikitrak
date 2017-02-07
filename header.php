@@ -67,14 +67,14 @@ if ($status==0) {
             <ul class="dropdown-menu animated fadeInRight">
               <li>
                 <span class="arrow top"></span>
-                <a href="#">Settings</a>
+            
               </li>
               <li>
                 <a href="profile.php">Profile</a>
               </li>
               
               <li>
-                <a href="#">Help</a>
+                
               </li>
               <li class="divider"></li>
               <li>
