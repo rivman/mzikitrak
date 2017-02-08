@@ -36,6 +36,7 @@ $final_file1=str_replace(' ','-',$new_file_name1);
 $folder2='music/'.$final_file1;
 move_uploaded_file ($file_loc1, $folder2);
 
+######AudioClip#######
 $Name=$_POST['name'];
 $s='0';
 $udate=date('d-m-Y');
@@ -43,20 +44,43 @@ $mins=$_POST['minutes'];
 $secs=$_POST['seconds'];
 $dateofrelease=$_POST['rdate'];
 $recordlabel=$_POST['rlabel'];
+######Contributor########
+$conName=$_POST['contname'];
+$conPercent=$_POST['percent'];
+$conEmail=$_POST['contemail'];
+$conNo=$_POST['contno'];
+########Featuring Artist#######
+$featName=$_POST['ftname'];
+$featNumber=$_POST['ftno'];
+$featEmail=$_POST['ftemail'];
 
 $sql2="INSERT INTO AudioClip(AccountNo,AudioTitle,AudioPath,Artist,Status,Coverart,Uploaddate,lengthMinutes,lengthSeconds,DateOfRelease,RecordLabel) VALUES(?,?,?,?,?,?,?,?,?,?,?)";
 $params = array($acc,$Name,$final_file1,$Cname,$s,$final_file,$udate,$mins,$secs,$dateofrelease,$recordlabel);
 $stmt12 = sqlsrv_query( $conn, $sql2, $params);
 
-            if( $stmt12 === false ) {
-         die( print_r( sqlsrv_errors(), true));
-                }
+if( $stmt12 === false )
+      {
+            die( print_r( sqlsrv_errors(), true));
+      }
+$sqlContrib="INSERT INTO Contributor(ContributorName,ContributorPercentage, ContributorEmail, ContributorPhoneNo) VALUES (?,?,?,?)";
+$contribParams=array($conName, $conPercent, $conEmail, $conNo);
+$stmt13 = sqlsrv_query( $conn, $sqlContrib, $contribParams);
 
+if( $stmt13 === false )
+      {
+            die( print_r( sqlsrv_errors(), true));
+      }
 
-
+$sqlFeatArt="INSERT INTO FeatArtist(FeatArtistName,FeatArtistEmail,FeatArtistPhoneNumber)VALUES(?,?,?)";
+$featArtistParams=array($featName,$featEmail,$featNumber);
+$popFeatTable= sqlsrv_query ($conn, $sqlFeatArt,$featArtistParams);
+if( $popFeatTable === false )
+      {
+            die( print_r( sqlsrv_errors(), true));
+      }
 
 ?>
-            <script language="javascript">
-                  alert("Upload Successful");
-                  top.location.href = "songs.php"; //the page to redirect
-            </script>
+<script language="javascript">
+      alert("Upload Successful");
+      top.location.href = "songs.php"; //the page to redirect
+</script>

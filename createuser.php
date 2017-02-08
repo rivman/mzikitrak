@@ -5,7 +5,9 @@ $rt1=$_POST['fname'];
 $rt2=$_POST['lname'];
 $rt3=$_POST['email'];
 $rt4=$_POST['pnumber'];
+$s_name=$_POST['stagename'];
 $rt12=date('Y');
+
 //$rt5=md5(uniqid(rand(10000,10000), true));
 
 $echeck=sqlsrv_query($conn,"SELECT Email from ClientInfo where Email='$rt3'" );
@@ -125,10 +127,10 @@ $var1="1";
 
 
 
-$query = "INSERT INTO ClientInfo (FirstName,LastName,Email,PhoneNumber,AccountNo)
-                        VALUES  (?,?,?,?,?)";
+$query = "INSERT INTO ClientInfo (FirstName,LastName,Email,PhoneNumber,AccountNo,StageName)
+                        VALUES  (?,?,?,?,?,?)";
 
-                $params = array($rt1,$rt2,$rt3,$rt4,$accountno);        
+                $params = array($rt1,$rt2,$rt3,$rt4,$accountno,$s_name);        
             $stmt = sqlsrv_query( $conn, $query, $params);
 
             if( $stmt === false ) {
