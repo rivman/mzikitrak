@@ -76,7 +76,7 @@
                         </a>
                         <div class="clear text-ellipsis">
                           <span><?php echo  $member['AudioTitle'];  ?></span>
-                          <span class="text-muted"></span>
+                          <span class="text-muted"> - <?php $y= $member['lengthMinutes']; if($y<10){$z="0".$y; echo $z;}else {echo  $y;}; ?>: <?php $y= $member['lengthSeconds']; if($y<10){$z="0".$y; echo $z;}else{ echo  $y;} ; ?></span>
                         </div>
                       </li>
                       <?php } ?>
@@ -130,7 +130,7 @@
         <div class="modal-body wrapper-lg">
           <div class="row">
             <div class="col-sm-12">
-                  <form id="wizardform" method="get" action="#">
+                  <form id="wizardform" method="POST" action="musicuplod.php" enctype="multipart/form-data">
                     <div class="panel panel-default">
                       <div class="panel-heading">
                         <ul class="nav nav-tabs font-bold">
@@ -142,60 +142,60 @@
                         </ul>
                       </div>
                       <div class="panel-body">
-                        <p>Fill in the details below. Confrim before submitting.</p>
+                        <p>Fill in the details below. Confirm before submitting.</p>
                         <div class="line line-lg"></div>
                         <div class="progress progress-xs m-t-md">
                           <div class="progress-bar bg-success"></div>
                         </div>
                         <div class="tab-content">
                           <div class="tab-pane" id="step1">
-                            <div class="line line-lg"></div>
+                          <div class="line line-lg"></div>
                             <h4>Song Details</h4>
                             <div class="line line-lg"></div>                            
                             <p>Audio Name:</p>
-                            <input type="text" class="form-control" data-trigger="change" data-required="true"  placeholder="Title of your song/sound clip">
+                            <input type="text" class="form-control" name="name" data-trigger="change" data-required="true"  placeholder="Title of your song/sound clip">
                             <p class="m-t">Artwork</p>
-                            <input type="file" class="form-control" data-trigger="change" data-required="true" placeholder="" accept="image/*">
+                            <input type="file" class="form-control" name="file" data-trigger="change" data-required="true" placeholder="" accept="image/*">
                             <p class="m-t">Length</p>
                             <div class="row">
-                              <div class="col-sm-6"><input type="number" class="form-control" data-trigger="change" data-required="true" min="0" max="59" placeholder="Minutes"></div>
-                              <div class="col-sm-6"><input type="number" class="form-control" data-trigger="change" data-required="true" min="1" max="59" placeholder="Seconds"></div>
+                              <div class="col-sm-6"><input type="number" name="minutes" class="form-control" data-trigger="change" data-required="true" min="0" max="59" placeholder="Minutes"></div>
+                              <div class="col-sm-6"><input type="number" name="seconds" class="form-control" data-trigger="change" data-required="true" min="1" max="59" placeholder="Seconds"></div>
                             </div>                            
                             <p class="m-t">Mp3</p>
-                            <input type="file" class="form-control" data-trigger="change" data-required="true" placeholder="" data-classButton="btn btn-default" data-classInput="form-control inline v-middle input-s" accept=".mp3">
+                            <input type="file" class="form-control" name="file1" data-trigger="change" data-required="true" placeholder="" data-classButton="btn btn-default" data-classInput="form-control inline v-middle input-s" accept=".mp3">
                             <p class="m-t">Date of Release</p>
-                            <input class="input-sm input-s datepicker-input form-control" size="16" type="text" value="01-01-2000" data-date-format="dd-mm-yyyy" >
+                            <input class="input-sm input-s datepicker-input form-control" size="16" name="rdate" type="text" value="01-01-2000" data-date-format="dd-mm-yyyy" >
                             <p class="m-t">Record Label:</p>
-                            <input type="text" class="form-control" data-trigger="change" data-required="true" placeholder="">
-                          </div>
+                            <input type="text" class="form-control" name="rlabel" data-trigger="change" data-required="true" placeholder="">
+                          </div>                                                      
                           <div class="tab-pane" id="step2">
-                            <div class="line line-lg"></div>
+                          <div class="line line-lg"></div>
                             <h4>Contributors</h4>
                             <div class="line line-lg"></div>
                             <p style="text-decoration: underline;">Contributor</p>
-                            <select name="account" class="form-control m-b" data-required="true"  placeholder="Contributors to your song.">
-                              <option>Performer</option>
-                              <option>Producer</option>
-                              <option>Author</option>
-                              <option>Composer</option>
-                              <option value="">Arranger</option>
+                            <select name="contribtype" class="form-control m-b" data-required="true"  placeholder="Contributors to your song.">
+                              <option value="Performer">Performer</option>
+                              <option value="Producer">Producer</option>
+                              <option value="Author">Author</option>
+                              <option value="Composer">Composer</option>
+                              <option value="Arranger">Arranger</option>
                             </select>                            
                             <p class="m-t">Name</p>
-                            <input type="text" class="form-control" data-trigger="change" data-required="true" placeholder="">
+                            <input type="text" name="contname" class="form-control" data-trigger="change" data-required="true" placeholder="">
                             <p class="m-t">Percentage of Contribution</p>
                             <input type="number" name="percent" min="1" max="99" class="form-control" data-trigger="change" data-required="true"  placeholder="">
                             <p class="m-t">Mobile</p>
-                            <input type="number" class="form-control" data-trigger="change" data-required="true" placeholder="">
+                            <input type="text" name="contno" class="form-control" data-trigger="change" data-required="true" placeholder="">
                             <p class="m-t">Email</p>
-                            <input type="text" class="form-control" data-trigger="change" data-required="true" placeholder="">
+                            <input type="text" name="contemail" class="form-control" data-trigger="change" data-required="true" placeholder="">
                             <div class="line line-lg"></div>
                             <p style="text-decoration: underline;">Featuring</p>
                             <p class="m-t">Name</p>
-                            <input type="text" class="form-control" data-trigger="change" data-required="true" placeholder="">
+                            <input type="text" name="ftname"class="form-control" data-trigger="change" data-required="true" placeholder="">
                             <p class="m-t">Mobile</p>
-                            <input type="number" class="form-control" data-trigger="change" data-required="true" placeholder="">
+                            <input type="text" name="ftno" class="form-control" data-trigger="change" data-required="true" placeholder="">
                             <p class="m-t">Email</p>
-                            <input type="text" class="form-control" data-trigger="change" data-required="true" placeholder="">                
+                            <input type="text" name="ftemail" class="form-control" data-trigger="change" data-required="true" placeholder="">                                          
                           </div>
                           <div class="tab-pane" id="step3">
                             <div class="line line-lg"></div>
@@ -241,7 +241,10 @@
                           </div>
                           <div class="tab-pane" id="step5">
                             <p>Your email:</p>
-                            <input type="text" class="form-control" data-trigger="change" data-required="true" data-type="email" placeholder="email address">
+                              <input type="text" class="form-control" data-trigger="change" data-required="true" data-type="email" placeholder="email address">
+                              <p style="float:right;">
+                                <button type="submit" class="btn btn-success" ></i> Upload </button> <i class="fa fa-spin fa-spinner hide" id="spin"></i>
+                              </p>                           
                           </div>
                           <ul class="pager wizard m-b-sm">
                             <li class="previous first" style="display:none;"><a href="#">First</a></li>
