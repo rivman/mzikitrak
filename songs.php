@@ -164,7 +164,7 @@
                             <p class="m-t">Mp3</p>
                             <input type="file" class="form-control" name="file1" data-trigger="change" data-required="true" placeholder="" data-classButton="btn btn-default" data-classInput="form-control inline v-middle input-s" accept=".mp3">
                             <p class="m-t">Date of Release</p>
-                            <input class="input-sm input-s datepicker-input form-control" size="16" name="rdate" type="text" value="01-01-2000" data-date-format="dd-mm-yyyy" >
+                            <input class="input-sm input-s datepicker-input form-control" size="16" name="rdate" type="text" value="01-01-2015" data-date-format="dd-mm-yyyy" >
                             <p class="m-t">Record Label:</p>
                             <input type="text" class="form-control" name="rlabel" data-trigger="change" data-required="true" placeholder="">
                           </div>                                                      
@@ -185,17 +185,17 @@
                             <p class="m-t">Percentage of Contribution</p>
                             <input type="number" name="percent" min="1" max="99" class="form-control" data-trigger="change" data-required="true"  placeholder="">
                             <p class="m-t">Mobile</p>
-                            <input type="text" name="contno" class="form-control" data-trigger="change" data-required="true" placeholder="">
+                            <input type="text" name="contno" class="form-control" data-trigger="change" data-required="true" placeholder="Phone Number">
                             <p class="m-t">Email</p>
-                            <input type="text" name="contemail" class="form-control" data-trigger="change" data-required="true" placeholder="">
+                            <input type="text" name="contemail" class="form-control" data-trigger="change" data-required="true" data-type="email" placeholder="email address">
                             <div class="line line-lg"></div>
                             <p style="text-decoration: underline;">Featuring</p>
                             <p class="m-t">Name</p>
                             <input type="text" name="ftname"class="form-control" data-trigger="change" data-required="true" placeholder="">
                             <p class="m-t">Mobile</p>
-                            <input type="text" name="ftno" class="form-control" data-trigger="change" data-required="true" placeholder="">
+                            <input type="text" name="ftno" class="form-control" data-trigger="change" data-required="true" placeholder="Phone Number">
                             <p class="m-t">Email</p>
-                            <input type="text" name="ftemail" class="form-control" data-trigger="change" data-required="true" placeholder="">                                          
+                            <input type="text" name="ftemail" class="form-control" data-trigger="change" data-required="true" placeholder="Email Address">                                          
                           </div>
                           <div class="tab-pane" id="step3">
                             <div class="line line-lg"></div>
@@ -236,20 +236,16 @@
                             <small>Admin fees apply. <a href="">View fees?</a></small>
                           </div>
                           <div class="tab-pane" id="step4">
-                            <p>Your email:</p>
-                            <input type="text" class="form-control" data-trigger="change" data-required="true" data-type="email" placeholder="email address">
+                            <!--<p>Your email:</p>
+                            <input type="text" class="form-control" data-trigger="change" data-required="true" data-type="email" placeholder="email address">-->
                           </div>
-                          <div class="tab-pane" id="step5">
-                            <p>Your email:</p>
-                              <input type="text" class="form-control" data-trigger="change" data-required="true" data-type="email" placeholder="email address">
-                              <p style="float:right;">
-                                <button type="submit" class="btn btn-success" ></i> Upload </button> <i class="fa fa-spin fa-spinner hide" id="spin"></i>
-                              </p>                           
+                          <div class="tab-pane" id="step5" style="text-aligh:center;">
+                              <button type="submit" class="btn btn-success" style="margin:0 auto;"> Done <i class="fa fa-check"></i></button> <i class="fa fa-spin fa-spinner hide" id="spin"></i>                     
                           </div>
                           <ul class="pager wizard m-b-sm">
                             <li class="previous first" style="display:none;"><a href="#">First</a></li>
                             <li class="previous"><a href="#">Previous</a></li>
-                            <li class="next last" style="display:none;"><a href="#">Last</a></li>
+                            <li class="next last"><a href="#">Last</a></li>
                             <li class="next"><a href="#">Next</a></li>
                           </ul>
                         </div>
@@ -259,8 +255,8 @@
                 </div>
           </div>          
         </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
+      </div>
+    </div>
   </div>
 </body>
 </html>
