@@ -21,7 +21,7 @@
                       </span>
                       <span class="hidden-nav-xs clear">
                         <span class="block m-l">
-                          <strong class="font-bold text-lt"><?php echo $login_session;  ?></strong>
+                          <strong class="font-bold text-lt"><?php echo $firstname." ".$lastname;  ?></strong>
                           <b class="caret"></b>
                         </span>
                         <span class="text-muted text-xs block m-l">Artist</span>

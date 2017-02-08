@@ -10,6 +10,9 @@ $row431=sqlsrv_fetch_array($session431);
 $acc=$row431['AccountNo'];
 $image=$row431['PassportPhoto'];
 $county=$row431['County'];
+$firstname=$row431['FirstName'];
+$lastname=$row431['LastName'];
+
 
 
 $session4321=sqlsrv_query($conn, "SELECT * FROM NextofKin WHERE AccountNumber='$acc' ");
@@ -37,7 +40,7 @@ $row4321=sqlsrv_fetch_array($session4321);
                           </a>
                        
                           <div>
-                            <div class="h3 m-t-xs m-b-xs"> <?php echo $login_session;  ?></div>
+                            <div class="h3 m-t-xs m-b-xs"> <?php echo $firstname." ".$lastname;  ?></div>
                             <small class="text-muted"><i class="fa fa-map-marker"></i> <?php echo $county; ?></small>
                           </div>
                         </div>

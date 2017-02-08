@@ -16,6 +16,8 @@ $session431=sqlsrv_query($conn, "SELECT * FROM ClientInfo WHERE Email='$check' "
 $row431=sqlsrv_fetch_array($session431);
 $acc=$row431['AccountNo'];
 $image=$row431['PassportPhoto'];
+$firstname=$row431['FirstName'];
+$lastname=$row431['LastName'];
 
 
 if ($status==0) {
@@ -61,7 +63,7 @@ if ($status==0) {
               <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
                 <img src="uploadimages/<?php echo $image;  ?>" alt="...">
               </span>
-              <?php echo $login_session;  ?> <b class="caret"></b>
+              <?php echo $firstname." ".$lastname;  ?> <b class="caret"></b>
             </a>
             <ul class="dropdown-menu animated fadeInRight">
               <li>
