@@ -310,12 +310,12 @@ $row431=sqlsrv_fetch_array($session431);
           </div>
           <div class="form-group">
             <label class="control-label">Upload a copy of your National ID</label> <small>(It should be in PDF format.)</small>
-            <input  maxlength="100" type="file" name="file" required="required"  class="form-control" placeholder="Upload a copy of your National ID"  />
+            <input  maxlength="100" type="file" name="file" required="required"  class="form-control" placeholder="Upload a copy of your National ID"  / accept=".pdf">
           </div>
           
           <div class="form-group">
             <label class="control-label">Upload Passport Photo</label>
-            <input maxlength="100" type="file" name="file1" required="required" class="form-control" placeholder="Upload Passport Photo"  />
+            <input maxlength="100" type="file" name="file1" required="required" class="form-control" placeholder="Upload Passport Photo"  / accept="image/*">
           </div>
 
           <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
@@ -351,8 +351,16 @@ $row431=sqlsrv_fetch_array($session431);
         <div class="col-md-12">
           <h3> Notification</h3>
           <p>How would you like to receive your notification </p>
-         <input type="radio" name="phone" value="phone" > Phone<br>
-         <input type="radio" name="email" value="email"> Email<br>
+          <div class="radio i-checks">
+            <label>
+            <input type="radio" name="a" value="option1"><i></i>Email
+            </label>
+          </div>
+          <div class="radio i-checks">
+          <label>
+          <input type="radio" name="a" value="option2" checked><i></i>Phone Number
+          </label>
+          </div>
          <h4>Frequency (Monthly, Quarterly)</h4>
           <p>Weekly or daily notification is a premium service. For this, kindly email us at info@mzikitrak.com </p>
          

@@ -38,11 +38,14 @@ move_uploaded_file ($file_loc1, $folder2);
 
 $Name=$_POST['name'];
 $s='0';
-$udate=date('d/m/Y');
+$udate=date('d-m-Y');
+$mins=$_POST['minutes'];
+$secs=$_POST['seconds'];
+$dateofrelease=$_POST['rdate'];
+$recordlabel=$_POST['rlabel'];
 
-$sql2="INSERT INTO AudioClip(AccountNo,AudioTitle,AudioPath,Artist,Status,Coverart,Uploaddate)
-VALUES(?,?,?,?,?,?,?)";
-$params = array($acc,$Name,$final_file1,$Cname,$s,$final_file,$udate);
+$sql2="INSERT INTO AudioClip(AccountNo,AudioTitle,AudioPath,Artist,Status,Coverart,Uploaddate,lengthMinutes,lengthSeconds,DateOfRelease,RecordLabel) VALUES(?,?,?,?,?,?,?,?,?,?,?)";
+$params = array($acc,$Name,$final_file1,$Cname,$s,$final_file,$udate,$mins,$secs,$dateofrelease,$recordlabel);
 $stmt12 = sqlsrv_query( $conn, $sql2, $params);
 
             if( $stmt12 === false ) {
