@@ -3,6 +3,21 @@
 <?php include 'css.php'; ?>
 
 
+<script type="text/javascript">
+function checkMailStatus(){
+    //alert("came");
+var email=$("email").val();// value in field email
+$.ajax({
+    type:'post',
+        url:'createuser.php',// put your real file name 
+        data:{email: email},
+        success:function(msg){
+        alert(msg); // your message will come here.     
+        }
+ });
+}
+
+</script>
 
 <body class="bg-info dker">
 
@@ -14,7 +29,7 @@
         <header class="wrapper text-center">
           <strong>Sign up to get started</strong>
         </header>
-        <form action="createuser.php" method="POST">
+        <form action="createuser.php" method="POST" >
           <div class="form-group">
             <input placeholder="First Name" name="fname" required="required" class="form-control rounded input-lg text-center no-border">
           </div>
@@ -22,7 +37,7 @@
             <input placeholder="Last Name" name="lname" required="required" class="form-control rounded input-lg text-center no-border">
           </div>
           <div class="form-group">
-            <input type="email" name="email" required="required" placeholder="Email Address" class="form-control rounded input-lg text-center no-border">
+            <input type="email" name="email" required="required" placeholder="Email Address" class="form-control rounded input-lg text-center no-border" onblur="checkMailStatus()">
           </div>
           <div class="form-group">
              <input type="phone number" name="pnumber" required="required"  placeholder="Phone Number" class="form-control rounded input-lg text-center no-border">

@@ -238,7 +238,7 @@ $row431=sqlsrv_fetch_array($session431);
           
           <div class="form-group">
             <label class="control-label">County</label>
-            <select class="form-control" name="county" required >
+            <select class="form-control"  name="county" required="required"   >
               <option disabled selected>Select your county</option>
               <option value="Baringo">Baringo</option>  
               <option value="Bomet">Bomet </option>
@@ -298,7 +298,7 @@ $row431=sqlsrv_fetch_array($session431);
           </div>
           <div class="form-group">
             <label class="control-label">Address</label>
-            <input  maxlength="100" type="text" class="form-control" required="required"  placeholder="Enter Postal Address" required  />           
+            <input  maxlength="100" type="text" class="form-control"  required="required"   placeholder="Enter Postal Address"  />           
           </div>
           <div class="form-group">
             <label class="control-label">Change Password</label>
@@ -425,7 +425,8 @@ $row431=sqlsrv_fetch_array($session431);
           curInputs = curStep.find("input[type='text'],input[type='url']"),
           isValid = true;
 
-                 
+          
+
  $(".form-group").removeClass("has-error");
         for(var i=0; i<curInputs.length; i++){
             if (!curInputs[i].validity.valid){
@@ -433,7 +434,41 @@ $row431=sqlsrv_fetch_array($session431);
                 $(curInputs[i]).closest(".form-group").addClass("has-error");
             }
         }
-      
+      function validate() {
+    var output = true;
+    $(".form-group").html('');
+    if($("#personal-field").css('display') != 'none') {
+        if(!($("#name").val())) {
+            output = false;
+            $("#name-error").html("Name required!");
+        }
+        if(!($("#email").val())) {
+            output = false;
+            $("#email-error").html("Email required!");
+        }
+        /** Remove below Comment for email validation **/ 
+        if(!$("#email").val().match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
+            $("#email-error").html("Invalid Email!");
+            output = false;
+        }
+    }
+ 
+    if($("#password-field").css('display') != 'none') {
+        if(!($("#user-password").val())) {
+            output = false;
+            $("#password-error").html("Password required!");
+        } 
+        if(!($("#confirm-password").val())) {
+            output = false;
+            $("#confirm-password-error").html("Confirm password required!");
+        } 
+        if($("#user-password").val() != $("#confirm-password").val()) {
+            output = false;
+            $("#confirm-password-error").html("Password not matched!");
+        } 
+    }
+    return output;
+}
 
       if (isValid)
           nextStepWizard.removeAttr('disabled').trigger('click');

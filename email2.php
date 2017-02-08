@@ -1,23 +1,30 @@
-<?php
-$email=$_GET['email'];
-//$password=$_GET['password'];
+<? php
+include('conn.php');
 
 
-$to = $email; // this is your Email address
-    $from ="alerts@mzikitrak.com"; // this is the sender's Email address
-    
-    $subject = "Login  details";
-    $subject2 = "Copy of your form submission";
-    $message = " Click this link to reset your password:"."\n\n"."http://mzikitrak.azurewebsites.net/newpass.php" . "\n\n"."Email Address"."\n\n" . $email.//"\n\n"."password"."\n\n" .$password;
-   // $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+if(isset($_POST) & !empty($_POST)){
+  $check=$_SESSION['SESS_username'];
+  $session43=sqlsrv_query($conn, "SELECT * FROM LoginCredentials WHERE Username='$check' ");
+  $res = sqlsrv_query($connection, $sql);
+  $count = sqlsrv_num_rows($res);
+  if($count == 1){
+    echo "Send email to user with password";
+  }else{
+    echo "User name does not exist in database";
+  }
+}
 
-    $headers = "From:" . $from;
-    $headers2 = "From:" . $to;
-    mail($to,$subject,$message,$headers);
-    //mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+$r = sqlsrv_fetch_assoc($res);
+$password = $r['password'];
+$to = $r['email'];
+$subject = "Your Recovered Password";
+ 
+$message = "Please use this password to login " . $password;
+$headers = "From : vivek@codingcyber.com";
+if(mail($to, $subject, $message, $headers)){
+  echo "Your Password has been sent to your email id";
+}else{
+  echo "Failed to Recover your password, try again";
+}
+
 ?>
-
-<script language="javascript">
-                  alert("We have sent the password reset link to your  email");
-                  top.location.href = "http://mzikitrak.azurewebsites.net/index.php"; //the page to redirect
-            </script>

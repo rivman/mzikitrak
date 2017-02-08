@@ -8,6 +8,15 @@ $rt4=$_POST['pnumber'];
 $rt12=date('Y');
 //$rt5=md5(uniqid(rand(10000,10000), true));
 
+$echeck=($conn,"SELECT Email from register where Email='$rt3'" );
+   $echk=sqlsrv_query($echeck);
+   $ecount=sqlsrv_num_rows($echk);
+  if($ecount!=0)
+   {
+      echo "Email already exists";
+   }
+
+
 $result3=sqlsrv_query($conn,"SELECT MAX(ID) as max FROM ClientInfo");
                             $row12=sqlsrv_fetch_array($result3);
 
