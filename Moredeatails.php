@@ -351,21 +351,16 @@ $row431=sqlsrv_fetch_array($session431);
         <div class="col-md-12">
           <h3> Notification</h3>
           <p>How would you like to receive your notification </p>
-          <div class="radio i-checks">
-            <label>
-            <input type="radio" name="a" value="option1"><i></i>Email
-            </label>
+         <div class="form-group">
+                    <input type="radio" name="chooseone" <label for="email"> Email</label>
+            <input maxlength="200" type="email" name="option1"   value="<?php echo $row431['Email']; ?>" required="required" class="form-control" placeholder="Enter Email Address"  />
           </div>
-          <div class="radio i-checks">
-          <label>
-          <input type="radio" name="a" value="option2" checked><i></i>Phone Number
-          </label>
-          </div>
-         <h4>Frequency (Monthly, Quarterly)</h4>
-          <p>Weekly or daily notification is a premium service. For this, kindly email us at info@mzikitrak.com </p>
+          <div class="form-group">
+          <input type="radio" name="chooseone" <label for="PhoneNumber"> Phone Number</label>
+            <input maxlength="200" type="text" name="option1" value="<?php echo $row431['PhoneNumber']; ?>" required="required" class="form-control" placeholder="Enter Phone Number"  />
          
-          
           <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+        </div>
         </div>
       </div>
     </div>
@@ -384,6 +379,92 @@ $row431=sqlsrv_fetch_array($session431);
     </div>
     
   </form>
+  <script type='text/javascript'>
+// <![CDATA[
+    //var pwdwidget = new PasswordWidget('thepwddiv','password');
+    //pwdwidget.MakePWDWidget();
+    
+    function Submit(){
+ var emailRegex = /^[A-Za-z0-9._]*\@[A-Za-z]*\.[A-Za-z]{2,5}$/;
+ var fname = document.form.Name.value,
+  lname = document.form.LastName.value,
+  femail = document.form.Email.value,
+  fstagename = document.form.stagename.value,
+  fpassword = document.form.Password.value,
+  faddress = document.form.address.value,
+  fnationalID = document.form.nationalID.value,
+  fpassportphoto = document.form.passportphoto.value;
+  fcounty = document.form.county.value,
+   
+ if( fname == "" )
+   {
+     document.form.Name.focus() ;
+  document.getElementById("errorBox").innerHTML = "enter the first name";
+     return false;
+   }
+ if( lname == "" )
+   {
+     document.form.LastName.focus() ;
+   document.getElementById("errorBox").innerHTML = "enter the last name";
+     return false;
+   }
+    
+   if (femail == "" )
+ {
+  document.form.Email.focus();
+  document.getElementById("errorBox").innerHTML = "enter the email";
+  return false;
+  }else if(!emailRegex.test(femail)){
+  document.form.Email.focus();
+  document.getElementById("errorBox").innerHTML = "enter the valid email";
+  return false;
+  }
+   
+   
+    if( fpassword == "" )
+   {
+     document.form.password.focus() ;
+   document.getElementById("errorBox").innerHTML = "enter password";
+     return false;
+   } 
+
+ if( fstagename == "" )
+   {
+     document.form.stagename.focus() ;
+   document.getElementById("errorBox").innerHTML = "enter stagename";
+     return false;
+   } 
+
+   
+   if (faddress == "") {
+        document.form.address.value.focus();
+  document.getElementById("errorBox").innerHTML = "enter the address";
+        return false;
+     }
+  if (fnationalID == "") {
+        document.form.nationalID.focus();
+  document.getElementById("errorBox").innerHTML = "Upload nationalID";
+        return false;
+     }
+  if (fpassportphoto == "") {
+        document.form.passportphoto.focus();
+  document.getElementById("errorBox").innerHTML = "Upload passportphoto";
+        return false;
+     }
+  if(f.county ==""){
+    document.form.county.focus();
+    document.getElementById("errorBox").innerHTML = "select your county";
+    return false;
+   }
+  if(fname != '' && lname != '' && femail != '' && fstagename != '' && fpassword != '' && faddress != '' && fnationalID != '' && fpassportphoto != '' && fcounty != ''){
+   document.getElementById("errorBox").innerHTML = "form submitted successfully";
+   }
+     
+}
+- See more at: http://www.webcodehelpers.com/2013/11/registration-form-validation-using-javascript-with-example.html#sthash.b10IntHX.dpuf
+// ]]>
+</script>
+
   
 </div>
                   
@@ -442,42 +523,7 @@ $row431=sqlsrv_fetch_array($session431);
                 $(curInputs[i]).closest(".form-group").addClass("has-error");
             }
         }
-      function validate() {
-    var output = true;
-    $(".form-group").html('');
-    if($("#personal-field").css('display') != 'none') {
-        if(!($("#name").val())) {
-            output = false;
-            $("#name-error").html("Name required!");
-        }
-        if(!($("#email").val())) {
-            output = false;
-            $("#email-error").html("Email required!");
-        }
-        /** Remove below Comment for email validation **/ 
-        if(!$("#email").val().match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
-            $("#email-error").html("Invalid Email!");
-            output = false;
-        }
-    }
- 
-    if($("#password-field").css('display') != 'none') {
-        if(!($("#user-password").val())) {
-            output = false;
-            $("#password-error").html("Password required!");
-        } 
-        if(!($("#confirm-password").val())) {
-            output = false;
-            $("#confirm-password-error").html("Confirm password required!");
-        } 
-        if($("#user-password").val() != $("#confirm-password").val()) {
-            output = false;
-            $("#confirm-password-error").html("Password not matched!");
-        } 
-    }
-    return output;
-}
-
+      
       if (isValid)
           nextStepWizard.removeAttr('disabled').trigger('click');
   });

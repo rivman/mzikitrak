@@ -69,7 +69,7 @@ $row4321=sqlsrv_fetch_array($session4321);
                         </div>
                         <div>
                           <div class="panel-body">
-                            <form action="" class="form-horizontal">
+                            <form action="edit1.php" method="post" class="form-horizontal">
                             <div class="m-b-md">
                                 <h3 class="m-b-none">Info</h3>
                               </div>
