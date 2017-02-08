@@ -29,9 +29,8 @@ if ($status==0) {
         <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
           <i class="icon-list"></i>
         </a>
-        <a href="index.html" class="navbar-brand text-lt">
-          <i class="icon-earphones"></i>
-          <img src="images/mtrakLogo.png" alt="." class="hide">
+        <a href="dashboard.php" class="navbar-brand text-lt">
+          <img src="images/mtrakLogo.png" alt=".">
           <span class="hidden-nav-xs m-l-sm">Mzikitrak</span>
         </a>
         <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">

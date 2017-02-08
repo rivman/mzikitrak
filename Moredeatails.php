@@ -310,12 +310,12 @@ $row431=sqlsrv_fetch_array($session431);
           </div>
           <div class="form-group">
             <label class="control-label">Upload a copy of your National ID</label> <small>(It should be in PDF format.)</small>
-            <input  maxlength="100" type="file" name="file" required="required"  class="form-control" placeholder="Upload a copy of your National ID"  />
+            <input  maxlength="100" type="file" name="file" required="required"  class="form-control" placeholder="Upload a copy of your National ID"  / accept=".pdf">
           </div>
           
           <div class="form-group">
             <label class="control-label">Upload Passport Photo</label>
-            <input maxlength="100" type="file" name="file1" required="required" class="form-control" placeholder="Upload Passport Photo"  />
+            <input maxlength="100" type="file" name="file1" required="required" class="form-control" placeholder="Upload Passport Photo"  / accept="image/*">
           </div>
 
           <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
