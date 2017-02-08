@@ -351,8 +351,16 @@ $row431=sqlsrv_fetch_array($session431);
         <div class="col-md-12">
           <h3> Notification</h3>
           <p>How would you like to receive your notification </p>
-         <input type="radio" name="phone" value="phone" > Phone<br>
-         <input type="radio" name="email" value="email"> Email<br>
+          <div class="radio i-checks">
+            <label>
+            <input type="radio" name="a" value="option1"><i></i>Email
+            </label>
+          </div>
+          <div class="radio i-checks">
+          <label>
+          <input type="radio" name="a" value="option2" checked><i></i>Phone Number
+          </label>
+          </div>
          <h4>Frequency (Monthly, Quarterly)</h4>
           <p>Weekly or daily notification is a premium service. For this, kindly email us at info@mzikitrak.com </p>
          
