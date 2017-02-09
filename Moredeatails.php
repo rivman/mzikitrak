@@ -45,6 +45,9 @@ $row431=sqlsrv_fetch_array($session431);
     .stepwizard-step p {
     margin-top: 10px;
 }
+.error {
+  color: #FF0000;
+}
 .stepwizard-row {
     display: table-row;
 }
@@ -294,28 +297,32 @@ $row431=sqlsrv_fetch_array($session431);
           
           <div class="form-group">
             <label class="control-label">Stage Name</label> <small> (Optional) </small>
-            <input  maxlength="100" type="text" class="form-control" placeholder="Your Stage Name"  />           
+            <input  maxlength="100" type="text" class="form-control"   placeholder="Your Stage Name"  /> 
+               
           </div>
           <div class="form-group">
             <label class="control-label">Address</label>
-            <input  maxlength="100" type="text" class="form-control"  required="required"   placeholder="Enter Postal Address"  />           
+            <input  maxlength="100" type="text" class="form-control"  required="required"  placeholder="Enter Postal Address"  /> 
+                     
           </div>
           <div class="form-group">
             <label class="control-label">Change Password</label>
-            <input  maxlength="100" type="password" name="password" required="required" class="form-control" placeholder="Type password"  />           
+            <input  maxlength="100" type="password" name="password" required="required" class="form-control"  placeholder="Type password"  />
+                       
           </div>
           <div class="form-group">
             <label class="control-label">Confirm password</label>
-            <input  maxlength="100" type="password"  name="cpassword" required="required" class="form-control" placeholder="Retype password"   />           
+            <input  maxlength="100" type="password"  name="cpassword" required="required" class="form-control" placeholder="Retype password"   />
+                     
           </div>
           <div class="form-group">
             <label class="control-label">Upload a copy of your National ID</label> <small>(It should be in PDF format.)</small>
-            <input  maxlength="100" type="file" name="file" required="required"  class="form-control" placeholder="Upload a copy of your National ID"  / accept=".pdf">
+            <input  maxlength="100" type="file" name="file" required="required"  class="form-control"  placeholder="Upload a copy of your National ID"  / accept=".pdf">
           </div>
           
           <div class="form-group">
             <label class="control-label">Upload Passport Photo</label>
-            <input maxlength="100" type="file" name="file1" required="required" class="form-control" placeholder="Upload Passport Photo"  / accept="image/*">
+            <input maxlength="100" type="file" name="file1" required="required" class="form-control"  placeholder="Upload Passport Photo"  / accept="image/*">
           </div>
 
           <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
@@ -379,92 +386,7 @@ $row431=sqlsrv_fetch_array($session431);
     </div>
     
   </form>
-  <script type='text/javascript'>
-// <![CDATA[
-    //var pwdwidget = new PasswordWidget('thepwddiv','password');
-    //pwdwidget.MakePWDWidget();
-    
-    function Submit(){
- var emailRegex = /^[A-Za-z0-9._]*\@[A-Za-z]*\.[A-Za-z]{2,5}$/;
- var fname = document.form.Name.value,
-  lname = document.form.LastName.value,
-  femail = document.form.Email.value,
-  fstagename = document.form.stagename.value,
-  fpassword = document.form.Password.value,
-  faddress = document.form.address.value,
-  fnationalID = document.form.nationalID.value,
-  fpassportphoto = document.form.passportphoto.value;
-  fcounty = document.form.county.value,
-   
- if( fname == "" )
-   {
-     document.form.Name.focus() ;
-  document.getElementById("errorBox").innerHTML = "enter the first name";
-     return false;
-   }
- if( lname == "" )
-   {
-     document.form.LastName.focus() ;
-   document.getElementById("errorBox").innerHTML = "enter the last name";
-     return false;
-   }
-    
-   if (femail == "" )
- {
-  document.form.Email.focus();
-  document.getElementById("errorBox").innerHTML = "enter the email";
-  return false;
-  }else if(!emailRegex.test(femail)){
-  document.form.Email.focus();
-  document.getElementById("errorBox").innerHTML = "enter the valid email";
-  return false;
-  }
-   
-   
-    if( fpassword == "" )
-   {
-     document.form.password.focus() ;
-   document.getElementById("errorBox").innerHTML = "enter password";
-     return false;
-   } 
-
- if( fstagename == "" )
-   {
-     document.form.stagename.focus() ;
-   document.getElementById("errorBox").innerHTML = "enter stagename";
-     return false;
-   } 
-
-   
-   if (faddress == "") {
-        document.form.address.value.focus();
-  document.getElementById("errorBox").innerHTML = "enter the address";
-        return false;
-     }
-  if (fnationalID == "") {
-        document.form.nationalID.focus();
-  document.getElementById("errorBox").innerHTML = "Upload nationalID";
-        return false;
-     }
-  if (fpassportphoto == "") {
-        document.form.passportphoto.focus();
-  document.getElementById("errorBox").innerHTML = "Upload passportphoto";
-        return false;
-     }
-  if(f.county ==""){
-    document.form.county.focus();
-    document.getElementById("errorBox").innerHTML = "select your county";
-    return false;
-   }
-  if(fname != '' && lname != '' && femail != '' && fstagename != '' && fpassword != '' && faddress != '' && fnationalID != '' && fpassportphoto != '' && fcounty != ''){
-   document.getElementById("errorBox").innerHTML = "form submitted successfully";
-   }
-     
-}
-- See more at: http://www.webcodehelpers.com/2013/11/registration-form-validation-using-javascript-with-example.html#sthash.b10IntHX.dpuf
-// ]]>
-</script>
-
+  
   
 </div>
                   

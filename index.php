@@ -1,12 +1,21 @@
+<?php
+$feedback="";
+    if(isset($_GET['var']) && ($_GET['var']=='successful')){
+        $feedback="<div class='alert success'>
+  <span class='closebtn'>&times;</span>  
+  <strong>Success!</strong> Your password will be send to your email. Use that to log in.
+</div>";
+    }
+  ?>
+
 <!DOCTYPE html>
 <html lang="en" class="app">
 <?php include 'css.php'; ?>
 
 <body class="bg-info dker">
-<div class="alert success">
-  <span class="closebtn">&times;</span>  
-  <strong>Success!</strong> Your password will be send to your email. Use that to log in.
-</div>
+
+
+<?php echo $feedback; ?>
 
   <section id="content" class="m-t-lg wrapper-md animated fadeInUp">
     <div class="container aside-xl">

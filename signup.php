@@ -3,21 +3,28 @@
 <?php include 'css.php'; ?>
 
 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
 <script type="text/javascript">
-function checkMailStatus(){
-    //alert("came");
-var email=$("email").val();// value in field email
-$.ajax({
-    type:'post',
-        url:'createuser.php',// put your real file name 
-        data:{email: email},
-        success:function(msg){
-        alert(msg); // your message will come here.     
-        }
- });
-}
+$(document).ready(function() {
+    var x_timer;    
+    $("#username").keyup(function (e){
+        clearTimeout(x_timer);
+        var user_name = $(this).val();
+        x_timer = setTimeout(function(){
+            check_username_ajax(user_name);
+        }, 1000);
+    }); 
 
+function check_username_ajax(username){
+    $("#user-result").html('<img src="ajax-loader.gif" />');
+    $.post('check_code.php', {'username':username}, function(data) {
+      $("#user-result").html(data);
+    });
+}
+});
 </script>
+
+
 
 <body class="bg-info dker">
 
@@ -38,7 +45,8 @@ $.ajax({
             <input placeholder="Last Name" name="lname" required="required" class="form-control rounded input-lg text-center no-border">
           </div>
           <div class="form-group">
-            <input type="email" name="email" required="required" placeholder="Email Address" class="form-control rounded input-lg text-center no-border" onblur="checkMailStatus()">
+           <input type="email" class="form-control rounded input-lg text-center no-border"  name="email" placeholder="Enter Email" id="username" required="required" > <span id="user-result"></span>
+           <!-- <input type="email" name="email" required="required" placeholder="Email Address" class="form-control rounded input-lg text-center no-border" onblur="checkMailStatus()">-->
           </div>
           <div class="form-group">
              <input type="phone number" name="pnumber" required="required"  placeholder="Phone Number" class="form-control rounded input-lg text-center no-border">
