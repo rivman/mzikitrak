@@ -195,7 +195,7 @@
                             <input class="input-sm input-s datepicker-input form-control" id="date_released" size="16" name="rdate" type="text" value="01-01-2017" data-date-format="dd-mm-yyyy" onchange="DateReleaseFunction()" onclick="DateReleaseFunction()" >
                             <p class="m-t">Record Label:</p>
                             <input type="text" class="form-control" id="record_label" name="rlabel" data-trigger="change" data-required="true" placeholder="" onchange="RecordLabelFunction()">
-                          </div>                                                      
+                          </div>                                                  
                           <div class="tab-pane" id="step2">
                           <div class="line line-lg"></div>
                             <h4>Contributors</h4>
@@ -223,7 +223,7 @@
                             <p class="m-t">Mobile</p>
                             <input type="text" name="ft_no" class="form-control" data-trigger="change" data-required="true" placeholder="Phone Number" onchange="FeatureArtistNumber()">
                             <p class="m-t">Email</p>
-                            <input type="text" name="ft_email" class="form-control" data-trigger="change" data-required="true" placeholder="Email Address" onchange="FeatureArtistEmail">                                          
+                            <input type="text" name="ft_email" class="form-control" data-trigger="change" data-required="true" placeholder="Email Address" onchange="FeatureArtistEmail()">                                          
                           </div>
                           <div class="tab-pane" id="step3">
                             <div class="line line-lg"></div>
