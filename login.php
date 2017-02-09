@@ -4,6 +4,16 @@ session_start();
 	
 include('conn.php');
 
+
+   $session43=sqlsrv_query($conn, "SELECT Email from ClientInfo where Email='$rt3' ");
+$row43=sqlsrv_fetch_array($session43);
+   $emailg=$row43['Email'];
+  if($emailg==$rt3)
+   {
+      header('location:index.php?var=error');
+   }
+   if($emailg!=$rt3){
+
 function encrypt_decrypt($action, $string) {
     $output = false;
 
@@ -45,6 +55,7 @@ $row_count = sqlsrv_num_rows( $stmt );
    
 if ($row_count == 0){
    header('location:index.php?msg=wrong_details');
+   
 }
 else{
    $result = sqlsrv_query($conn,"SELECT * FROM LoginCredentials WHERE  Username='$username' AND Password='$encrypted_txt' ") or die (sqlsrv_errors()); 
@@ -67,6 +78,7 @@ header ('location:dashboard.php');
 }
     }
 
+}
 }
 
 ?>

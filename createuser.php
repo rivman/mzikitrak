@@ -5,18 +5,21 @@ $rt1=$_POST['fname'];
 $rt2=$_POST['lname'];
 $rt3=$_POST['email'];
 $rt4=$_POST['pnumber'];
-$s_name=$_POST['stagename'];
+//$s_name=$_POST['stagename'];
 $rt12=date('Y');
+
+
 
 //$rt5=md5(uniqid(rand(10000,10000), true));
 
-$echeck=sqlsrv_query($conn,"SELECT Email from ClientInfo where Email='$rt3'" );
-   $echk=sqlsrv_query($echeck);
-   $ecount=sqlsrv_num_rows($echk);
-  if($ecount!=0)
+   $session43=sqlsrv_query($conn, "SELECT Email from ClientInfo where Email='$rt3' ");
+$row43=sqlsrv_fetch_array($session43);
+   $emailg=$row43['Email'];
+  if($emailg==$rt3)
    {
-      echo "Email already exists";
+      header('location:signup.php?var=successful');
    }
+   if($emailg!=$rt3){
 
 
 $result3=sqlsrv_query($conn,"SELECT MAX(ID) as max FROM ClientInfo");
@@ -150,6 +153,8 @@ $query1 = "INSERT INTO LoginCredentials(Username,Password,activationCode,account
 
 
 header("Location: http://www.mzikitrak.com/portal/email/email1.php?email=$rt3&activation=$rt5&password=$rt7");
+
+}
 
 ?>
 

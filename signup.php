@@ -1,9 +1,20 @@
+
+<?php
+$feedback="";
+    if(isset($_GET['var']) && ($_GET['var']=='successful')){
+        $feedback="<div class='alert danger'>
+  <span class='closebtn'>&times;</span>  
+  <strong>Sorry!</strong> Email Aready Exists.
+</div>";
+    }
+  ?>
+
 <!DOCTYPE html>
 <html lang="en" class="app">
 <?php include 'css.php'; ?>
 
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
     var x_timer;    
@@ -22,12 +33,13 @@ function check_username_ajax(username){
     });
 }
 });
-</script>
+</script>-->
 
 
 
 <body class="bg-info dker">
 
+<?php echo $feedback; ?>
 
   <section id="content" class="m-t-lg wrapper-md animated fadeInDown">
     <div class="container aside-xl">

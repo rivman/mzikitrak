@@ -62,7 +62,8 @@ $row4321=sqlsrv_fetch_array($session4321);
                                 <div class="line line-dashed b-b line-lg pull-in"></div>
                                 <div class="h3 m-t-xs m-b-xs">Provide us with your email below.</div>
                                 <p>Fill out the text box with your email address. A link will be sent to email to reset your password </p>
-                                <form role="form" method="post">
+                                <form role="form" method="post" action="resetlink.php" >
+                              
                                     <div class="form-group">
                                     <label>Email address</label>
                                     <input type="email" class="form-control" placeholder="Enter email" required>

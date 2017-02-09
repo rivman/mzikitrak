@@ -31,7 +31,7 @@ $row4321=sqlsrv_fetch_array($session4321);
                             <div class="h3 m-t-xs m-b-xs">Reset your password</div>
                             <p>Choose a strong password that you haven't already used with this account.</p>
                             <div class="line line-dashed b-b line-lg pull-in"></div>
-                            <form data-validate="parsley">
+                            <form data-validate="parsley" method="POST" action="newpass.php">
                                 <section class="panel panel-default">
                                 <div class="panel-body" style="background-color: #e8eff0;">                                    
                                     <div class="form-group pull-in clearfix">

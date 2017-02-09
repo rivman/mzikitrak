@@ -1,6 +1,15 @@
 <?php
 
 include('conn.php');
+
+$feedback="";
+    if(isset($_GET['var']) && ($_GET['var']=='successful')){
+        $feedback="<div class='alert success'>
+  <span class='closebtn'>&times;</span>  
+  <strong>Success!</strong> Your password will be send to your email. Use that to log in.
+</div>";
+    }
+
 session_start();
 $check=$_SESSION['SESS_username'];
 $session43=sqlsrv_query($conn, "SELECT * FROM LoginCredentials WHERE Username='$check' ");
@@ -52,10 +61,8 @@ else{
 <html lang="en" class="app">
 <?php include 'css.php' ?>
 <body class="">
-<div class="alert success">
-  <span class="closebtn">&times;</span>  
-  <strong>Success!</strong> Account created successfully.
-</div>
+<?php echo $feedback; ?>
+
   <section class="vbox">
     <?php include 'header.php'; ?>
     <section>
@@ -225,7 +232,7 @@ for (i = 0; i < close.length; i++) {
 </script>
 </body>
 </html>
-
-<?php
+<?php include 'aside.php'; ?>
+<?php  
 }
 ?>
