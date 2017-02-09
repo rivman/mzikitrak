@@ -193,6 +193,8 @@
                             <input type="file" class="form-control" name="file1" data-trigger="change" data-required="true" placeholder="" data-classButton="btn btn-default" data-classInput="form-control inline v-middle input-s" accept=".mp3">
                             <p class="m-t">Date of Release</p>
                             <input class="input-sm input-s datepicker-input form-control" id="date_released" size="16" name="rdate" type="text" value="01-01-2017" data-date-format="dd-mm-yyyy" onchange="DateReleaseFunction()" onclick="DateReleaseFunction()" >
+                            <p class="m-t">Featuring Artist(s):</p>
+                            <input type="text" id="ft_name" class="form-control" data-trigger="change" data-required="true" placeholder="Artist's name" onchange="FeatureArtistFunction()">
                             <p class="m-t">Record Label:</p>
                             <input type="text" class="form-control" id="record_label" name="rlabel" data-trigger="change" data-required="true" placeholder="" onchange="RecordLabelFunction()">
                           </div>                                                  
@@ -219,11 +221,11 @@
                             <div class="line line-lg"></div>
                             <p style="text-decoration: underline;">Featuring</p>
                             <p class="m-t">Name</p>
-                            <input type="text" name="ft_name"class="form-control" data-trigger="change" data-required="true" placeholder="Artist's name" onchange="FeatureArtistFunction()">
+                            <input type="text" name="ftname" id="ft_name" class="form-control" data-trigger="change" data-required="true" placeholder="Artist's name" onchange="FeatureArtistFunction()">
                             <p class="m-t">Mobile</p>
-                            <input type="text" name="ft_no" class="form-control" data-trigger="change" data-required="true" placeholder="Phone Number" onchange="FeatureArtistNumber()">
+                            <input type="text" id="ft_no" name="ftno" class="form-control" data-trigger="change" data-required="true" placeholder="Phone Number" onchange="FeatureArtistNumber()">
                             <p class="m-t">Email</p>
-                            <input type="text" name="ft_email" class="form-control" data-trigger="change" data-required="true" placeholder="Email Address" onchange="FeatureArtistEmail()">                                          
+                            <input type="text" id="ft_email" name="ftemail"class="form-control" data-trigger="change" data-required="true" placeholder="Email Address" onchange="FeatureArtistEmail()">                                          
                           </div>
                           <div class="tab-pane" id="step3">
                             <div class="line line-lg"></div>
@@ -277,6 +279,35 @@
                               <div class="col-sm-9">
                                 <input id="audio_name_display" type="text" class="form-control" value="" disabled>
                               </div>
+                            </div>                            
+                            <div class="row" style="padding: 2px;">                              
+                              <div class="col-sm-3">
+                                <label>Featuring:</label>
+                              </div>
+                              <div class="col-sm-9">
+                                <input id="ft_name_dis" type="text" class="form-control" value="" disabled>
+                              </div>
+                            </div>
+                            <div class="row" style="padding: 2px;">                              
+                              <div class="col-sm-3">
+                                <label>Length:</label>
+                              </div>
+                              <div class="col-sm-4">
+                                <div class="col-sm-6">
+                                  <input id="display_minutes" type="text" class="form-control" value="" disabled>
+                                </div>
+                                <div class="col-sm-6">
+                                  <span>Minutes</span>
+                                </div>                               
+                              </div>
+                              <div class="col-sm-4">
+                                <div class="col-sm-6">
+                                  <input id="display_seconds" type="text" class="form-control" value="" disabled>
+                                </div>
+                                <div class="col-sm-6">
+                                  <span>Seconds</span>
+                                </div>                               
+                              </div>
                             </div>
                             <div class="row" style="padding: 2px;">                              
                               <div class="col-sm-3">
@@ -295,6 +326,7 @@
                               </div>
                             </div>
                             <div class="line line-lg"></div>
+                            <!--
                             <h4>Featuring Artist</h4>
                             <div class="row" style="padding: 2px;">                              
                               <div class="col-sm-3">
@@ -319,7 +351,7 @@
                               <div class="col-sm-9">
                                 <input id="ft_no_dis" type="text" class="form-control" value="" disabled>
                               </div>
-                            </div>
+                            </div> -->
                           </div><!--end of step 4 -->
                           <div class="tab-pane" id="step5" style="text-aligh:center;">
                               <button type="submit" class="btn btn-success" style="margin:0 auto;"> Done <i class="fa fa-check"></i></button> <i class="fa fa-spin fa-spinner hide" id="spin"></i>                     
