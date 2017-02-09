@@ -7,6 +7,68 @@
       z-index: 1600 !important; /* has to be larger than 1050 */
     }
 </style>
+<script type="text/javascript">
+  function AudioNameFunction()
+  {
+    var suggest = document.getElementById('audio_name').value;
+    document.getElementById('audio_name_display').value=suggest;
+  }
+
+  function DateReleaseFunction()
+  {
+    var suggest = document.getElementById('date_released').value;
+    document.getElementById('date_released_display').value=suggest;
+  }
+
+  function RecordLabelFunction()
+  {
+    var suggest = document.getElementById('record_label').value;
+    document.getElementById('record_label_display').value=suggest;
+  }
+
+  function minutesFunction()
+  {
+    var suggest = document.getElementById('audio_minutes').value;
+    document.getElementById('display_minutes').value=suggest;
+  }
+
+  function secondsFunction()
+  {
+    var suggest = document.getElementById('audio_seconds').value;
+    document.getElementById('display_seconds').value=suggest;
+  }
+
+  function FeatureArtistFunction()
+  {
+    var suggest = document.getElementById('ft_name').value;
+    document.getElementById('ft_name_dis').value=suggest;
+  }
+
+  function FeatureArtistEmail()
+  {
+    var suggest = document.getElementById('ft_email').value;
+    document.getElementById('ft_email_dis').value=suggest;
+  }
+
+   function FeatureArtistNumber()
+  {
+    var suggest = document.getElementById('ft_no').value;
+    document.getElementById('ft_no_dis').value=suggest;
+  }
+
+
+  function Details(){
+    var AudioName = document.getElementById('audio_name_display').value;
+    var RecordLabel = document.getElementById('record_label_display').value;
+    var DateReleased = document.getElementById('date_released_display').value;
+    var Minutes = document.getElementById('display_minutes').value;
+    var Seconds = document.getElementById('display_seconds').value;
+    var featName= document.getElementbyId('ft_name_dis').value;
+    var featEmail= document.getElementbyId('ft_email_dis').value;
+    var featNo= document.getElementbyId('ft_no_dis').value;
+  }
+
+</script>
   <section class="vbox">
     <?php include 'header.php'; ?>
     <section>
@@ -46,9 +108,7 @@
                       <p> </p>
                     </div>
                     <a href="#modal-form" class="btn btn-success" data-toggle="modal">Upload Song</a>
-                    <h4 class="m-t-lg m-b">My Songs</h4>                
-
-
+                    <h4 class="m-t-lg m-b">My Songs</h4>
                     <ul class="list-group list-group-lg">
 
                     <?php
@@ -83,38 +143,6 @@
                     </ul>
                   </div>
                 </div>
-                <!--<div class="col-sm-5">
-                  <div class="panel panel-default">
-                    <div class="panel-heading">Upload Song/Audio clip</div>
-                    <div class="panel-body">
-                      <form class="form-horizontal" method="POST" action="musicuplod.php" enctype="multipart/form-data" >
-                        <div class="line line-dashed b-b line-lg pull-in"></div>
-                        <div class="form-group">
-                          <label class="col-sm-3 control-label">Audio Name</label>
-                          <div class="col-sm-9">
-                            <input type="text" class="form-control" name="name" placeholder="Your audio clip's title">
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <label class="col-sm-3 control-label">Cover Art</label>
-                          <div class="col-sm-9">
-                            <input type="file" name="file" class="filestyle" data-icon="false" data-classButton="btn btn-default" data-classInput="form-control inline v-middle input-s"  >
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <label class="col-sm-3 control-label">Mp3 Upload</label>
-                          <div class="col-sm-9">
-                            <input type="file"  name="file1" class="filestyle" data-icon="false" data-classButton="btn btn-default" data-classInput="form-control inline v-middle input-s" >
-                          </div>
-                        </div>
-                        <div class="line line-dashed b-b line-lg pull-in"></div>
-                        <p style="float:right;">
-                          <button type="submit" class="btn btn-success" ></i> Upload </button> <i class="fa fa-spin fa-spinner hide" id="spin"></i>
-                        </p>
-                      </form>
-                    </div>
-                  </div>
-                </div>-->
               </div>
             </section>
           </section>
@@ -153,21 +181,21 @@
                             <h4>Song Details</h4>
                             <div class="line line-lg"></div>                            
                             <p>Audio Name:</p>
-                            <input type="text" class="form-control" name="name" data-trigger="change" data-required="true"  placeholder="Title of your song/sound clip">
+                            <input type="text" class="form-control" id="audio_name" name="name" data-trigger="change" data-required="true"  placeholder="Title of your song/sound clip" onchange="AudioNameFunction()">
                             <p class="m-t">Artwork</p>
                             <input type="file" class="form-control" name="file" data-trigger="change" data-required="true" placeholder="" accept="image/*">
                             <p class="m-t">Length</p>
                             <div class="row">
-                              <div class="col-sm-6"><input type="number" name="minutes" class="form-control" data-trigger="change" data-required="true" min="0" max="59" placeholder="Minutes"></div>
-                              <div class="col-sm-6"><input type="number" name="seconds" class="form-control" data-trigger="change" data-required="true" min="1" max="59" placeholder="Seconds"></div>
+                              <div class="col-sm-6"><input type="number" name="minutes" id="audio_minutes" class="form-control" data-trigger="change" data-required="true" min="0" max="59" placeholder="Minutes" onchange="minutesFunction()"></div>
+                              <div class="col-sm-6"><input type="number" name="seconds" id="audio_seconds" class="form-control" data-trigger="change" data-required="true" min="1" max="59" placeholder="Seconds" onchange="secondsFunction()"></div>
                             </div>                            
                             <p class="m-t">Mp3</p>
                             <input type="file" class="form-control" name="file1" data-trigger="change" data-required="true" placeholder="" data-classButton="btn btn-default" data-classInput="form-control inline v-middle input-s" accept=".mp3">
                             <p class="m-t">Date of Release</p>
-                            <input class="input-sm input-s datepicker-input form-control" size="16" name="rdate" type="text" value="01-01-2015" data-date-format="dd-mm-yyyy" >
+                            <input class="input-sm input-s datepicker-input form-control" id="date_released" size="16" name="rdate" type="text" value="01-01-2017" data-date-format="dd-mm-yyyy" onchange="DateReleaseFunction()" onclick="DateReleaseFunction()" >
                             <p class="m-t">Record Label:</p>
-                            <input type="text" class="form-control" name="rlabel" data-trigger="change" data-required="true" placeholder="">
-                          </div>                                                      
+                            <input type="text" class="form-control" id="record_label" name="rlabel" data-trigger="change" data-required="true" placeholder="" onchange="RecordLabelFunction()">
+                          </div>                                                  
                           <div class="tab-pane" id="step2">
                           <div class="line line-lg"></div>
                             <h4>Contributors</h4>
@@ -179,7 +207,7 @@
                               <option value="Author">Author</option>
                               <option value="Composer">Composer</option>
                               <option value="Arranger">Arranger</option>
-                            </select>                            
+                            </select>                                                      
                             <p class="m-t">Name</p>
                             <input type="text" name="contname" class="form-control" data-trigger="change" data-required="true" placeholder="">
                             <p class="m-t">Percentage of Contribution</p>
@@ -191,11 +219,11 @@
                             <div class="line line-lg"></div>
                             <p style="text-decoration: underline;">Featuring</p>
                             <p class="m-t">Name</p>
-                            <input type="text" name="ftname"class="form-control" data-trigger="change" data-required="true" placeholder="">
+                            <input type="text" name="ft_name"class="form-control" data-trigger="change" data-required="true" placeholder="Artist's name" onchange="FeatureArtistFunction()">
                             <p class="m-t">Mobile</p>
-                            <input type="text" name="ftno" class="form-control" data-trigger="change" data-required="true" placeholder="Phone Number">
+                            <input type="text" name="ft_no" class="form-control" data-trigger="change" data-required="true" placeholder="Phone Number" onchange="FeatureArtistNumber()">
                             <p class="m-t">Email</p>
-                            <input type="text" name="ftemail" class="form-control" data-trigger="change" data-required="true" placeholder="Email Address">                                          
+                            <input type="text" name="ft_email" class="form-control" data-trigger="change" data-required="true" placeholder="Email Address" onchange="FeatureArtistEmail()">                                          
                           </div>
                           <div class="tab-pane" id="step3">
                             <div class="line line-lg"></div>
@@ -236,9 +264,63 @@
                             <small>Admin fees apply. <a href="">View fees?</a></small>
                           </div>
                           <div class="tab-pane" id="step4">
-                            <!--<p>Your email:</p>
-                            <input type="text" class="form-control" data-trigger="change" data-required="true" data-type="email" placeholder="email address">-->
-                          </div>
+                            <div class="line line-lg"></div>
+                            <h4>Looks good?</h4>
+                            <div class="line line-lg"></div>
+                            Here's a summary of your audio's details. Confirm that everything is alright before proceeding.
+                            <div class="line line-lg"></div>
+                            <h4>Song Details</h4>
+                            <div class="row" style="padding: 2px;">                              
+                              <div class="col-sm-3">
+                                <label>Audio Clip Title:</label>
+                              </div>
+                              <div class="col-sm-9">
+                                <input id="audio_name_display" type="text" class="form-control" value="" disabled>
+                              </div>
+                            </div>
+                            <div class="row" style="padding: 2px;">                              
+                              <div class="col-sm-3">
+                                <label>Record Label:</label>
+                              </div>
+                              <div class="col-sm-9">
+                                <input id="record_label_display" type="text" class="form-control" value="" disabled>
+                              </div>
+                            </div>
+                            <div class="row" style="padding: 2px;">                              
+                              <div class="col-sm-3">
+                                <label>Date Released:</label>
+                              </div>
+                              <div class="col-sm-9">
+                                <input id="date_released_display" type="text" class="form-control" value="" disabled>
+                              </div>
+                            </div>
+                            <div class="line line-lg"></div>
+                            <h4>Featuring Artist</h4>
+                            <div class="row" style="padding: 2px;">                              
+                              <div class="col-sm-3">
+                                <label>Featuring:</label>
+                              </div>
+                              <div class="col-sm-9">
+                                <input id="ft_name_dis" type="text" class="form-control" value="" disabled>
+                              </div>
+                            </div>
+                            <div class="row" style="padding: 2px;">                              
+                              <div class="col-sm-3">
+                                <label>Artist Email:</label>
+                              </div>
+                              <div class="col-sm-9">
+                                <input id="ft_email_dis" type="text" class="form-control" value="" disabled>
+                              </div>
+                            </div>
+                            <div class="row" style="padding: 2px;">                              
+                              <div class="col-sm-3">
+                                <label>Artist Phone Number:</label>
+                              </div>
+                              <div class="col-sm-9">
+                                <input id="ft_no_dis" type="text" class="form-control" value="" disabled>
+                              </div>
+                            </div>
+                          </div><!--end of step 4 -->
                           <div class="tab-pane" id="step5" style="text-aligh:center;">
                               <button type="submit" class="btn btn-success" style="margin:0 auto;"> Done <i class="fa fa-check"></i></button> <i class="fa fa-spin fa-spinner hide" id="spin"></i>                     
                           </div>
@@ -246,7 +328,7 @@
                             <li class="previous first" style="display:none;"><a href="#">First</a></li>
                             <li class="previous"><a href="#">Previous</a></li>
                             <li class="next last"><a href="#">Last</a></li>
-                            <li class="next"><a href="#">Next</a></li>
+                            <li class="next" onclick="Details()"><a href="#">Next</a></li>
                           </ul>
                         </div>
                       </div>
