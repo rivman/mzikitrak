@@ -6,6 +6,15 @@
     .datepicker {
       z-index: 1600 !important; /* has to be larger than 1050 */
     }
+    input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
 </style>
 <script type="text/javascript">
   function AudioNameFunction()
@@ -105,7 +114,6 @@
                       </div>
                     </div>
                     <div class="m-t">
-                      <p> </p>
                     </div>
                     <a href="#modal-form" class="btn btn-success" data-toggle="modal">Upload Song</a>
                     <h4 class="m-t-lg m-b">My Songs</h4>
@@ -166,7 +174,7 @@
                           <li><a href="#step2" data-toggle="tab">Step 2</a></li>
                           <li><a href="#step3" data-toggle="tab">Step 3</a></li>
                           <li><a href="#step4" data-toggle="tab">Step 4</a></li>
-                          <li><a href="#step5" data-toggle="tab">Step 5</a></li>
+                          <!--<li><a href="#step5" data-toggle="tab">Step 5</a></li>-->
                         </ul>
                       </div>
                       <div class="panel-body">
@@ -192,9 +200,11 @@
                             <p class="m-t">Mp3</p>
                             <input type="file" class="form-control" name="file1" data-trigger="change" data-required="true" placeholder="" data-classButton="btn btn-default" data-classInput="form-control inline v-middle input-s" accept=".mp3">
                             <p class="m-t">Date of Release</p>
-                            <input class="input-sm input-s datepicker-input form-control" id="date_released" size="16" name="rdate" type="text" value="01-01-2017" data-date-format="dd-mm-yyyy" onchange="DateReleaseFunction()" onclick="DateReleaseFunction()" >
+                            <input class="input-sm input-s datepicker-input form-control" id="date_released" size="16" name="rdate" type="text" value="20-11-2016" data-date-format="dd-mm-yyyy" onchange="DateReleaseFunction()" onclick="DateReleaseFunction()" >
+                            <p class="m-t">Featuring Artist(s):</p>
+                            <input type="text" id="ft_name" class="form-control" data-trigger="change" placeholder="Artist's name" onchange="FeatureArtistFunction()">
                             <p class="m-t">Record Label:</p>
-                            <input type="text" class="form-control" id="record_label" name="rlabel" data-trigger="change" data-required="true" placeholder="" onchange="RecordLabelFunction()">
+                            <input type="text" class="form-control" id="record_label" name="rlabel" data-trigger="change" data-required="true" placeholder="Where did you record from?" onchange="RecordLabelFunction()">
                           </div>                                                  
                           <div class="tab-pane" id="step2">
                           <div class="line line-lg"></div>
@@ -213,55 +223,57 @@
                             <p class="m-t">Percentage of Contribution</p>
                             <input type="number" name="percent" min="1" max="99" class="form-control" data-trigger="change" data-required="true"  placeholder="">
                             <p class="m-t">Mobile</p>
-                            <input type="text" name="contno" class="form-control" data-trigger="change" data-required="true" placeholder="Phone Number">
+                            <input type="number" name="contno" class="form-control" data-trigger="change" data-required="true" placeholder="Phone Number">
                             <p class="m-t">Email</p>
                             <input type="text" name="contemail" class="form-control" data-trigger="change" data-required="true" data-type="email" placeholder="email address">
                             <div class="line line-lg"></div>
                             <p style="text-decoration: underline;">Featuring</p>
                             <p class="m-t">Name</p>
-                            <input type="text" name="ft_name"class="form-control" data-trigger="change" data-required="true" placeholder="Artist's name" onchange="FeatureArtistFunction()">
+                            <input type="text" id="ft_name" name="ftname" class="form-control" data-trigger="change" placeholder="Artist's name" onchange="FeatureArtistFunction()">
                             <p class="m-t">Mobile</p>
-                            <input type="text" name="ft_no" class="form-control" data-trigger="change" data-required="true" placeholder="Phone Number" onchange="FeatureArtistNumber()">
+                            <input type="number" id="ft_no" name="ftno" class="form-control" data-trigger="change" placeholder="Phone Number" onchange="FeatureArtistNumber()">
                             <p class="m-t">Email</p>
-                            <input type="text" name="ft_email" class="form-control" data-trigger="change" data-required="true" placeholder="Email Address" onchange="FeatureArtistEmail()">                                          
+                            <input type="text" id="ft_email" name="ftemail"class="form-control" data-trigger="change" data-type="email" placeholder="Email Address" onchange="FeatureArtistEmail()">                                          
                           </div>
                           <div class="tab-pane" id="step3">
                             <div class="line line-lg"></div>
                             <h4>Track Outlets</h4>
                             <div class="line line-lg"></div>
-                            <p>Where would you like us to administer your rights?</p>
+                            <p>Where would you like us to administer your rights?</p> <small>(List at least one)</small>
                             <div class="line line-lg"></div>
                             <p>Local radio stations</p>
-                            <input type="text" class="form-control" data-trigger="change" data-required="true"  placeholder="Name">
-                            <input type="text" class="form-control" data-trigger="change" data-required="true"  placeholder="Frequency">
+                            <div class="col-sm-10 col-sm-offset-1" style="padding: 2px;"><input type="text" name="outlet1" class="form-control" data-trigger="change" data-required="true"  placeholder="Name"></div>
+                            <div class="col-sm-10 col-sm-offset-1" style="padding: 2px;" ><input type="text" name="outlet2" class="form-control" data-trigger="change" placeholder="Name"></div>
+                            <div class="col-sm-10 col-sm-offset-1" style="padding: 2px;"><input type="text" name="outlet3" class="form-control" data-trigger="change" placeholder="Name"></div>                         
                             <div class="line line-lg"></div>
                             <p>Internet Radio</p>
-                            <input type="text" class="form-control" data-trigger="change" data-required="true"  placeholder="Name">
-                            <input type="text" class="form-control" data-trigger="change" data-required="true"  placeholder="URL">
+                            <div class= "col-sm-10 col-sm-offset-1" style="padding: 2px;"><input type="text" name="outlet4" class="form-control" data-trigger="change" placeholder="Name"></div>
+                            <div class= "col-sm-10 col-sm-offset-1" style="padding: 2px;"><input type="text" name="outlet5" class="form-control" data-trigger="change" placeholder="Name"></div> 
+                            <div class= "col-sm-10 col-sm-offset-1" style="padding: 2px;"><input type="text" name="outlet6" class="form-control" data-trigger="change" placeholder="Name"></div>                             
                             <div class="line line-lg"></div>
-                            <p>Network Service Providers</p>
+                            <div class="line line-lg"></div>
+                            <p>Network Service Providers. <small>Admin fees apply. <a href="#">View fees?</a></small></p>
                             <div class="checkbox i-checks">
                               <label>
-                                <input type="checkbox" value="">
+                                <input type="checkbox" value="Skiza Tunes">
                                 <i></i>
                                 Safaricom Skiza Tunes
                               </label>
                             </div>
                             <div class="checkbox i-checks">
                               <label>
-                                <input type="checkbox" value="">
+                                <input type="checkbox" value="Airtel Hello Tunes">
                                 <i></i>
                                 Airtel Hello Tunes
                               </label>
                             </div>
                             <div class="checkbox i-checks">
                               <label>
-                                <input type="checkbox" value="">
+                                <input type="checkbox" value="Orange Hello Tunes">
                                 <i></i>
                                 Telkom Orange Hello Tunes
                               </label>
-                            </div>
-                            <small>Admin fees apply. <a href="">View fees?</a></small>
+                            </div>                            
                           </div>
                           <div class="tab-pane" id="step4">
                             <div class="line line-lg"></div>
@@ -276,6 +288,35 @@
                               </div>
                               <div class="col-sm-9">
                                 <input id="audio_name_display" type="text" class="form-control" value="" disabled>
+                              </div>
+                            </div>                            
+                            <div class="row" style="padding: 2px;">                              
+                              <div class="col-sm-3">
+                                <label>Featuring:</label>
+                              </div>
+                              <div class="col-sm-9">
+                                <input id="ft_name_dis" type="text" class="form-control" value="No contributing artist(s)." disabled>
+                              </div>
+                            </div>
+                            <div class="row" style="padding: 2px;">                              
+                              <div class="col-sm-3">
+                                <label>Length:</label>
+                              </div>
+                              <div class="col-sm-4">
+                                <div class="col-sm-6">
+                                  <input id="display_minutes" type="text" class="form-control" value="" disabled>
+                                </div>
+                                <div class="col-sm-6">
+                                  <span>Minutes</span>
+                                </div>                               
+                              </div>
+                              <div class="col-sm-4">
+                                <div class="col-sm-6">
+                                  <input id="display_seconds" type="text" class="form-control" value="" disabled>
+                                </div>
+                                <div class="col-sm-6">
+                                  <span>Seconds</span>
+                                </div>                               
                               </div>
                             </div>
                             <div class="row" style="padding: 2px;">                              
@@ -295,6 +336,7 @@
                               </div>
                             </div>
                             <div class="line line-lg"></div>
+                            <!--
                             <h4>Featuring Artist</h4>
                             <div class="row" style="padding: 2px;">                              
                               <div class="col-sm-3">
@@ -319,15 +361,16 @@
                               <div class="col-sm-9">
                                 <input id="ft_no_dis" type="text" class="form-control" value="" disabled>
                               </div>
-                            </div>
+                            </div> -->
+                            <button type="submit" class="btn btn-success" style="margin:0 auto;"> Done <i class="fa fa-check"></i></button> <i class="fa fa-spin fa-spinner hide" id="spin"></i>
                           </div><!--end of step 4 -->
-                          <div class="tab-pane" id="step5" style="text-aligh:center;">
+                          <!--<div class="tab-pane" id="step5" style="text-aligh:center;">
                               <button type="submit" class="btn btn-success" style="margin:0 auto;"> Done <i class="fa fa-check"></i></button> <i class="fa fa-spin fa-spinner hide" id="spin"></i>                     
-                          </div>
+                          </div>-->
                           <ul class="pager wizard m-b-sm">
                             <li class="previous first" style="display:none;"><a href="#">First</a></li>
                             <li class="previous"><a href="#">Previous</a></li>
-                            <li class="next last"><a href="#">Last</a></li>
+                            <!--<li class="next last"><a href="#">Last</a></li>-->
                             <li class="next" onclick="Details()"><a href="#">Next</a></li>
                           </ul>
                         </div>
