@@ -100,7 +100,7 @@ $row4321=sqlsrv_fetch_array($session4321);
                               <div class="form-group">
                               <label class="col-lg-3 control-label">Phone Number</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text"  value="<?php echo $row431['PhoneNumber']; ?>">
+                                  <input class="form-control" type="number"  value="<?php echo $row431['PhoneNumber']; ?>">
                                 </div>
                               </div>
                               <div class="line line-dashed b-b line-lg pull-in"></div> 
@@ -138,7 +138,7 @@ $row4321=sqlsrv_fetch_array($session4321);
                               <div class="form-group">
                               <label class="col-lg-3 control-label">Phone Number</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text"  value="<?php echo $row4321['PhoneNumber']; ?>"> 
+                                  <input class="form-control" type="number"  value="<?php echo $row4321['PhoneNumber']; ?>"> 
                                   </div>
                                 </div>
                                 <div class="btn-group btn-group-justified m-b">

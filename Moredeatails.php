@@ -354,7 +354,7 @@ if (eaddress==null || eaddress==""){
           </div>
           <div class="form-group">
             <label class="control-label">Phone Number</label>
-            <input maxlength="200" type="pnumber" name="pnumber"  class="form-control" placeholder="Enter Phone Number" required />
+            <input maxlength="200" type="number" name="pnumber"  class="form-control" placeholder="Enter Phone Number" required />
           </div>
           <div class="form-group">
             <label class="control-label">Email Address</label>
