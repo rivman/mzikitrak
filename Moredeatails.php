@@ -251,10 +251,7 @@ if (eaddress==null || eaddress==""){
       <div class="col-xs-6 col-md-offset-2">
         <div class="col-md-12">
           <h3> Personal Details</h3>
-         
-
           <div class="form-group">
-
             <label class="control-label">County</label>
             <select class="form-control"  type="text" name="county" required  >
               <option disabled selected>Select your county</option>
@@ -305,11 +302,9 @@ if (eaddress==null || eaddress==""){
               <option value="Vihiga">Vihiga </option>
               <option value="Wajir">Wajir </option>
               <option value="West Pokot">West Pokot </option>
-
             </select>
           </div>
-          
-          
+
           <div class="form-group" >
             <label class="control-label">Stage Name</label> <small> (Optional) </small>
             <input  maxlength="100" type="text" name="stagename" class="form-control"   placeholder="Your Stage Name"  required />

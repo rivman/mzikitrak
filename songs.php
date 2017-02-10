@@ -148,6 +148,7 @@
                             <input type="text" id="ft_name" class="form-control" data-trigger="change" placeholder="Artist's name" onchange="FeatureArtistFunction()">
                             <p class="m-t">Record Label:</p>
                             <input type="text" class="form-control" id="record_label" name="rlabel" data-trigger="change" data-required="true" placeholder="Where did you record from?" onchange="RecordLabelFunction()">
+                            <div class="line line-lg"></div>
                           </div>                                                  
                           <div class="tab-pane" id="step2">
                           <div class="line line-lg"></div>
@@ -176,47 +177,60 @@
                             <p class="m-t">Mobile</p>
                             <input type="number" id="ft_no" name="ftno" class="form-control" data-trigger="change" placeholder="Phone Number" onchange="FeatureArtistNumber()">
                             <p class="m-t">Email</p>
-                            <input type="text" id="ft_email" name="ftemail"class="form-control" data-trigger="change" data-type="email" placeholder="Email Address" onchange="FeatureArtistEmail()">                                          
+                            <input type="text" id="ft_email" name="ftemail"class="form-control" data-trigger="change" data-type="email" placeholder="Email Address" onchange="FeatureArtistEmail()">
+                            <div class="line line-lg"></div>                                          
                           </div>
                           <div class="tab-pane" id="step3">
                             <div class="line line-lg"></div>
                             <h4>Track Outlets</h4>
                             <div class="line line-lg"></div>
-                            <p>Where would you like us to administer your rights?</p> <small>(List at least one)</small>
-                            <div class="line line-lg"></div>
-                            <p>Local radio stations</p>
-                            <div class="col-sm-10 col-sm-offset-1" style="padding: 2px;"><input type="text" name="outlet1" class="form-control" data-trigger="change" data-required="true"  placeholder="Name"></div>
-                            <div class="col-sm-10 col-sm-offset-1" style="padding: 2px;" ><input type="text" name="outlet2" class="form-control" data-trigger="change" placeholder="Name"></div>
-                            <div class="col-sm-10 col-sm-offset-1" style="padding: 2px;"><input type="text" name="outlet3" class="form-control" data-trigger="change" placeholder="Name"></div>                         
-                            <div class="line line-lg"></div>
-                            <p>Internet Radio</p>
-                            <div class= "col-sm-10 col-sm-offset-1" style="padding: 2px;"><input type="text" name="outlet4" class="form-control" data-trigger="change" placeholder="Name"></div>
-                            <div class= "col-sm-10 col-sm-offset-1" style="padding: 2px;"><input type="text" name="outlet5" class="form-control" data-trigger="change" placeholder="Name"></div> 
-                            <div class= "col-sm-10 col-sm-offset-1" style="padding: 2px;"><input type="text" name="outlet6" class="form-control" data-trigger="change" placeholder="Name"></div>                             
-                            <div class="line line-lg"></div>
-                            <div class="line line-lg"></div>
-                            <p>Network Service Providers. <small>Admin fees apply. <a href="#">View fees?</a></small></p>
+                            <p>Where would you like us to administer your rights?</p>
                             <div class="checkbox i-checks">
                               <label>
-                                <input type="checkbox" value="Skiza Tunes">
+                                <input type="checkbox" name="fm" value="yes">
+                                <i></i>
+                                Local Radio Stations.
+                              </label>
+                            </div>
+                            <div class="checkbox i-checks">
+                              <label>
+                                <input type="checkbox" name="internet" value="yes">
+                                <i></i>
+                                Internet Streams.
+                              </label>
+                            </div>
+                            <div class="checkbox i-checks">
+                              <label>
+                                <input type="checkbox" name="tv" value="yes">
+                                <i></i>
+                                TV Stations
+                              </label>
+                            </div>
+                            <div class="line line-lg"></div>
+                            <h4>Network Service Providers.</h4>     
+                            <p>Admin fees apply. <a href="">Click to view fees.</a></p>
+                            <div class="checkbox i-checks">
+                              <label>
+                                <input type="checkbox" name="safaricom" value="yes">
                                 <i></i>
                                 Safaricom Skiza Tunes
                               </label>
                             </div>
                             <div class="checkbox i-checks">
                               <label>
-                                <input type="checkbox" value="Airtel Hello Tunes">
+                                <input type="checkbox" name="airtel" value="yes">
                                 <i></i>
                                 Airtel Hello Tunes
                               </label>
                             </div>
                             <div class="checkbox i-checks">
                               <label>
-                                <input type="checkbox" value="Orange Hello Tunes">
+                                <input type="checkbox" name="orange" value="yes">
                                 <i></i>
                                 Telkom Orange Hello Tunes
                               </label>
-                            </div>                            
+                            </div>
+                            <div class="line line-lg"></div>                            
                           </div>
                           <div class="tab-pane" id="step4">
                             <div class="line line-lg"></div>
@@ -306,6 +320,7 @@
                               </div>
                             </div> -->
                             <button type="submit" class="btn btn-success" style="margin:0 auto;"> Done <i class="fa fa-check"></i></button> <i class="fa fa-spin fa-spinner hide" id="spin"></i>
+                            <div class="line line-lg"></div>
                           </div><!--end of step 4 -->
                           <!--<div class="tab-pane" id="step5" style="text-aligh:center;">
                               <button type="submit" class="btn btn-success" style="margin:0 auto;"> Done <i class="fa fa-check"></i></button> <i class="fa fa-spin fa-spinner hide" id="spin"></i>                     
