@@ -337,7 +337,7 @@ if (eaddress==null || eaddress==""){
             <input maxlength="100" type="file" name="file1"   class="form-control"  placeholder="Upload Passport Photo"  / accept="image/*" required >
           </div>
 
-          <button class="btn btn-primary nextBtn btn-lg pull-right" type="next" value="next" formvalidate value="next" >Next</button>
+          <button class="btn btn-primary nextBtn btn-lg pull-right" type="button"  onclick="formvalidate()" >Next</button>
         </div>
       </div>
     </div>
@@ -361,7 +361,7 @@ if (eaddress==null || eaddress==""){
             <label class="control-label">Email Address</label>
             <input maxlength="200" type="email" name="eaddress"  class="form-control" placeholder="Enter Email Address"  required />
           </div>
-          <button class="btn btn-primary nextBtn btn-lg pull-right" type="next" value="next" formvalidate value="next" >Next</button>
+          <button class="btn btn-primary nextBtn btn-lg pull-right" type="next"  onclick="formvalidate()" >Next</button>
         </div>
       </div>
     </div>
@@ -378,7 +378,7 @@ if (eaddress==null || eaddress==""){
           <input type="radio" name="chooseone" <label for="PhoneNumber"> Phone Number</label>
             <input maxlength="200" type="text" name="option1" value="<?php echo $row431['PhoneNumber']; ?>" required="required" class="form-control" placeholder="Enter Phone Number"  />
          
-          <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+          <button class="btn btn-primary nextBtn btn-lg pull-right" type="next"  onclick="formvalidate()" >Next</button>
         </div>
         </div>
       </div>
@@ -392,7 +392,7 @@ if (eaddress==null || eaddress==""){
             <input maxlength="200" type="text" name="fullname"  required="required" class="form-control" placeholder="Enter Full Name"  />
             <label><input type="checkbox" name="terms"> I agree with the <a href="http://mzikitrak.azurewebsites.net/index.php">Terms and Conditions</a>.</label>
           </div>
-          <button type="submit" class="btn btn-success btn-lg pull-right">Submit</button>
+          <button type="submit"   class="btn btn-success btn-lg pull-right">Submit</button>
         </div>
       </div>
     </div>
