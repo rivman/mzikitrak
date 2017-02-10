@@ -108,8 +108,7 @@ if (eaddress==null || eaddress==""){
           <i class="icon-list"></i>
         </a>
         <a href="index.html" class="navbar-brand text-lt">
-          <i class="icon-earphones"></i>
-          <img src="images/logo.png" alt="." class="hide">
+          <img src="images/mtrakLogo.png" alt=".">
           <span class="hidden-nav-xs m-l-sm">MzikiTrak</span>
         </a>
         <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
@@ -138,7 +137,7 @@ if (eaddress==null || eaddress==""){
                 <div class="list-group list-group-alt">
                   <a href="#" class="media list-group-item">
                     <span class="pull-left thumb-sm">
-                      <img src="images/unk.jpg" alt="..." class="img-circle">
+                      <img src="images/mt.jpg" alt="..." class="img-circle">
                     </span>
                     <span class="media-body block m-b-none">
                       Complete your profile to advance.<br>
@@ -313,7 +312,7 @@ if (eaddress==null || eaddress==""){
           
           <div class="form-group" >
             <label class="control-label">Stage Name</label> <small> (Optional) </small>
-            <input  maxlength="100" type="text" name="stagename" class="form-control"   placeholder="Your Stage Name"  required /> 
+            <input  maxlength="100" type="text" name="stagename" class="form-control"   placeholder="Your Stage Name"  required />
           </div>
           <div class="form-group" >
             <label class="control-label">Address</label>
@@ -416,8 +415,8 @@ if (eaddress==null || eaddress==""){
   <!-- Bootstrap -->
   <script src="js/bootstrap.js"></script>
   <!-- App -->
-
-
+  <script src="js/app.js"></script>  
+    <script src="js/slimscroll/jquery.slimscroll.min.js"></script>
 <script type="text/javascript">
   $(document).ready(function () {
   var navListItems = $('div.setup-panel div a'),
