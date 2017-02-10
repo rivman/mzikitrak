@@ -34,72 +34,15 @@ $row431=sqlsrv_fetch_array($session431);
   <link rel="stylesheet" href="css/font.css" type="text/css" />
   <link rel="stylesheet" href="css/app.css" type="text/css" />
   <link rel="shortcut icon" href="images/mtrakLogo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="css/moredetails.css">
+
     <!--[if lt IE 9]>
     <script src="js/ie/html5shiv.js"></script>
     <script src="js/ie/respond.min.js"></script>
     <script src="js/ie/excanvas.js"></script>
-  <![endif]-->
-
-  <style type="text/css">
-    
-    .stepwizard-step p {
-    margin-top: 10px;
-}
-.error {
-  color: #FF0000;
-}
-.stepwizard-row {
-    display: table-row;
-}
-.stepwizard {
-    display: table;
-    width: 50%;
-    position: relative;
-}
-.stepwizard-step button[disabled] {
-    opacity: 1 !important;
-    filter: alpha(opacity=100) !important;
-}
-.stepwizard-row:before {
-    top: 14px;
-    bottom: 0;
-    position: absolute;
-    content: " ";
-    width: 100%;
-    height: 1px;
-    background-color: #ccc;
-    z-order: 0;
-}
-.stepwizard-step {
-    display: table-cell;
-    text-align: center;
-    position: relative;
-}
-.btn-circle {
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    padding: 6px 0;
-    font-size: 12px;
-    line-height: 1.428571429;
-    border-radius: 15px;
-}
-  </style>
-  <script>
-  function formvalidate(){  
-var eaddress=document.form-group.name.value;  
-var password=document.form-group.password.value;  
-  
-if (eaddress==null || eaddress==""){  
-  alert("email can't be blank");  
-  return false;  
-}else if(password.length<6){  
-  alert("Password must be at least 6 characters long.");  
-  return false;  
-  }  
-} 
-  </script>
+  <![endif]-->  
 </head>
+
 <body class="">
   <section class="vbox">
     <header class="bg-white-only header header-md navbar navbar-fixed-top-xs">
@@ -175,7 +118,7 @@ if (eaddress==null || eaddress==""){
 
 
                 <!-- nav -->
-                
+
                 <!-- / nav -->
               </div>
             </section>
@@ -206,7 +149,7 @@ if (eaddress==null || eaddress==""){
                       </li>
                     </ul>
                   </div>
-                </div>           
+                </div>
                  </footer>
           </section>
         </aside>
@@ -218,7 +161,7 @@ if (eaddress==null || eaddress==""){
               </div>
               <div class="row">
                 <div class="col-sm-12">
-                  
+
                       <div class="col-sm-12">
                       <div class="panel-body">
                         <div class="line line-lg"></div>
@@ -245,7 +188,7 @@ if (eaddress==null || eaddress==""){
       </div>
     </div>
   </div>
-  
+
   <form role="form" action="process.php" method="post" onnext="return formvalidate()"  enctype="multipart/form-data" >
     <div class="row setup-content" id="step-1">
       <div class="col-xs-6 col-md-offset-2">
@@ -255,9 +198,9 @@ if (eaddress==null || eaddress==""){
             <label class="control-label">County</label>
             <select class="form-control"  type="text" name="county" required  >
               <option disabled selected>Select your county</option>
-              <option value="Baringo">Baringo</option>  
+              <option value="Baringo">Baringo</option>
               <option value="Bomet">Bomet </option>
-              <option value="Bungoma">Bungoma</option>  
+              <option value="Bungoma">Bungoma</option>
               <option value="Busia">Busia </option>
               <option value="Elgeyo">Elgeyo</option>
               <option value="Embu">Embu </option>
@@ -319,13 +262,13 @@ if (eaddress==null || eaddress==""){
           <div class="form-group" >
             <label class="control-label">Confirm password</label>
             <input  maxlength="100" type="password"  name="cpassword"  class="form-control" class="form-control" placeholder="Retype password"  required />
-                     
+
           </div>
           <div class="form-group" >
             <label class="control-label">Upload a copy of your National ID</label> <small>(It should be in PDF format.)</small>
             <input  maxlength="100" type="file" name="file"  class="form-control"  placeholder="Upload a copy of your National ID"  / accept=".pdf" required>
           </div>
-          
+
           <div class="form-group" >
             <label class="control-label">Upload Passport Photo</label>
             <input maxlength="100" type="file" name="file1"   class="form-control"  placeholder="Upload Passport Photo"  / accept="image/*" required >
@@ -371,7 +314,7 @@ if (eaddress==null || eaddress==""){
           <div class="form-group">
           <input type="radio" name="chooseone" <label for="PhoneNumber"> Phone Number</label>
             <input maxlength="200" type="text" name="option1" value="<?php echo $row431['PhoneNumber']; ?>" required="required" class="form-control" placeholder="Enter Phone Number"  />
-         
+
           <button class="btn btn-primary nextBtn btn-lg pull-right" type="next"  onclick="formvalidate()" >Next</button>
         </div>
         </div>
@@ -390,11 +333,11 @@ if (eaddress==null || eaddress==""){
         </div>
       </div>
     </div>
-    
+
   </form>
- 
+
 </div>
-                  
+
                 </div>
                 <div class="col-sm-6">
                 </div>
@@ -410,56 +353,8 @@ if (eaddress==null || eaddress==""){
   <!-- Bootstrap -->
   <script src="js/bootstrap.js"></script>
   <!-- App -->
-  <script src="js/app.js"></script>  
-    <script src="js/slimscroll/jquery.slimscroll.min.js"></script>
-<script type="text/javascript">
-  $(document).ready(function () {
-  var navListItems = $('div.setup-panel div a'),
-          allWells = $('.setup-content'),
-          allNextBtn = $('.nextBtn');
-          
-
-  allWells.hide();
-
-  navListItems.click(function (e) {
-      e.preventDefault();
-      var $target = $($(this).attr('href')),
-              $item = $(this);
-
-      if (!$item.hasClass('disabled')) {
-          navListItems.removeClass('btn-primary').addClass('btn-default');
-          $item.addClass('btn-primary');
-          allWells.hide();
-          $target.show();
-          $target.find('input:eq(0)').focus();
-      }
-  });
-
-  allNextBtn.click(function(){
-      var curStep = $(this).closest(".setup-content"),
-          curStepBtn = curStep.attr("id"),
-          nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
-          curInputs = curStep.find("input[type='text'],input[type='url']"),
-          isValid = true;
-
-          
-
- $(".form-group").removeClass("has-error");
-        for(var i=0; i<curInputs.length; i++){
-            if (!curInputs[i].validity.valid){
-                isValid = false;
-                $(curInputs[i]).closest(".form-group").addClass("has-error");
-            }
-        }
-      
-      if (isValid)
-          nextStepWizard.removeAttr('disabled').trigger('click');
-  });
-
-  $('div.setup-panel div a.btn-primary').trigger('click');
-});
-
-  
-  </script>
+  <script src="js/app.js"></script>
+  <script src="js/slimscroll/jquery.slimscroll.min.js"></script>
+  <script src="js/moredetails.js" type="text/javascript"></script>
 </body>
 </html>
