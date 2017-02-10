@@ -105,7 +105,7 @@ $row4321=sqlsrv_fetch_array($session4321);
                               <div class="form-group">
                               <label class="col-lg-3 control-label">Phone Number</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" placeholder="+254 7 XXXX XXX XXX" value="<?php echo $row431['PhoneNumber']; ?>" disabled>
+                                  <input class="form-control" type="number" placeholder="+254 7 XXXX XXX XXX" value="<?php echo $row431['PhoneNumber']; ?>" disabled>
                                 </div>
                               </div>
                               <div class="line line-dashed b-b line-lg pull-in"></div> 
@@ -143,7 +143,7 @@ $row4321=sqlsrv_fetch_array($session4321);
                               <div class="form-group">
                               <label class="col-lg-3 control-label">Phone Number</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" placeholder="+254 7 XXXX XXX XXX" value="<?php echo $row4321['PhoneNumber']; ?>" disabled>                                  
+                                  <input class="form-control" type="number" placeholder="+254 7 XXXX XXX XXX" value="<?php echo $row4321['PhoneNumber']; ?>" disabled>                                  
                                 </div>
                                 </div>
                                 <div class="m-b-md">

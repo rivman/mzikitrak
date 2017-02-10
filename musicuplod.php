@@ -45,6 +45,7 @@ $secs=$_POST['seconds'];
 $dateofrelease=$_POST['rdate'];
 $recordlabel=$_POST['rlabel'];
 ######Contributor########
+$contType=$_POST['contribtype'];
 $conName=$_POST['contname'];
 $conPercent=$_POST['percent'];
 $conEmail=$_POST['contemail'];
@@ -53,6 +54,13 @@ $conNo=$_POST['contno'];
 $featName=$_POST['ftname'];
 $featNumber=$_POST['ftno'];
 $featEmail=$_POST['ftemail'];
+##########TRACK OUTLETS########
+$fm=$_POST['fm'];
+$internet=$_POST['internet'];
+$tv=$_POST['tv'];
+$safaricom=$_POST['safaricom'];
+$airtel=$_POST['airtel'];
+$orange=$_POST['orange'];
 
 $sql2="INSERT INTO AudioClip(AccountNo,AudioTitle,AudioPath,Artist,Status,Coverart,Uploaddate,lengthMinutes,lengthSeconds,DateOfRelease,RecordLabel) VALUES(?,?,?,?,?,?,?,?,?,?,?)";
 $params = array($acc,$Name,$final_file1,$Cname,$s,$final_file,$udate,$mins,$secs,$dateofrelease,$recordlabel);
@@ -62,8 +70,8 @@ if( $stmt12 === false )
       {
             die( print_r( sqlsrv_errors(), true));
       }
-$sqlContrib="INSERT INTO Contributor(ContributorName,ContributorPercentage, ContributorEmail, ContributorPhoneNo) VALUES (?,?,?,?)";
-$contribParams=array($conName, $conPercent, $conEmail, $conNo);
+$sqlContrib="INSERT INTO Contributor(ContributorCategory,ContributorName,ContributorPercentage, ContributorEmail, ContributorPhoneNo) VALUES (?,?,?,?,?)";
+$contribParams=array($contType,$conName, $conPercent, $conEmail, $conNo);
 $stmt13 = sqlsrv_query( $conn, $sqlContrib, $contribParams);
 
 if( $stmt13 === false )
@@ -78,5 +86,14 @@ if( $popFeatTable === false )
       {
             die( print_r( sqlsrv_errors(), true));
       }
+
+$sqlTrackOutlet = "INSERT INTO TrackOutlets(FM, Internet, TV, Safaricom, Airtel,Orange)VALUES(?,?,?,?,?,?)";
+$OutletParams=array($fm,$internet,$tv,$safaricom,$airtel,$orange);
+$popTrackOutletTable= sqlsrv_query ($conn, $sqlTrackOutlet,$OutletParams);
+if( $popTrackOutletTable === false )
+      {
+            die( print_r( sqlsrv_errors(), true));
+      }
+
 header('location:songs.php?var=successful_upload');
 ?>

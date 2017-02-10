@@ -107,7 +107,7 @@ if (eaddress==null || eaddress==""){
         <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
           <i class="icon-list"></i>
         </a>
-        <a href="index.html" class="navbar-brand text-lt">
+        <a href="index.php" class="navbar-brand text-lt">
           <img src="images/mtrakLogo.png" alt=".">
           <span class="hidden-nav-xs m-l-sm">MzikiTrak</span>
         </a>
@@ -202,7 +202,7 @@ if (eaddress==null || eaddress==""){
                       </li>
                       <li class="divider"></li>
                       <li>
-                        <a href="index.php" data-toggle="ajaxModal" >Logout</a>
+                        <a href="logout.php" data-toggle="ajaxModal" >Logout</a>
                       </li>
                     </ul>
                   </div>
@@ -251,10 +251,7 @@ if (eaddress==null || eaddress==""){
       <div class="col-xs-6 col-md-offset-2">
         <div class="col-md-12">
           <h3> Personal Details</h3>
-         
-
           <div class="form-group">
-
             <label class="control-label">County</label>
             <select class="form-control"  type="text" name="county" required  >
               <option disabled selected>Select your county</option>
@@ -305,11 +302,9 @@ if (eaddress==null || eaddress==""){
               <option value="Vihiga">Vihiga </option>
               <option value="Wajir">Wajir </option>
               <option value="West Pokot">West Pokot </option>
-
             </select>
           </div>
-          
-          
+
           <div class="form-group" >
             <label class="control-label">Stage Name</label> <small> (Optional) </small>
             <input  maxlength="100" type="text" name="stagename" class="form-control"   placeholder="Your Stage Name"  required />
@@ -354,7 +349,7 @@ if (eaddress==null || eaddress==""){
           </div>
           <div class="form-group">
             <label class="control-label">Phone Number</label>
-            <input maxlength="200" type="pnumber" name="pnumber"  class="form-control" placeholder="Enter Phone Number" required />
+            <input maxlength="200" type="number" name="pnumber"  class="form-control" placeholder="Enter Phone Number" required />
           </div>
           <div class="form-group">
             <label class="control-label">Email Address</label>
