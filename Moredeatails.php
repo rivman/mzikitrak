@@ -247,14 +247,14 @@ $row431=sqlsrv_fetch_array($session431);
               <option value="West Pokot">West Pokot </option>
             </select>
           </div>
-
           <div class="form-group" >
             <label class="control-label">Stage Name</label> <small> (Optional) </small>
-            <input  maxlength="100" type="text" name="stagename" class="form-control"   placeholder="Your Stage Name"  required />
+            <input  maxlength="100" type="text" name="stagename" class="form-control"   placeholder="Your Stage Name" />
           </div>
           <div class="form-group" >
             <label class="control-label">Address</label>
-            <input  maxlength="100" type="text" name="address" class="form-control"  required="required"  placeholder="Enter Postal Address" required></div>
+            <input  maxlength="100" type="text" name="address" class="form-control"  required="required"  placeholder="Enter Postal Address" required>
+          </div>
           <div class="form-group"  >
             <label class="control-label">Change Password</label>
             <input  maxlength="100" type="password" name="password"    class="form-control"  placeholder="Type password"  required/>
@@ -262,18 +262,15 @@ $row431=sqlsrv_fetch_array($session431);
           <div class="form-group" >
             <label class="control-label">Confirm password</label>
             <input  maxlength="100" type="password"  name="cpassword"  class="form-control" class="form-control" placeholder="Retype password"  required />
-
           </div>
           <div class="form-group" >
             <label class="control-label">Upload a copy of your National ID</label> <small>(It should be in PDF format.)</small>
             <input  maxlength="100" type="file" name="file"  class="form-control"  placeholder="Upload a copy of your National ID"  / accept=".pdf" required>
           </div>
-
           <div class="form-group" >
             <label class="control-label">Upload Passport Photo</label>
             <input maxlength="100" type="file" name="file1"   class="form-control"  placeholder="Upload Passport Photo"  / accept="image/*" required >
           </div>
-
           <button class="btn btn-primary nextBtn btn-lg pull-right" type="button"  onclick="formvalidate()" >Next</button>
         </div>
       </div>
