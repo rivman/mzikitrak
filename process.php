@@ -79,7 +79,7 @@ $encrypted_txt = encrypt_decrypt('encrypt', $y2);
 
 
 
-$sql="UPDATE ClientInfo SET County='$y',DigitalSignatureName=$y7,StageName='y8',NationalID='$final_file',PassportPhoto='$final_file1',DateRegistered='$date' WHERE AccountNo='$acc'";
+$sql="UPDATE ClientInfo SET County='$y',DigitalSignatureName='$y7',StageName='y8',NationalID='$final_file',PassportPhoto='$final_file1',DateRegistered='$date' WHERE AccountNo='$acc'";
 
 $stmt = sqlsrv_query( $conn, $sql);
 if( $stmt === false ) {

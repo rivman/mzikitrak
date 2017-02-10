@@ -79,9 +79,9 @@ $row4321=sqlsrv_fetch_array($session4321);
                               <div class="form-group">
                                 <label class="col-lg-3 control-label">First Name</label>
                                 <div class="col-lg-9">
-                                  <input class="form-control" type="text" placeholder="First name..." value="<?php echo $row431['FirstName'];  ?>" 
-                                >
+                                  <input class="form-control" type="text" value="<?php echo $row431['FirstName'];  ?>">
                                 </div>
+                              </div>
                               <div class="line line-dashed b-b line-lg pull-in"></div>
                               <div class="form-group">
                               <label class="col-lg-3 control-label">Last Name</label>

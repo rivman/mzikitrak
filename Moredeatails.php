@@ -313,18 +313,14 @@ if (eaddress==null || eaddress==""){
           
           <div class="form-group" >
             <label class="control-label">Stage Name</label> <small> (Optional) </small>
-            <input  maxlength="100"  type="text"    class="form-control" placeholder="Your Stage Name" required /> 
-               
+            <input  maxlength="100" type="text" name="stagename" class="form-control"   placeholder="Your Stage Name"  required /> 
           </div>
           <div class="form-group" >
             <label class="control-label">Address</label>
-            <input  maxlength="100"  type="text"   class="form-control" placeholder="Enter Postal Address" required /> 
-                     
-          </div>
+            <input  maxlength="100" type="text" name="address" class="form-control"  required="required"  placeholder="Enter Postal Address" required></div>
           <div class="form-group"  >
             <label class="control-label">Change Password</label>
             <input  maxlength="100" type="password" name="password"    class="form-control"  placeholder="Type password"  required/>
-                       
           </div>
           <div class="form-group" >
             <label class="control-label">Confirm password</label>

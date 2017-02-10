@@ -61,7 +61,7 @@ function check_username_ajax(username){
            <!-- <input type="email" name="email" required="required" placeholder="Email Address" class="form-control rounded input-lg text-center no-border" onblur="checkMailStatus()">-->
           </div>
           <div class="form-group">
-             <input type="phone number" name="pnumber" required="required"  placeholder="Phone Number" class="form-control rounded input-lg text-center no-border">
+             <input type="number" name="pnumber" required="required"  placeholder="Phone Number" class="form-control rounded input-lg text-center no-border">
           </div>
           <div class="checkbox i-checks m-b">
             <label class="m-l">
