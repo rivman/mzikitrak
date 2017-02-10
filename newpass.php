@@ -40,8 +40,13 @@ $row4321=sqlsrv_fetch_array($session4321);
                                         <input type="password" class="form-control" data-required="true" id="pwd">   
                                     </div>
                                     <br>
+                                    <div class="col-sm-8 col-sm-offset-2" style="padding-bottom: 20px;">
+                                        <label>Change password</label>
+                                        <input type="password" class="form-control" data-required="true" id="pwd">   
+                                    </div>
+                                    <br>
                                     <div class="col-sm-8 col-sm-offset-2">
-                                        <label>Confirm password</label>
+                                        <label>Confirm new password</label>
                                         <input type="password" class="form-control" data-equalto="#pwd" data-required="true">      
                                     </div>   
                                     </div>

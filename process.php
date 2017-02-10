@@ -104,7 +104,7 @@ if( $stmt3 === false ) {
 }
 
                 
- header('location:index.php?var=account_successful');
+ header('location:dashboard.php?var=account_successful');
 
 ?>
 
