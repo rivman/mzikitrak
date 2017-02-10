@@ -9,7 +9,7 @@ $login_session=$row43['Username'];
 $status=$row43['Status'];
 if(!isset($login_session))
 {
-header("Location:index.php");
+      header("Location:index.php");
 }
 
 $session431=sqlsrv_query($conn, "SELECT * FROM ClientInfo WHERE Email='$check' ");
@@ -78,9 +78,5 @@ if( $popFeatTable === false )
       {
             die( print_r( sqlsrv_errors(), true));
       }
-
+header('location:songs.php?var=successful_upload');
 ?>
-<script language="javascript">
-      alert("Upload Successful");
-      top.location.href = "songs.php"; //the page to redirect
-</script>

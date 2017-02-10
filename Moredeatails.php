@@ -297,12 +297,12 @@ $row431=sqlsrv_fetch_array($session431);
           
           <div class="form-group">
             <label class="control-label">Stage Name</label> <small> (Optional) </small>
-            <input  maxlength="100" type="text" class="form-control"   placeholder="Your Stage Name"  /> 
+            <input  maxlength="100" type="text" name="stagename" class="form-control"   placeholder="Your Stage Name"  /> 
                
           </div>
           <div class="form-group">
             <label class="control-label">Address</label>
-            <input  maxlength="100" type="text" class="form-control"  required="required"  placeholder="Enter Postal Address"  /> 
+            <input  maxlength="100" type="text" name="address" class="form-control"  required="required"  placeholder="Enter Postal Address"  /> 
                      
           </div>
           <div class="form-group">
