@@ -21,23 +21,6 @@ $acc=$row431['AccountNo'];
 
 
 
-$file =rand(1000,100000)."-".$_FILES['file']['name'];
-$file_loc = $_FILES['file']['tmp_name'];
-$new_file_name = strtolower($file);
-$final_file=str_replace(' ','-',$new_file_name);
-$folder1='uploadid/'.$final_file;
-move_uploaded_file ($file_loc, $folder1);
-
-
-$file1 =rand(1000,100000)."-". $_FILES['file1']['name'];
-$file_loc1 = $_FILES['file1']['tmp_name'];
-$new_file_name1 = strtolower($file1);
-$final_file1=str_replace(' ','-',$new_file_name1);
-$folder2='uploadimages/'.$final_file1;
-move_uploaded_file ($file_loc1, $folder2);
-
-
-
 
 $y= $_POST['county'];
 $y1= $_POST['address'];

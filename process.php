@@ -104,11 +104,8 @@ if( $stmt3 === false ) {
 }
 
                 
-
+ header('location:index.php?var=account_successful');
 
 ?>
-<script language="javascript">
-                  //alert("Account Opened successfully.");
-                  top.location.href = "dashboard.php"; //the page to redirect
-            </script>
+
 

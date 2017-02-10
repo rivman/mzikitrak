@@ -3,10 +3,10 @@
 include('conn.php');
 
 $feedback="";
-    if(isset($_GET['var']) && ($_GET['var']=='successful')){
+    if(isset($_GET['var']) && ($_GET['var']=='account_successful')){
         $feedback="<div class='alert success'>
   <span class='closebtn'>&times;</span>  
-  <strong>Success!</strong> Your password will be send to your email. Use that to log in.
+  <strong>Success!</strong> Account created succefully!.
 </div>";
     }
 
@@ -232,7 +232,7 @@ for (i = 0; i < close.length; i++) {
 </script>
 </body>
 </html>
-<?php include 'aside.php'; ?>
+
 <?php  
 }
 ?>

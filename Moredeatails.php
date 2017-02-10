@@ -85,6 +85,20 @@ $row431=sqlsrv_fetch_array($session431);
     border-radius: 15px;
 }
   </style>
+  <script>
+  function formvalidate(){  
+var eaddress=document.form-group.name.value;  
+var password=document.form-group.password.value;  
+  
+if (eaddress==null || eaddress==""){  
+  alert("email can't be blank");  
+  return false;  
+}else if(password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  }  
+} 
+  </script>
 </head>
 <body class="">
   <section class="vbox">
@@ -233,15 +247,17 @@ $row431=sqlsrv_fetch_array($session431);
     </div>
   </div>
   
-  <form role="form" action="process.php" method="post" enctype="multipart/form-data">
+  <form role="form" action="process.php" method="post" onnext="return formvalidate()"  enctype="multipart/form-data" >
     <div class="row setup-content" id="step-1">
       <div class="col-xs-6 col-md-offset-2">
         <div class="col-md-12">
           <h3> Personal Details</h3>
-          
+         
+
           <div class="form-group">
+
             <label class="control-label">County</label>
-            <select class="form-control"  name="county" required="required"   >
+            <select class="form-control"  type="text" name="county" required  >
               <option disabled selected>Select your county</option>
               <option value="Baringo">Baringo</option>  
               <option value="Bomet">Bomet </option>
@@ -295,36 +311,33 @@ $row431=sqlsrv_fetch_array($session431);
           </div>
           
           
-          <div class="form-group">
+          <div class="form-group" >
             <label class="control-label">Stage Name</label> <small> (Optional) </small>
-            <input  maxlength="100" type="text" name="stagename" class="form-control"   placeholder="Your Stage Name"  />               
+            <input  maxlength="100" type="text" name="stagename" class="form-control"   placeholder="Your Stage Name"  required />
           </div>
-          <div class="form-group">
+          <div class="form-group" >
             <label class="control-label">Address</label>
-            <input  maxlength="100" type="text" name="address" class="form-control"  required="required"  placeholder="Enter Postal Address"  /> 
-                     
-          </div>
-          <div class="form-group">
+            <input  maxlength="100" type="text" name="address" class="form-control"  required="required"  placeholder="Enter Postal Address" required></div>
+          <div class="form-group"  >
             <label class="control-label">Change Password</label>
-            <input  maxlength="100" type="password" name="password" required="required" class="form-control"  placeholder="Type password"  />
-                       
+            <input  maxlength="100" type="password" name="password"    class="form-control"  placeholder="Type password"  required/>
           </div>
-          <div class="form-group">
+          <div class="form-group" >
             <label class="control-label">Confirm password</label>
-            <input  maxlength="100" type="password"  name="cpassword" required="required" class="form-control" placeholder="Retype password"   />
+            <input  maxlength="100" type="password"  name="cpassword"  class="form-control" class="form-control" placeholder="Retype password"  required />
                      
           </div>
-          <div class="form-group">
+          <div class="form-group" >
             <label class="control-label">Upload a copy of your National ID</label> <small>(It should be in PDF format.)</small>
-            <input  maxlength="100" type="file" name="file" required="required"  class="form-control"  placeholder="Upload a copy of your National ID"  / accept=".pdf">
+            <input  maxlength="100" type="file" name="file"  class="form-control"  placeholder="Upload a copy of your National ID"  / accept=".pdf" required>
           </div>
           
-          <div class="form-group">
+          <div class="form-group" >
             <label class="control-label">Upload Passport Photo</label>
-            <input maxlength="100" type="file" name="file1" required="required" class="form-control"  placeholder="Upload Passport Photo"  / accept="image/*">
+            <input maxlength="100" type="file" name="file1"   class="form-control"  placeholder="Upload Passport Photo"  / accept="image/*" required >
           </div>
 
-          <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+          <button class="btn btn-primary nextBtn btn-lg pull-right" type="next" value="next" formvalidate value="next" >Next</button>
         </div>
       </div>
     </div>
@@ -334,21 +347,21 @@ $row431=sqlsrv_fetch_array($session431);
           <h3> Next of Kin</h3>
           <div class="form-group">
             <label class="control-label">First Name</label>
-            <input maxlength="200" type="text" name="fname"  required="required" class="form-control" placeholder="Enter First Name"  />
+            <input maxlength="200" type="text" name="fname"   class="form-control" placeholder="Enter First Name" required />
           </div>
           <div class="form-group">
             <label class="control-label">Last Name</label>
-            <input maxlength="200" type="text" name="lname" required="required" class="form-control" placeholder="Enter Second Name"   />
+            <input maxlength="200" type="text" name="lname"  class="form-control" placeholder="Enter Second Name" required  />
           </div>
           <div class="form-group">
             <label class="control-label">Phone Number</label>
-            <input maxlength="200" type="text" name="pnumber" required="required" class="form-control" placeholder="Enter Phone Number"  />
+            <input maxlength="200" type="pnumber" name="pnumber"  class="form-control" placeholder="Enter Phone Number" required />
           </div>
           <div class="form-group">
             <label class="control-label">Email Address</label>
-            <input maxlength="200" type="email" name="eaddress" required="required" class="form-control" placeholder="Enter Email Address"   />
+            <input maxlength="200" type="email" name="eaddress"  class="form-control" placeholder="Enter Email Address"  required />
           </div>
-          <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+          <button class="btn btn-primary nextBtn btn-lg pull-right" type="next" value="next" formvalidate value="next" >Next</button>
         </div>
       </div>
     </div>
@@ -385,8 +398,7 @@ $row431=sqlsrv_fetch_array($session431);
     </div>
     
   </form>
-  
-  
+ 
 </div>
                   
                 </div>
@@ -404,13 +416,14 @@ $row431=sqlsrv_fetch_array($session431);
   <!-- Bootstrap -->
   <script src="js/bootstrap.js"></script>
   <!-- App -->
-  
+
 
 <script type="text/javascript">
   $(document).ready(function () {
   var navListItems = $('div.setup-panel div a'),
           allWells = $('.setup-content'),
           allNextBtn = $('.nextBtn');
+          
 
   allWells.hide();
 
