@@ -107,7 +107,7 @@ if (eaddress==null || eaddress==""){
         <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
           <i class="icon-list"></i>
         </a>
-        <a href="index.html" class="navbar-brand text-lt">
+        <a href="index.php" class="navbar-brand text-lt">
           <img src="images/mtrakLogo.png" alt=".">
           <span class="hidden-nav-xs m-l-sm">MzikiTrak</span>
         </a>
@@ -202,7 +202,7 @@ if (eaddress==null || eaddress==""){
                       </li>
                       <li class="divider"></li>
                       <li>
-                        <a href="index.php" data-toggle="ajaxModal" >Logout</a>
+                        <a href="logout.php" data-toggle="ajaxModal" >Logout</a>
                       </li>
                     </ul>
                   </div>
