@@ -7,8 +7,8 @@ $feedback="";
 </div>";
     }
     $feedback1="";
-    if(isset($_GET['var']) && ($_GET['var']=='error')){
-        $feedback="<div class='alert  danger'>
+    if(isset($_GET['msg']) && ($_GET['msg']=='wrong_details')){
+        $feedback1="<div class='alert  danger'>
   <span class='closebtn'>&times;</span>  
   <strong>Error!</strong> Wrong email and password.
 </div>";
@@ -24,6 +24,7 @@ $feedback="";
 
 <?php echo $feedback; ?>
 <?php echo $feedback1; ?>
+
 
   <section id="content" class="m-t-lg wrapper-md animated fadeInUp">
     <div class="container aside-xl">

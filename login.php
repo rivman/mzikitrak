@@ -8,11 +8,7 @@ include('conn.php');
    $session43=sqlsrv_query($conn, "SELECT Email from ClientInfo where Email='$rt3' ");
 $row43=sqlsrv_fetch_array($session43);
    $emailg=$row43['Email'];
-  if($emailg==$rt3)
-   {
-      header('location:index.php?var=error');
-   }
-   if($emailg!=$rt3){
+  
 
 function encrypt_decrypt($action, $string) {
     $output = false;
@@ -79,7 +75,7 @@ header ('location:dashboard.php');
     }
 
 }
-}
+
 
 ?>
 
