@@ -293,32 +293,6 @@
                               </div>
                             </div>
                             <div class="line line-lg"></div>
-                            <!--
-                            <h4>Featuring Artist</h4>
-                            <div class="row" style="padding: 2px;">                              
-                              <div class="col-sm-3">
-                                <label>Featuring:</label>
-                              </div>
-                              <div class="col-sm-9">
-                                <input id="ft_name_dis" type="text" class="form-control" value="" disabled>
-                              </div>
-                            </div>
-                            <div class="row" style="padding: 2px;">                              
-                              <div class="col-sm-3">
-                                <label>Artist Email:</label>
-                              </div>
-                              <div class="col-sm-9">
-                                <input id="ft_email_dis" type="text" class="form-control" value="" disabled>
-                              </div>
-                            </div>
-                            <div class="row" style="padding: 2px;">                              
-                              <div class="col-sm-3">
-                                <label>Artist Phone Number:</label>
-                              </div>
-                              <div class="col-sm-9">
-                                <input id="ft_no_dis" type="text" class="form-control" value="" disabled>
-                              </div>
-                            </div> -->
                             <button type="submit" class="btn btn-success" style="margin:0 auto;"> Done <i class="fa fa-check"></i></button> <i class="fa fa-spin fa-spinner hide" id="spin"></i>
                             <div class="line line-lg"></div>
                           </div><!--end of step 4 -->
@@ -328,7 +302,7 @@
                           <ul class="pager wizard m-b-sm">
                             <li class="previous first" style="display:none;"><a href="#">First</a></li>
                             <li class="previous"><a href="#">Previous</a></li>
-                            <!--<li class="next last"><a href="#">Last</a></li>-->
+                            <li class="next last"><a href="#">Last</a></li>
                             <li class="next" onclick="Details()"><a href="#">Next</a></li>
                           </ul>
                         </div>
