@@ -36,7 +36,7 @@
                   <div class="panel wrapper-lg">
                     <div class="row">
                       <div class="col-sm-5">
-                        <img src="images/m10.jpg" class="img-full m-b">
+                        <img src="images/mt.jpg" class="img-full m-b">
                       </div>
                       <div class="col-sm-7">
                         <h2 class="m-t-none text-black"></h2><!--Song title-->
