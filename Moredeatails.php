@@ -35,6 +35,7 @@ $row431=sqlsrv_fetch_array($session431);
   <link rel="stylesheet" href="css/app.css" type="text/css" />
   <link rel="shortcut icon" href="images/mtrakLogo.png" type="image/x-icon" />
   <link rel="stylesheet" href="css/moredetails.css">
+  <link rel="stylesheet" href="css/phonenumber.css">
 
     <!--[if lt IE 9]>
     <script src="js/ie/html5shiv.js"></script>
