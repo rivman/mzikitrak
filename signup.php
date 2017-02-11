@@ -1,11 +1,12 @@
 
 <?php
 $feedback="";
-    if(isset($_GET['var']) && ($_GET['var']=='successful')){
+    if(isset($_GET['var']) && ($_GET['var']=='successful'))
+    {
         $feedback="<div class='alert danger'>
-  <span class='closebtn'>&times;</span>  
-  <strong>Sorry!</strong> Email Aready Exists.
-</div>";
+        <span class='closebtn'>&times;</span>  
+        <strong>Sorry!</strong> Email Aready Exists.
+      </div>";
     }
   ?>
 

@@ -13,6 +13,8 @@
     <script type="text/javascript" src="js/jPlayer/add-on/jplayer.playlist.min.js"></script>
     <script type="text/javascript" src="js/jPlayer/demo.js"></script>
     <script src="js/file-input/bootstrap-filestyle.min.js"></script>
+    <!-- INline notification -->
+    <script src="js/notification.js" type="text/javascript"></script>
     <!-- datepicker -->
     <script src="js/datepicker/bootstrap-datepicker.js"></script>
     <!-- slider -->
