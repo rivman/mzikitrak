@@ -24,7 +24,7 @@ $(document).ready(function () {
       var curStep = $(this).closest(".setup-content"),
           curStepBtn = curStep.attr("id"),
           nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
-          curInputs = curStep.find("input[type='text'],input[type='password'],input[type='file'],input[type='url'] input[type='checkbox'],input[type='radio'],"),
+          curInputs = curStep.find("input[type='text'],input[type='password'],input[type='file'],input[type='url']"),
           isValid = true;
 
 
