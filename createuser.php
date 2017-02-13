@@ -36,39 +36,35 @@ $accountno="FLG00".$cnt.$rt12;
 
 
 function generate_random_password($length = 10) {
-    $alphabets = range('A','Z');
-    $numbers = range('0','9');
-   
-    $final_array = array_merge($alphabets,$numbers);
-         
-    $password = '';
-  
-    while($length--) {
-      $key = array_rand($final_array);
-      $password .= $final_array[$key];
-    }
-  
-    return $password;
+   $password = '';
+
+  //Initialize a random desired length
+  $desired_length = rand(8, 12);
+
+  for($length = 0; $length < $desired_length; $length++) {
+    //Append a random ASCII character (including symbols)
+    $password .= chr(rand(32, 126));
   }
-  
+
+  return $password;
+}
 
 $rt5= generate_random_password(8) ;
 
 function generate_random_password2($length = 10) {
-    $alphabets = range('A','Z');
-    $numbers = range('0','9');
-   
-    $final_array = array_merge($alphabets);
-         
-    $password = '';
-  
-    while($length--) {
-      $key = array_rand($final_array);
-      $password .= $final_array[$key];
-    }
-  
-    return $password;
+ $password = '';
+
+  //Initialize a random desired length
+  $desired_length = rand(8, 12);
+
+  for($length = 0; $length < $desired_length; $length++) {
+    //Append a random ASCII character (including symbols)
+    $password .= chr(rand(32, 126));
   }
+
+  return $password;
+}
+    
   
 
 $rt6= "user";
@@ -155,6 +151,7 @@ $query1 = "INSERT INTO LoginCredentials(Username,Password,activationCode,account
 header("Location: http://www.mzikitrak.com/portal/email/email1.php?email=$rt3&activation=$rt5&password=$rt7");
 
 }
+
 
 ?>
 
