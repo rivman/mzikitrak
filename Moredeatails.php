@@ -306,15 +306,14 @@ $row431=sqlsrv_fetch_array($session431);
           <h3> Notification</h3>
           <p>How would you like to receive your notification </p>
          <div class="form-group">
-                    <input type="radio" name="chooseone" <label for="email"> Email</label>
+            <input type="radio" name="notification" label for="email" value="<?php echo $row431['Email']; ?>"> Email</label>
             <input maxlength="200" type="email" name="option1"   value="<?php echo $row431['Email']; ?>" required="required" class="form-control" placeholder="Enter Email Address"  />
           </div>
           <div class="form-group">
-          <input type="radio" name="chooseone" <label for="PhoneNumber"> Phone Number</label>
-            <input maxlength="200" type="text" name="option1" value="<?php echo $row431['PhoneNumber']; ?>" required="required" class="form-control" placeholder="Enter Phone Number"  />
-
-          <button class="btn btn-primary nextBtn btn-lg pull-right" type="next"  onclick="formvalidate()" >Next</button>
+            <input type="radio" name="notification" label for="PhoneNumber" value="<?php echo $row431['PhoneNumber']; ?>"> Phone Number</label>
+            <input maxlength="200" type="text" name="option1" value="<?php echo $row431['PhoneNumber']; ?>" required="required" class="form-control" placeholder="Enter Phone Number"  />          
         </div>
+        <button class="btn btn-primary nextBtn btn-lg pull-right" type="next"  onclick="formvalidate()" >Next</button>
         </div>
       </div>
     </div>
@@ -331,9 +330,7 @@ $row431=sqlsrv_fetch_array($session431);
         </div>
       </div>
     </div>
-
   </form>
-
 </div>
 
                 </div>

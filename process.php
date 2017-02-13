@@ -48,6 +48,7 @@ $y5= $_POST['pnumber'];
 $y6= $_POST['eaddress'];
 $y7= $_POST['fullname'];
 $y8= $_POST['stagename'];
+$notification=$_POST['notification'];
 $date=date('d/m/Y');
 
 
@@ -79,7 +80,7 @@ $encrypted_txt = encrypt_decrypt('encrypt', $y2);
 
 
 
-$sql="UPDATE ClientInfo SET County='$y',DigitalSignatureName='$y7',StageName='y8',NationalID='$final_file',PassportPhoto='$final_file1',DateRegistered='$date' WHERE AccountNo='$acc'";
+$sql="UPDATE ClientInfo SET County='$y',DigitalSignatureName='$y7',StageName='$y8',NationalID='$final_file',PassportPhoto='$final_file1',DateRegistered='$date', PostalAddress='$y1', NotificationPref='$notification' WHERE AccountNo='$acc'";
 
 $stmt = sqlsrv_query( $conn, $sql);
 if( $stmt === false ) {
@@ -102,7 +103,6 @@ $stmt3 = sqlsrv_query( $conn, $sql3);
 if( $stmt3 === false ) {
      die( print_r( sqlsrv_errors(), true));
 }
-
                 
  header('location:dashboard.php?var=account_successful');
 

@@ -32,7 +32,7 @@ $feedback="";
       <!--<a class="navbar-brand block" href="index.html"><span class="h1 font-bold">MzikiTrak</span></a>-->
       <section class="m-b-lg">
         <header class="wrapper text-center">
-          <strong>Sign in to get in touch</strong>
+          <strong></strong>
         </header>
         <form action="login.php" method="POST">
           <div class="form-group">

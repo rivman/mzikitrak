@@ -97,3 +97,16 @@ if( $popTrackOutletTable === false )
 
 header('location:songs.php?var=successful_upload');
 ?>
+
+<!--<script>
+  //check for navigation time API support
+  if (window.performance) {
+  }
+
+  if (performance.navigation.type == 1) {
+    <!--?php header ('location:songs.php'); ?>
+  } else {
+    //
+  }
+  //</script>-->
+  

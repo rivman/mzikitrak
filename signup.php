@@ -9,7 +9,6 @@ $feedback="";
       </div>";
     }
   ?>
-
 <!DOCTYPE html>
 <html lang="en" class="app">
 <?php include 'css.php'; ?>
@@ -35,13 +34,8 @@ function check_username_ajax(username){
 }
 });
 </script>-->
-
-
-
 <body class="bg-info dker">
-
 <?php echo $feedback; ?>
-
   <section id="content" class="m-t-lg wrapper-md animated fadeInDown">
     <div class="container aside-xl">
       <img src="images/MzikiTrakLogo120px.png" alt="MzikiTrak Logo" class="logo">
@@ -66,10 +60,9 @@ function check_username_ajax(username){
           </div>
           <div class="checkbox i-checks m-b">
             <label class="m-l">
-              <input type="checkbox" checked=""><i></i> I agree the <a href="#">terms and policy</a>
+              <input type="checkbox"><i></i> I agree the <a href="#">terms and policy</a>
             </label>
           </div>
-
           <button type="submit" class="btn btn-lg btn-warning lt b-white b-2x btn-block btn-rounded"><i class="icon-arrow-right pull-right"></i><span class="m-r-n-lg">Sign up</span></button>
           <div class="line line-dashed"></div>
           <p class="text-muted text-center"><small>Already have an account?</small></p>
