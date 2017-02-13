@@ -101,7 +101,7 @@ $row431=sqlsrv_fetch_array($session431);
             </a>
             <ul class="dropdown-menu animated fadeInRight">
               <li>
-                <a href="logout.php" data-toggle="ajaxModal" >Logout</a>
+                <a href="logout.php">Logout</a>
               </li>
             </ul>
           </li>
@@ -146,7 +146,7 @@ $row431=sqlsrv_fetch_array($session431);
                       </li>
                       <li class="divider"></li>
                       <li>
-                        <a href="logout.php" data-toggle="ajaxModal" >Logout</a>
+                        <a href="logout.php">Logout</a>
                       </li>
                     </ul>
                   </div>
@@ -324,7 +324,7 @@ $row431=sqlsrv_fetch_array($session431);
          <div class="form-group">
             <label class="control-label">Full Name</label>
             <input maxlength="200" type="text" name="fullname"  required="required" class="form-control" placeholder="Enter Full Name"  />
-            <label><input type="checkbox" name="terms"> I agree with the <a href="http://mzikitrak.azurewebsites.net/index.php">Terms and Conditions</a>.</label>
+            <label><input type="checkbox" name="terms" required="required"> I agree with the <a href="http://mzikitrak.azurewebsites.net/index.php">Terms and Conditions</a>.</label>
           </div>
           <button type="submit"   class="btn btn-success btn-lg pull-right">Submit</button>
         </div>

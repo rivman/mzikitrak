@@ -41,7 +41,7 @@
                       </li>
                       <li class="divider"></li>
                       <li>
-                         <a href="logout.php" data-toggle="ajaxModal" >Logout</a>
+                         <a href="logout.php">Logout</a>
                       </li>
                     </ul>
                   </div>

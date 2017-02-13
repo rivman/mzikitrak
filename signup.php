@@ -60,7 +60,7 @@ function check_username_ajax(username){
           </div>
           <div class="checkbox i-checks m-b">
             <label class="m-l">
-              <input type="checkbox"><i></i> I agree the <a href="#">terms and policy</a>
+              <input type="checkbox" required="required"><i></i> I agree the <a href="#">terms and policy</a>
             </label>
           </div>
           <button type="submit" class="btn btn-lg btn-warning lt b-white b-2x btn-block btn-rounded"><i class="icon-arrow-right pull-right"></i><span class="m-r-n-lg">Sign up</span></button>
