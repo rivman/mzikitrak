@@ -34,7 +34,7 @@ function check_username_ajax(username){
 }
 });
 </script>-->
-<body class="bg-info dker">
+<body class="bg-info dker" style="overflow: scroll;">
 <?php echo $feedback; ?>
   <section id="content" class="m-t-lg wrapper-md animated fadeInDown">
     <div class="container aside-xl">
