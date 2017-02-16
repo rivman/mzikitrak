@@ -67,7 +67,8 @@
                               
 
                     ?>
-                      <li class="list-group-item">
+                      <div class="row">
+                        <li class="list-group-item">
                         <div class="pull-right m-l">
                           <div class="btn-group">
 		                      <button class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
@@ -89,6 +90,7 @@
                           <span class="text-muted"> - <?php $y= $member['lengthMinutes']; if($y<10){$z="0".$y; echo $z;}else {echo  $y;}; ?>: <?php $y= $member['lengthSeconds']; if($y<10){$z="0".$y; echo $z;}else{ echo  $y;} ; ?></span>
                         </div>
                       </li>
+                      </div>
                       <?php } ?>
                     </ul>
                   </div>
