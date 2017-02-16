@@ -31,7 +31,7 @@
                         <span class="pull-right text-sm">12 Songs<br>36 mins 42 secs</span>
                         <span class="h2 font-thin">Album Title</span>
                       </div>
-                      <img class="img-full" src="images/m43.jpg" alt="...">
+                      <!--<img class="img-full" src="images/m43.jpg" alt="...">-->
                     </div>
                     <ul class="list-group list-group-lg no-radius no-border no-bg m-t-n-xxs m-b-none auto">
                       <li class="list-group-item">
