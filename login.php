@@ -4,15 +4,13 @@ session_start();
 	
 include('conn.php');
 
-
-   $session43=sqlsrv_query($conn, "SELECT Email from ClientInfo where Email='$rt3' ");
+$session43=sqlsrv_query($conn, "SELECT Email from ClientInfo where Email='$rt3' ");
 $row43=sqlsrv_fetch_array($session43);
-   $emailg=$row43['Email'];
+$emailg=$row43['Email'];
   
 
 function encrypt_decrypt($action, $string) {
     $output = false;
-
     $encrypt_method = "AES-256-CBC";
     $secret_key = '5637282hhhrhrhrdn';
     $secret_iv = 'grgr%%%%&***&&^Hjhnnh';
@@ -30,9 +28,8 @@ function encrypt_decrypt($action, $string) {
     else if( $action == 'decrypt' ){
         $output = openssl_decrypt(base64_decode($string), $encrypt_method, $key, 0, $iv);
     }
-
-    return $output;
-}
+        return $output;
+    }
 
 $plain_txt = $_POST['password'];
 
