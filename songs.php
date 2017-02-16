@@ -61,7 +61,6 @@
                     <a href="#modal-form" class="btn btn-success" data-toggle="modal">Upload Song</a>
                     <h4 class="m-t-lg m-b">My Songs</h4>
                     <ul class="list-group list-group-lg">
-
                     <?php
                        $result = sqlsrv_query($conn,"SELECT * FROM AudioClip WHERE AccountNo='$acc' ") or die (sqlsrv_errors()); 
                            while( $member = sqlsrv_fetch_array( $result, SQLSRV_FETCH_ASSOC) ) {
@@ -81,9 +80,9 @@
 		                      </div>
                         </div>
                         <a href="#" class="jp-play-me m-r-sm pull-left">
-                        <audio id="music" controls="controls">
-                          <source src="music/<?php echo $member['AudioPath'];   ?>" />  
-                        </audio>
+                          <audio id="music" controls="controls">
+                            <source src="music/<?php echo $member['AudioPath'];   ?>" />  
+                          </audio>
                         </a>
                         <div class="clear text-ellipsis">
                           <span><?php echo  $member['AudioTitle'];  ?></span>
