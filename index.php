@@ -10,7 +10,8 @@ $feedback="";
     if(isset($_GET['msg']) && ($_GET['msg']=='wrong_details')){
         $feedback1="<div class='alert  danger'>
   <span class='closebtn'>&times;</span>  
-  <strong>Error!</strong> Wrong email and password.
+  <strong>Error!</strong> Wrong password.
+  <small> Are you using the correct email?</small>
 </div>";
     }
   ?>
