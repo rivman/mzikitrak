@@ -110,7 +110,7 @@ $c = sqlsrv_num_rows( $stmt );
                       <footer class="panel-footer bg-white">
                         <div class="row text-center no-gutter">
                           <div class="col-xs-3 b-r b-light">
-                            <p class="h3 font-bold m-t"><?php echo $c; ?></p>
+                            <p class="h3 font-bold m-t"><a href="songs.php"><?php echo $c; ?></a></p>
                             <p class="text-muted">Songs</p>
                           </div>
                           <div class="col-xs-3 b-r b-light">
