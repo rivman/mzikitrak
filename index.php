@@ -60,6 +60,10 @@ $feedback="";
           &copy; <script>document.write(new Date().getFullYear())</script>
         </small>
       </p>
+      <p>
+        For any queries, email <a href="mailto:admin@mzikitrak.com">admin@mzikitrak.com</a>
+        <!--<span class="btn btn-sm btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">adasd</span>-->
+      </p>
     </div>
   </footer>
   <!-- / footer -->
