@@ -148,7 +148,7 @@ $query1 = "INSERT INTO LoginCredentials(Username,Password,activationCode,account
 
 
 
-header("Location: http://www.mzikitrak.com/portal/email/email1.php?email=$rt3&activation=$rt5&password=$rt7");
+header("Location: http://www.mzikitrak.com/portal/email/email1.php?email=$rt3&activation=$rt5&lname=$rt2&password=$rt7&fname=$rt1&phone=$rt4");
 
 }
 
