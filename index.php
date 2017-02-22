@@ -3,7 +3,8 @@ $feedback="";
     if(isset($_GET['var']) && ($_GET['var']=='successful')){
         $feedback="<div class='alert success'>
   <span class='closebtn'>&times;</span>  
-  <strong>Success!</strong> Your password will be sent to your email. Use that to log in.
+  <strong>Success!</strong> Your password will be sent to your email. Use that to log in. <br>
+  Be sure to check your junk or spam folder.
 </div>";
     }
     $feedback1="";
