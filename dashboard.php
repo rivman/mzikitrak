@@ -16,10 +16,15 @@ $session43=sqlsrv_query($conn, "SELECT * FROM LoginCredentials WHERE Username='$
 $row43=sqlsrv_fetch_array($session43);
 $login_session=$row43['Username'];
 $status=$row43['Status'];
+$flag=$row43['Flag'];
 if(!isset($login_session))
 {
 header("Location:index.php");
 }
+if ($flag==1) {
+ header('location:newpass.php');
+}
+else{
 
 if ($status==0) {
  header('location:moredeatails.php');
@@ -234,5 +239,6 @@ else{
 </html>
 
 <?php  
+}
 }
 ?>
