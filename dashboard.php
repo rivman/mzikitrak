@@ -30,6 +30,15 @@ if ($status==0) {
  header('location:moredeatails.php');
 }
 else{
+$session431=sqlsrv_query($conn, "SELECT * FROM ClientInfo WHERE Email='$check' ");
+$row431=sqlsrv_fetch_array($session431);
+$acc=$row431['AccountNo'];
+$sql = "SELECT * FROM AudioClip where AccountNo='$acc'";
+$params = array();
+$options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
+$stmt = sqlsrv_query( $conn, $sql , $params, $options );
+
+$c = sqlsrv_num_rows( $stmt );
 ?>
 
 <style>
@@ -106,7 +115,7 @@ else{
                       <footer class="panel-footer bg-white">
                         <div class="row text-center no-gutter">
                           <div class="col-xs-3 b-r b-light">
-                            <p class="h3 font-bold m-t">0</p>
+                            <p class="h3 font-bold m-t"><a href="songs.php"><?php echo $c; ?></a></p>
                             <p class="text-muted">Songs</p>
                           </div>
                           <div class="col-xs-3 b-r b-light">

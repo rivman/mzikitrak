@@ -81,6 +81,9 @@ function check_username_ajax(username){
           &copy; <script>document.write(new Date().getFullYear())</script>
         </small>
       </p>
+      <p>
+        For any queries, email <a href="mailto:admin@mzikitrak.com">admin@mzikitrak.com</a>
+      </p>
     </div>
   </footer>
  <?php include 'scripts.php'; ?>

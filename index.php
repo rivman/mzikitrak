@@ -3,14 +3,16 @@ $feedback="";
     if(isset($_GET['var']) && ($_GET['var']=='successful')){
         $feedback="<div class='alert success'>
   <span class='closebtn'>&times;</span>  
-  <strong>Success!</strong> Your password will be sent to your email. Use that to log in.
+  <strong>Success!</strong> Your password will be sent to your email. Use that to log in. <br>
+  Be sure to check your junk or spam folder.
 </div>";
     }
     $feedback1="";
     if(isset($_GET['msg']) && ($_GET['msg']=='wrong_details')){
         $feedback1="<div class='alert  danger'>
   <span class='closebtn'>&times;</span>  
-  <strong>Error!</strong> Wrong email and password.
+  <strong>Error!</strong> Wrong password.
+  <small> Are you using the correct email?</small>
 </div>";
     }
   ?>
@@ -58,6 +60,10 @@ $feedback="";
           <a href="http://flag42.com/">Flag42</a><br>
           &copy; <script>document.write(new Date().getFullYear())</script>
         </small>
+      </p>
+      <p>
+        For any queries, email <a href="mailto:admin@mzikitrak.com">admin@mzikitrak.com</a>
+        <!--<span class="btn btn-sm btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">adasd</span>-->
       </p>
     </div>
   </footer>

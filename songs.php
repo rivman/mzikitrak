@@ -61,14 +61,14 @@
                     <a href="#modal-form" class="btn btn-success" data-toggle="modal">Upload Song</a>
                     <h4 class="m-t-lg m-b">My Songs</h4>
                     <ul class="list-group list-group-lg">
-
                     <?php
                        $result = sqlsrv_query($conn,"SELECT * FROM AudioClip WHERE AccountNo='$acc' ") or die (sqlsrv_errors()); 
                            while( $member = sqlsrv_fetch_array( $result, SQLSRV_FETCH_ASSOC) ) {
                               
 
                     ?>
-                      <li class="list-group-item">
+                      <div class="row">
+                        <li class="list-group-item">
                         <div class="pull-right m-l">
                           <div class="btn-group">
 		                      <button class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
@@ -81,15 +81,16 @@
 		                      </div>
                         </div>
                         <a href="#" class="jp-play-me m-r-sm pull-left">
-                        <audio id="music" controls="controls">
-                          <source src="music/<?php echo $member['AudioPath'];   ?>" />  
-                        </audio>
+                          <audio id="music" controls="controls">
+                            <source src="music/<?php echo $member['AudioPath'];   ?>" />  
+                          </audio>
                         </a>
                         <div class="clear text-ellipsis">
                           <span><?php echo  $member['AudioTitle'];  ?></span>
                           <span class="text-muted"> - <?php $y= $member['lengthMinutes']; if($y<10){$z="0".$y; echo $z;}else {echo  $y;}; ?>: <?php $y= $member['lengthSeconds']; if($y<10){$z="0".$y; echo $z;}else{ echo  $y;} ; ?></span>
                         </div>
                       </li>
+                      </div>
                       <?php } ?>
                     </ul>
                   </div>
