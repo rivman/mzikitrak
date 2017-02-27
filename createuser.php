@@ -6,7 +6,7 @@ $rt2=$_POST['lname'];
 $rt3=$_POST['email'];
 $rt4=$_POST['pnumber'];
 //$s_name=$_POST['stagename'];
-$rt12=date('Y');
+$rt12=date('d/m/Y');
 
 
 
@@ -126,10 +126,10 @@ $var1="1";
 
 
 
-$query = "INSERT INTO ClientInfo (FirstName,LastName,Email,PhoneNumber,AccountNo,StageName)
-                        VALUES  (?,?,?,?,?,?)";
+$query = "INSERT INTO ClientInfo (FirstName,LastName,Email,PhoneNumber,AccountNo,StageName,DateRegistered)
+                        VALUES  (?,?,?,?,?,?,?)";
 
-                $params = array($rt1,$rt2,$rt3,$rt4,$accountno,$s_name);        
+                $params = array($rt1,$rt2,$rt3,$rt4,$rt12,$accountno,$s_name);        
             $stmt = sqlsrv_query( $conn, $query, $params);
 
             if( $stmt === false ) {
@@ -148,7 +148,7 @@ $query1 = "INSERT INTO LoginCredentials(Username,Password,activationCode,account
 
 
 
-header("Location: http://www.mzikitrak.com/portal/email/email1.php?email=$rt3&activation=$rt5&password=$rt7");
+header("Location: http://www.mzikitrak.com/portal/email/email1.php?email=$rt3&activation=$rt5&password=$rt7&phone=$rt4");
 
 }
 

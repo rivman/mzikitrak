@@ -62,8 +62,20 @@ else{
     
             $dbuser = $member['Username'];
             $dbpass = $member['Password'];
+            $type=$member['Usertype'];
             
-           if($dbuser=$username){
+           if($type=='admin'){
+                $_SESSION['SESS_username']= $dbuser;
+                
+               
+              
+
+
+header ('location:admindashboard.php');
+
+}
+
+else{
                 $_SESSION['SESS_username']= $dbuser;
                 
                
